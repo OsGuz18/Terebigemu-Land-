@@ -15,11 +15,7 @@ Listado se referencias:
 
 Descripción de integrantes del equipo:
 
-1. 
-
-
-
-
+1. Mi nombre es Osmar Humberto Guzmán Mariscal, ingeniero mecatrónico y en la actualidad me dedico al desarrollo de aplicaciones de escritorio y automatización de procesos. Dentro de mi ramo he trabajado principalmente con lenguaje Visual Net sin embargo considero que em falta mucho por aprender. Me interesa continuar con mi preparación en cuanto uso y desarrollo de software y a la utilización del mismo para la automatización e innovación de procesos.
 
 
 2. Me llamo César A. Camas Flores Ingeniero Mecánico, Maestro en Energías Renovables y actual estudiante de doctorado de Materiales y Sistemas Energéticos Renovables. En el mundo de la programación, me considero un principiante, pero ávido de aprendizaje. He desarrollado algunos scripts para LAMMPS, programa basado en C++ y estoy muy interesado en la realidad aumentada, realidad virtual e inteligencia articial.
