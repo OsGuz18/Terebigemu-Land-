@@ -11,3 +11,15 @@ Listado se referencias:
 > https://gameplanet.com
 > https://www.gamestop.com
 > http://www.hottoys.com.hk
+
+
+Descripción de integrantes del equipo:
+
+1. 
+
+
+
+
+
+
+2. Me llamo César A. Camas Flores Ingeniero Mecánico, Maestro en Energías Renovables y actual estudiante de doctorado de Materiales y Sistemas Energéticos Renovables. En el mundo de la programación, me considero un principiante, pero ávido de aprendizaje. He desarrollado algunos scripts para LAMMPS, programa basado en C++ y estoy muy interesado en la realidad aumentada, realidad virtual e inteligencia articial.
