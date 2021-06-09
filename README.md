@@ -19,3 +19,6 @@ Descripción de integrantes del equipo:
 
 
 2. Me llamo César A. Camas Flores Ingeniero Mecánico, Maestro en Energías Renovables y actual estudiante de doctorado de Materiales y Sistemas Energéticos Renovables. En el mundo de la programación, me considero un principiante, pero ávido de aprendizaje. He desarrollado algunos scripts para LAMMPS, programa basado en C++ y estoy muy interesado en la realidad aumentada, realidad virtual e inteligencia articial.
+
+
+Link al tablero de trabajo: https://trello.com/b/WsBDLy67/terebigemu-land
