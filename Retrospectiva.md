@@ -1,6 +1,7 @@
 Sprint 1
 Siguiento el esque,a de la estrella de mar podemos realizar la siguiente restrospectiova del sprint 1, donde:
-    1.-Comenzar a hacer: Coemnzar a organizar las tareas no sólo por miembro del equipo si no delimitando una fecha y especificando los requerimientos para considerar la tarea terminada.
+    
+    1.-Comenzar a hacer: Comenzar a organizar las tareas no sólo por miembro del equipo si no delimitando una fecha y especificando los requerimientos para considerar la tarea terminada.
 
     2.-Hacer más: Aumentar la comunicación como equipo y coordinar el trabajo para ser más productivos.
 
