@@ -22,3 +22,13 @@ Descripción de integrantes del equipo:
 
 
 Link al tablero de trabajo: https://trello.com/b/WsBDLy67/terebigemu-land
+
+
+
+
+
+
+
+
+
+             

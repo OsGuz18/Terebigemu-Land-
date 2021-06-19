@@ -3,3 +3,259 @@
     padding: 0px;
     margin: 0px;
 }
+header{
+    background-color: black;
+    padding: 20px;
+}
+
+
+header section{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+} 
+
+header section img.logo{
+    width: 10%;
+}
+
+header section div.nombre{
+    width: 100%;
+}
+
+header section div img{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+header section form{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+header section form div.buscador{
+    background-color: white;
+    width: 80%;
+    height: 25%;
+    align-self: center;
+}
+
+header section form div {
+    width: 4%;
+}
+header section form div i{
+    width: 100%;
+    background-color: white;
+    margin-top: 230%;
+    padding-top: 40%;
+    padding-bottom: 42%;
+}
+header section div.boton-log{
+    width: 20%;
+    display: flex;
+    background-color: blue;
+    height: 10%;
+    align-self: center;
+    border: 1px #169AF0 solid;
+    
+}
+
+header section div.boton-log i{
+    color: white;
+    font-size: 120%;
+    align-self: center;
+    background-color: blue;
+    margin-right: 5%;
+}
+a{
+    color: white;
+}
+
+header section div button{
+    width: 100%;
+    height: 50%;
+    border: 0px ;
+    margin-right: 10%;
+    background-color: blue;
+    color: white;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 150%;
+}
+body section.barra-navegacion{
+    background-color: blue;
+}
+body section ul{
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 120%;
+    text-decoration: underline;
+}
+
+main section.formulario{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+main section.formulario-datos{
+    background-color: #ebebeb;
+    width: 110%;
+    padding-bottom: 2%;
+}
+
+.titulo{
+    font-size: 180%;
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+}
+
+
+.input1{
+    border-radius: 2px;
+    border: 1px #ebebeb;
+    margin-left: 10%;
+    color: #AFA9A9;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 120%;
+    width: 35%;
+}
+
+.input2{
+    border-radius: 2px;
+    border: 1px #ebebeb;
+    margin-left: 10%;
+    color: #AFA9A9;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 120%;
+    width: 80%;
+    margin-bottom: 2%;
+}
+
+main section form div.doble-box{
+    display: flex;
+    margin-bottom: 5%;
+    
+}
+
+main section form div button{
+    background-color: #AFA9A9;
+    border: none;
+    width: 80%;
+    margin-left: 10%;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 160%;
+    margin-top: 10%;
+}
+
+main section img{
+    width: 100%;
+    height: 100%;
+}
+
+
+main section.banner{
+    width: 100%;
+    background-color: black;
+    
+}
+
+main section.banner img{
+    width: 35%;
+    margin-left: 35%;
+    
+}
+
+
+
+
+
+main section div.navegacion-under{
+   display: flex; 
+   justify-content: space-around;
+   background-color: white;
+}
+main section div article{
+    width: 15%;
+}
+
+main section div article a img{
+    width: 80%;
+    height: 70%;
+    margin-top: 30%;
+    margin-left: 10%;
+}
+
+.Titulo-under{
+    text-align: center;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 160%;
+}
+
+main section button{
+    margin-top: 3%;
+    width: 70%;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 160%;
+    margin-left: 15%;
+    color: white;
+    background-color: black;
+    border: none;
+}
+
+footer section ul{
+    text-decoration: none;
+    font-family: Arial;
+    display: list-item;
+    list-style: circle;
+}
+
+
+body footer section ul i a{
+    color: black;
+    font-family: Arial;
+    text-decoration: none;
+    font-size: 70%;
+    display: list-item;
+    list-style: disc;
+    margin-left: 10%;
+    margin-bottom: 2%;
+} 
+
+
+footer section{
+    width: 20%;
+}
+
+footer section div b{
+    font-size: 100%;
+    margin-left: 6%;
+}
+
+footer{
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    
+}
+
+.redes{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+}
+
+.terminos{
+    font-size: 100%;
+    text-align: center;
+    margin-top: 5%;
+}
+
