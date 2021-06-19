@@ -267,3 +267,205 @@ footer{
     margin-top: 5%;
 }
 
+main section.banner-section{
+    background-color: black;
+}
+
+ main section img.banner2{
+    width:45%;
+    margin-left: 30%;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 160%;
+}
+
+.shopping-car{
+    margin-left: 10%;
+    margin-top: 3%;
+    font-size: 200%;
+}
+
+.articulos{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+    
+}
+
+.articulo{
+    display: flex;
+    margin-top: 5%;
+}
+
+.articulo-foto{
+    width: 150%;
+   
+}
+
+.checkbox-articulo{
+   display: flex;
+    width: 40%;
+    margin-top: 10%;
+    margin-left: -5%;
+}
+
+main section img.articulo-foto2{
+    width: 100%;
+    height: 60%;
+}
+
+
+
+section form div label{
+    width: 110%;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 160%;
+}
+
+.picture-articulo{
+    width: 10%;
+    margin-left: 10%;
+}
+
+.description-articulo{
+    width: 25%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 160%;
+}
+
+main section div b{
+    align-self: auto;
+}
+
+main section p{
+    justify-self: auto;
+}
+
+.relleno-linea{
+    background-color: black;
+    width: 80%;
+    font-size: 1px;
+    margin-top: 2%;
+    margin-left: 10%;
+}
+
+main section div b{
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 160%;
+}
+
+.texto-total{
+    margin-left: 13%;
+}
+
+.seccion-total{
+    display: flex;
+}
+
+main section form.borrar-carrito{
+    width: 30%;
+}
+
+main section form button{
+    background-color: white;
+    border: none;
+    color: #a19696;
+    text-align: left;
+    width: 40%;
+    font-size: 120%;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+.subtotal-cantidad{
+    margin-left: 7%;
+    margin-top: 0.5%;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 160%;
+
+}
+
+.texto-envio{
+    display: flex;
+    background-color: #ebebeb;
+    padding: 1%;
+}
+
+.datos-envio{
+    margin-top: 2%;
+    width: 80%;
+    margin-left: 10%;
+    
+}
+
+main section.datos-envio i{
+    font-size: 200%;
+    
+}
+main section.datos-envio div{
+    margin-left: 2%;
+}
+
+section form div input.check{
+    margin-left: 50%;
+    width: 100%; 
+    margin-top: 0%;
+}
+
+.nombre-cliente{
+    margin-top: 4%;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 135%;
+}
+
+.formulario-pagar{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 3.5%;
+}
+
+.boton-pagar{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10%;
+}
+
+.datos{
+    margin-left: -15%;
+}
+
+main section button.pagar-ahora{
+    width: 200%;
+}
+
+.producto{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 12%;
+    width: 100%;
+}
+
+main section div.producto article p{
+    margin-top: 20%;
+    width: 70%;
+}
+
+main section div.producto article img{
+    width: 100%;
+    margin-top: 10%;
+}
+.precio-sug{
+    width: 20%;
+    margin-left: 10%;
+    font-size: 90%;
+}
+main section div.producto article b{
+   font-size: 150%;
+}
+
+.center{
+    margin-top: -2%;
+}
