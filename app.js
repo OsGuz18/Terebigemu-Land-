@@ -12,7 +12,7 @@ app.listen(3030, () => {
 });
 
 app.get("/",(req,res) => {
-    res.sendFile(path.resolve(__dirname,'./views/register.html'))
+    res.send("Hola mundo")
 });
 
 app.get("/register",(req,res) =>{

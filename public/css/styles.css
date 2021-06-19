@@ -16,6 +16,14 @@ header section{
     justify-content: space-between;
 } 
 
+header section ul.barra-superior{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    margin-left: 35%;
+}
+
 header section img.logo{
     width: 10%;
 }
