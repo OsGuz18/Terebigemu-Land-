@@ -12,7 +12,6 @@ app.listen(3030, () => {
 });
 
 app.get("/",(req,res) => {
-<<<<<<< HEAD
     res.sendFile(path.resolve(__dirname, './views/index.html'));
 });
 
@@ -24,9 +23,6 @@ app.get("/login",(req,res) => {
     res.sendFile(path.resolve(__dirname, './views/login.html'));
 });
 
-=======
-    res.send("Hola mundo")
-});
 
 app.get("/register",(req,res) =>{
     res.sendFile(path.resolve(__dirname,'./views/register.html'))
@@ -35,4 +31,3 @@ app.get("/register",(req,res) =>{
 app.get("/shopping-car",(req,res) =>{
     res.sendFile(path.resolve(__dirname,'./views/shopping-car.html'))
 });
->>>>>>> cf3ff879acbe64ef6d76513115354c7ef9c46276
