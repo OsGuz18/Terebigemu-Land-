@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terebigemu Land Register</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        
+        <section>
+            <ul class="barra-superior">
+                
+                <i><a href="#">Cuenta</a></i>
+                <i>|</i>
+                <i><a href="#">Ofertas</a></i>
+                <i>|</i>
+                <i><a href="#">Preventas</a></i>
+                <i>|</i>
+                <i><a href="#">Vender</a></i>
+
+            </ul>
+        </section>
+        
+        <section >
+            <img class="logo" width="100" src="images/Sello_1.jpg" alt="Logo">
+            <div class="nombre">
+                <img  src="images/Nombre.jpg" alt="Nombre">
+            </div>
+            <form  action="buscar" method="GET">
+                <div class="buscador">Buscar productos, marcas y más</div>
+                <div ><i class="fa fa-search"></i></div>
+            </form>
+            <div class="boton-log">
+                <button>Log in</button>
+                <i class="fas fa-sign-in-alt"></i>
+            </div>
+            
+        </section>
+    </header>
+    
+    <section class="barra-navegacion">
+        <ul>
+            <i><a href="#">Videojuegos</a></i>
+            <i> <a href="#">Coleccionables</a> </i>
+            <i> <a href="#">Accesorios</a></i>
+            <i> <a href="#">Computo</a></i>
+            <i> <a href="#">Comics</a></i>
+            <i> <a href="#">Ropa</a></i>
+        </ul>
+    </section>
+    
+    <main>
+        <section class="banner-section" >
+            <img class="banner2" src="images/banner.jpg" alt="">
+        </section>
+
+        <section>
+            <div class="shopping-car"><i class="fas fa-shopping-cart"></i> Shopping car</div>
+        </section>
+
+        <section class="articulos">
+            <form action="articulo">
+                <div class="articulo">
+                    <div class="checkbox-articulo"> 
+                        <input class="check" type="checkbox" id="articulo">
+                        <label for="articulo">Hot Toy Miguel O'hara</label>
+                    </div>
+                   <div class="picture-articulo">
+                        <img class="articulo-foto" src="images/2044.jpg" alt="">
+                   </div> 
+                   <div class="description-articulo">
+                        <b>Descripción</b>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, 
+                           perferendis fugit iusto nemo debitis
+                        </p>
+                   </div>
+
+                   <div class="description-articulo">
+                        <b>Precio</b>
+                        <p>$ 10,000.00 MXN</p>
+                    </div>
+                </div>
+
+                <div class="relleno-linea">
+                    <div >linea</div>
+                </div>
+
+
+                <div class="articulo">
+                    <div class="checkbox-articulo"> 
+                        <input class="check" type="checkbox" id="articulo">
+                        <label for="articulo">Memoria RAM</label>
+                    </div>
+                   <div class="picture-articulo">
+                        <img class="articulo-foto" src="images/memoria.jpg" alt="">
+                   </div> 
+                   <div class="description-articulo">
+                        <b>Descripción</b>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, 
+                           perferendis fugit iusto nemo debitis
+                        </p>
+                   </div>
+
+                   <div class="description-articulo">
+                        <b>Precio</b>
+                        <p>$ 2,500.00 MXN</p>
+                    </div>
+                </div>
+
+                <div class="relleno-linea">
+                    <div >linea</div>
+                </div>
+            </form> 
+        </section>
+
+        <section class="seccion-total">
+            <div class="texto-total">
+                <b>Total de artículos a pagar:</b> <b>2  </b> <b>|</b>
+            </div>
+            <form class="borrar-carrito" action="borrar-carrito">
+                <button>Eliminar del carrito</button>
+            </form>
+            <div>
+                <b>Subtotal</b>
+            </div>
+            <div class="subtotal-cantidad">
+                $12,500 MXN
+            </div>
+        </section>
+        <div class="relleno-linea">
+            <div >linea</div>
+        </div>
+        
+        <section class="datos-envio">
+            <section class="texto-envio">
+                <i class="fas fa-shipping-fast"></i>
+                <div class="texto-total"><b>Datos de envío</b></div>
+            </section>
+            <section class="formulario-pagar">
+                <section class="datos">
+                    <div class="nombre-cliente">
+                        <b>Cliente</b>
+                        <p>Cosme Fulanito</p>
+                    </div>
+                    <div class="nombre-cliente">
+                        <b>Dirección</b>
+                        <p>P. Sherman Calle Walabi 42 Sydney</p>
+                    </div>
+                    <div class="nombre-cliente">
+                        <b>Teléfono</b>
+                        <p>222-223-47-59</p>
+                    </div>
+                </section>
+
+                <section class="boton-pagar">
+                    <div>
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div>
+                        <button class="pagar-ahora">Pagar ahora</button>
+                    </div>
+                </section>
+            </section>
+
+
+            <section>
+                <div><b>Más Artículos por explorar...</b></div>
+                <div class="producto">
+                    <article>
+                        <b>Mario Maker 2</b>
+                        <p class="precio-sug"> $ 1,600 MXN</p>
+                        <img class="articulo-foto2" src="images/mario-maker.jpg" alt="">
+                    </article>
+                    <article class="center">
+                        <b>Zelda breath of the wild</b>
+                        <p class="precio-sug"> $ 1,400 MXN</p>
+                        <img class="articulo-foto2" src="images/zelda.jpg" alt="">
+                    </article>
+                    <article>
+                        <b>Control PS5</b>
+                        <p class="precio-sug">$ 1,900 MXN</p>
+                        <img class="articulo-foto2" src="images/control.jpg" alt="">
+                    </article>
+                    <article>
+                        <b>Playera Batman</b>
+                        <p>$ 200 MXN</p>
+                        <img class="articulo-foto2" src="images/playera.jpg" alt="">
+                    </article>
+                </div>
+            </section>
+
+            
+        </section>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <section class="banner">
+            <img  src="images/banner.jpg" alt="">
+        </section>
+        
+        
+        <section >
+            <div class="navegacion-under">
+                <article>
+                   <a href="#">
+                       <img src="images/ofertas.jpg" alt="">
+                   </a> 
+                   <div class="Titulo-under">
+                        Ofertas
+                   </div>
+                   
+                </article>
+                
+                
+                <article>
+                    <a href="#">
+                        <img src="images/nuevo.jpg" alt="">
+                    </a> 
+                    <div class="Titulo-under">
+                        Lo nuevo
+                    </div>
+                </article>
+                <article>
+                    <a href="#">
+                        <img src="images/vendidos.jpg" alt="">
+                    </a> 
+                    <div class="Titulo-under">
+                        Mas vendidos
+                    </div>
+                </article>
+                <article>
+                    <a href="#">
+                        <img src="images/beneficios.jpg" alt="">
+                    </a> 
+                    <div class="Titulo-under">
+                        Beneficios
+                    </div>
+                </article>
+            </div>
+            <div>
+                <button>Volver al inicio</button>
+            </div>
+        </section>
+    </main>
+    
+
+    <footer>
+        <section>
+            <div><b>INFORMACIÓN</b></div>
+            <ul>
+                <i><a href="#" >Acerca de</a></i>
+                <i><a href="#" >Empresa</a></i>
+                <i><a href="#" >Trabaja con nosotros</a></i>
+                <i><a href="#" >Otros recursos</a></i>
+            </ul>
+        </section>
+
+
+        <section>
+            <div><b>ATENCIÓN A CLIENTES</b></div>
+            <ul>
+                <i><a href="#" >Quejas y sugerencias</a></i>
+                <i><a href="#" >Soporte</a></i>
+                <i><a href="#" >Garantías</a></i>
+            </ul>
+        </section>
+
+
+        <section>
+            <div><b>COMPRAS Y VENTAS</b></div>
+            <ul>
+                <i><a href="#" >Vender</a></i>
+                <i><a href="#" >Comprar</a></i>
+                <i><a href="#" >Reglas de transacción</a></i>
+            </ul>
+        </section>
+
+        <section>
+            <div><b>CONTACTO</b></div>
+            <ul class="redes" >
+                <i><a class="redes" href="#" > <img width="50%" src="images/facebook.png" alt=""> </a></i>
+                <i><a class="redes" href="#" > <img width="60%" src="images/twitter.png" alt=""></a></i>
+                <i><a class="redes" href="#" ><img width="60%" src="images/whatsapp.jpg" alt=""></a></i>
+            </ul>
+        </section>
+    </footer>
+    <div class="terminos">
+        Términos y Condiciones | Aviso de Privacidad © 2021 Terebigemu Land. Todos los Derechos Reservados. 
+    </div>
+</body>
+</html>
