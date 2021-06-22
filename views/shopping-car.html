@@ -5,67 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terebigemu Land Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         
-        <section>
-            <ul class="barra-superior">
-                
-                <i><a href="#">Cuenta</a></i>
-                <i>|</i>
-                <i><a href="#">Ofertas</a></i>
-                <i>|</i>
-                <i><a href="#">Preventas</a></i>
-                <i>|</i>
-                <i><a href="#">Vender</a></i>
-
-            </ul>
-        </section>
+        <a href="/"><img src="/images/TL_logo1.jpg" alt="LOGO" class="brand"></a>
         
-        <section >
-            <img class="logo" width="100" src="images/Sello_1.jpg" alt="Logo">
-            <div class="nombre">
-                <img  src="images/Nombre.jpg" alt="Nombre">
-            </div>
-            <form  action="buscar" method="GET">
-                <div class="buscador">Buscar productos, marcas y más</div>
-                <div ><i class="fa fa-search"></i></div>
-            </form>
-            <div class="boton-log">
-                <button>Log in</button>
-                <i class="fas fa-sign-in-alt"></i>
-            </div>
+        <div class="container">
             
-        </section>
-    </header>
+            <nav class="nav-main">
+               
+                <ul class="nav-menu">
+                    <li><a href="/register">Registrarse     |</a></li>
+                    <li><a href="/login">Ingresar     |</a></li>
+                    <li><a href="#">Ofertas     |</a></li>
+                    <li><a href="#">Preventas     |</a></li>
+                    <li><a href="#">Vender/Comprar     |</a></li>
+                </ul>
     
-    <section class="barra-navegacion">
-        <ul>
-            <i><a href="#">Videojuegos</a></i>
-            <i> <a href="#">Coleccionables</a> </i>
-            <i> <a href="#">Accesorios</a></i>
-            <i> <a href="#">Computo</a></i>
-            <i> <a href="#">Comics</a></i>
-            <i> <a href="#">Ropa</a></i>
-        </ul>
-    </section>
+                <div>
+                <input class="buscador" type="text" placeholder="Videojuegos, consolas y más...">
+                <button type="submit" class="search-buttom">Buscar</button>
+                <i class="fas fa-search"></i>
+                </div>
+                <br>
+                
+                <ul class="nav-menu-bottom">
+                    <li><a href="#">Categorias</a></li>
+                    <li><a href="#">Videojuegos</a></li>
+                    <li><a href="#">Consolas</a></li>
+                    <li><a href="#">Revistas</a></li>
+                    <li><a href="#">Ropa</a></li>
+                    <li><a href="#">Figuras</a></li>
+                </ul>
+            
+            </nav>
+        
+             
+        </div>
+       
+</header>
+       <div class="Banner">
+            <img src="/images/Banner_SuperMario.jpg" alt="Banner">
+        </div>
     
     <main>
         <section class="banner-section" >
             <img class="banner2" src="images/banner.jpg" alt="">
         </section>
 
-        <section>
-            <div class="shopping-car"><i class="fas fa-shopping-cart"></i> Shopping car</div>
-        </section>
-
         <section class="articulos">
+            <section>
+                <div class="shopping-car"><i class="fas fa-shopping-cart"></i> Shopping car</div>
+            </section>
+
             <form action="articulo">
                 <div class="articulo">
                     <div class="checkbox-articulo"> 
@@ -168,35 +165,33 @@
                     </div>
                 </section>
             </section>
+        </section>
 
-
-            <section>
-                <div><b>Más Artículos por explorar...</b></div>
-                <div class="producto">
-                    <article>
-                        <b>Mario Maker 2</b>
-                        <p class="precio-sug"> $ 1,600 MXN</p>
-                        <img class="articulo-foto2" src="images/mario-maker.jpg" alt="">
-                    </article>
-                    <article class="center">
-                        <b>Zelda breath of the wild</b>
-                        <p class="precio-sug"> $ 1,400 MXN</p>
-                        <img class="articulo-foto2" src="images/zelda.jpg" alt="">
-                    </article>
-                    <article>
-                        <b>Control PS5</b>
-                        <p class="precio-sug">$ 1,900 MXN</p>
-                        <img class="articulo-foto2" src="images/control.jpg" alt="">
-                    </article>
-                    <article>
-                        <b>Playera Batman</b>
-                        <p>$ 200 MXN</p>
-                        <img class="articulo-foto2" src="images/playera.jpg" alt="">
-                    </article>
-                </div>
-            </section>
-
+        <section>
+            <div class="titulo-mas"><b>Más Artículos por explorar...</b></div>
             
+            <div class="producto">
+                <article class="producto-container">
+                    <img class="articulo-foto2" src="images/mario-maker.jpg" alt="">
+                    <p class="precio-sug"> $ 1,600 MXN</p>
+                    <b class="nombre-art">Mario Maker 2</b>
+                </article>
+                <article class="producto-container">
+                    <img class="articulo-foto2" src="images/zelda.jpg" alt="">
+                    <p class="precio-sug"> $ 1,400 MXN</p>
+                    <b class="nombre-art">Zelda breath of the wild</b>
+                </article>
+                <article class="producto-container">
+                    <img class="articulo-foto2" src="images/control.jpg" alt="">
+                    <p class="precio-sug">$ 1,900 MXN</p>
+                    <b>Control PS5</b>
+                </article>
+                <article class="producto-container">
+                    <img class="articulo-foto2" src="images/playera.jpg" alt="">
+                    <p class="precio-sug">$ 200 MXN</p>
+                    <b class="nombre-art">Playera Batman</b>
+                </article>
+            </div>
         </section>
 
         
@@ -227,7 +222,7 @@
         </section>
         
         
-        <section >
+        <section class="under">
             <div class="navegacion-under">
                 <article>
                    <a href="#">
@@ -265,55 +260,61 @@
                     </div>
                 </article>
             </div>
-            <div>
-                <button>Volver al inicio</button>
-            </div>
         </section>
     </main>
     
 
     <footer>
-        <section>
-            <div><b>INFORMACIÓN</b></div>
-            <ul>
-                <i><a href="#" >Acerca de</a></i>
-                <i><a href="#" >Empresa</a></i>
-                <i><a href="#" >Trabaja con nosotros</a></i>
-                <i><a href="#" >Otros recursos</a></i>
-            </ul>
-        </section>
+        <div class="container_foot">
+            <a class="to_menu" href="/">INICIO DE PÁGINA</a>
+        </div>
 
+    <div class="container_foot2">
 
-        <section>
-            <div><b>ATENCIÓN A CLIENTES</b></div>
-            <ul>
-                <i><a href="#" >Quejas y sugerencias</a></i>
-                <i><a href="#" >Soporte</a></i>
-                <i><a href="#" >Garantías</a></i>
-            </ul>
-        </section>
+        <ul class="vinculos_footer">
+             <b>INFORMACIÓN</b> 
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Visión, Misión y Valores</a></li>
+            <li><a href="#">Trabaja con nosotros</a></li>
+            <li><a href="#">Otros recursos</a></li>
+        </ul>
 
+        <ul class="vinculos_footer">
+            <b>ATENCIÓN A CLIENTES</b> 
+            <li><a href="#">Quejas y sugerencias</a></li>
+            <li><a href="#">Soporte</a></li>
+            <li><a href="#">Garantías</a></li>
+        </ul>
 
-        <section>
-            <div><b>COMPRAS Y VENTAS</b></div>
-            <ul>
-                <i><a href="#" >Vender</a></i>
-                <i><a href="#" >Comprar</a></i>
-                <i><a href="#" >Reglas de transacción</a></i>
-            </ul>
-        </section>
+        <ul class="vinculos_footer">
+            <b>COMPRAS Y VENTAS</b>
+            <li><a href="#">Vender</a></li>
+            <li><a href="#">Comprar</a></li>
+            <li><a href="#">Reglas de transacción</a></li>
+        </ul>
 
-        <section>
-            <div><b>CONTACTO</b></div>
-            <ul class="redes" >
-                <i><a class="redes" href="#" > <img width="50%" src="images/facebook.png" alt=""> </a></i>
-                <i><a class="redes" href="#" > <img width="60%" src="images/twitter.png" alt=""></a></i>
-                <i><a class="redes" href="#" ><img width="60%" src="images/whatsapp.jpg" alt=""></a></i>
-            </ul>
-        </section>
-    </footer>
-    <div class="terminos">
-        Términos y Condiciones | Aviso de Privacidad © 2021 Terebigemu Land. Todos los Derechos Reservados. 
+    
+        <ul class="vinculos_footer_Contact">
+            <b>CONTACTO</b>
+            <div class="socialMedia">
+            <a href="#"><img src="/images/FaceLogo.png" class="FaceLogo"></a>
+            <a href="#"><img src="/images/twitchLogo.png" class="twitchLogo"></a>
+            <a href="#"><img src="/images/twitterLogo.png" class="twitterLogo"></a>
+            <a href="#"><img src="/images/youtubeLogo.png" class="youtubeLogo"></a>
+            
+            
+            <!-- <li><img src="/images/twitchLogo.png" class="FaceLogo"></li>
+            <li><img src="/images/twitterLogo.png" class="FaceLogo"></li>
+            <li><img src="/images/youtubeLogo.png" class="FaceLogo"></li> -->
+            </div>
+        </ul>
+
+    </div>
+    
+</footer>
+
+    <div class="Terms_Conditions">
+        <b>Términos y condiciones | Aviso de privacidad @2021 TerebigemuLand. Todos los derechos reservados.</b>
     </div>
 </body>
 </html>

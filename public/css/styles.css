@@ -3,6 +3,15 @@
     padding: 0px;
     margin: 0px;
 }
+
+body{
+    font-family: 'Homenaje', sans-serif;
+    background-color:rgb(0, 0, 0);
+    color: white;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='52' viewBox='0 0 52 52'%3E%3Cpath fill='%23e32828' fill-opacity='0.4' d='M0 17.83V0h17.83a3 3 0 0 1-5.66 2H5.9A5 5 0 0 1 2 5.9v6.27a3 3 0 0 1-2 5.66zm0 18.34a3 3 0 0 1 2 5.66v6.27A5 5 0 0 1 5.9 52h6.27a3 3 0 0 1 5.66 0H0V36.17zM36.17 52a3 3 0 0 1 5.66 0h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 0 1 0-5.66V52H36.17zM0 31.93v-9.78a5 5 0 0 1 3.8.72l4.43-4.43a3 3 0 1 1 1.42 1.41L5.2 24.28a5 5 0 0 1 0 5.52l4.44 4.43a3 3 0 1 1-1.42 1.42L3.8 31.2a5 5 0 0 1-3.8.72zm52-14.1a3 3 0 0 1 0-5.66V5.9A5 5 0 0 1 48.1 2h-6.27a3 3 0 0 1-5.66-2H52v17.83zm0 14.1a4.97 4.97 0 0 1-1.72-.72l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1 0-5.52l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43c.53-.35 1.12-.6 1.72-.72v9.78zM22.15 0h9.78a5 5 0 0 1-.72 3.8l4.44 4.43a3 3 0 1 1-1.42 1.42L29.8 5.2a5 5 0 0 1-5.52 0l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1-.72-3.8zm0 52c.13-.6.37-1.19.72-1.72l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43a5 5 0 0 1 5.52 0l4.43-4.43a3 3 0 1 1 1.42 1.41l-4.44 4.43c.36.53.6 1.12.72 1.72h-9.78zm9.75-24a5 5 0 0 1-3.9 3.9v6.27a3 3 0 1 1-2 0V31.9a5 5 0 0 1-3.9-3.9h-6.27a3 3 0 1 1 0-2h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 1 1 2 0v6.27a5 5 0 0 1 3.9 3.9h6.27a3 3 0 1 1 0 2H31.9z'%3E%3C/path%3E%3C/svg%3E");
+    font-size: 16px;
+}
+
 header{
     background-color: black;
     padding: 20px;
@@ -89,7 +98,7 @@ header section div button{
     margin-right: 10%;
     background-color: blue;
     color: white;
-    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-family: 'Homenaje', sans-serif;
     font-size: 150%;
 }
 body section.barra-navegacion{
@@ -99,7 +108,7 @@ body section ul{
     display: flex;
     color: white;
     justify-content: space-around;
-    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-family: 'Homenaje', sans-serif;
     font-size: 120%;
     text-decoration: underline;
 }
@@ -121,7 +130,7 @@ main section.formulario-datos{
     margin-left: 10%;
     margin-top: 2%;
     margin-bottom: 2%;
-    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-family: 'Homenaje', sans-serif;
 }
 
 
@@ -130,7 +139,7 @@ main section.formulario-datos{
     border: 1px #ebebeb;
     margin-left: 10%;
     color: #AFA9A9;
-    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-family: 'Homenaje', sans-serif;
     font-size: 120%;
     width: 35%;
 }
@@ -157,7 +166,7 @@ main section form div button{
     border: none;
     width: 80%;
     margin-left: 10%;
-    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-family: 'Homenaje', sans-serif;
     font-size: 160%;
     margin-top: 10%;
 }
@@ -181,13 +190,9 @@ main section.banner img{
 }
 
 
-
-
-
 main section div.navegacion-under{
    display: flex; 
-   justify-content: space-around;
-   background-color: white;
+   justify-content: space-around; 
 }
 main section div article{
     width: 15%;
@@ -202,14 +207,14 @@ main section div article a img{
 
 .Titulo-under{
     text-align: center;
-    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-family: 'Homenaje', sans-serif;
     font-size: 160%;
 }
 
 main section button{
     margin-top: 3%;
     width: 70%;
-    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-family: 'Homenaje', sans-serif;
     font-size: 160%;
     margin-left: 15%;
     color: white;
@@ -217,55 +222,7 @@ main section button{
     border: none;
 }
 
-footer section ul{
-    text-decoration: none;
-    font-family: Arial;
-    display: list-item;
-    list-style: circle;
-}
 
-
-body footer section ul i a{
-    color: black;
-    font-family: Arial;
-    text-decoration: none;
-    font-size: 70%;
-    display: list-item;
-    list-style: disc;
-    margin-left: 10%;
-    margin-bottom: 2%;
-} 
-
-
-footer section{
-    width: 20%;
-}
-
-footer section div b{
-    font-size: 100%;
-    margin-left: 6%;
-}
-
-footer{
-    margin-top: 2%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    
-}
-
-.redes{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    width: 100%;
-}
-
-.terminos{
-    font-size: 100%;
-    text-align: center;
-    margin-top: 5%;
-}
 
 main section.banner-section{
     background-color: black;
@@ -274,20 +231,27 @@ main section.banner-section{
  main section img.banner2{
     width:45%;
     margin-left: 30%;
-    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-family: 'Homenaje', sans-serif;
     font-size: 160%;
 }
 
 .shopping-car{
-    margin-left: 10%;
+    margin-left: 3%;
     margin-top: 3%;
     font-size: 200%;
+    font-family: 'Homenaje', sans-serif;
 }
+
 
 .articulos{
     display: flex;
     flex-direction: column;
     margin-bottom: 2%;
+    background-color: black;
+    width: 80%;
+    margin-left: 10%;
+    border: white solid 6px;
+    margin-top: 3%;
     
 }
 
@@ -317,7 +281,7 @@ main section img.articulo-foto2{
 
 section form div label{
     width: 110%;
-    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-family: 'Homenaje', sans-serif;
     font-size: 160%;
 }
 
@@ -331,7 +295,7 @@ section form div label{
     margin-left: 10%;
     display: flex;
     flex-direction: column;
-    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-family: 'Homenaje', sans-serif;
     font-size: 160%;
 }
 
@@ -352,7 +316,7 @@ main section p{
 }
 
 main section div b{
-    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-family: 'Homenaje', sans-serif;
     font-size: 160%;
 }
 
@@ -362,6 +326,12 @@ main section div b{
 
 .seccion-total{
     display: flex;
+    background-color: black;
+    width: 80%;
+    margin-left: 10%;
+    border: white solid 6px;
+    margin-top: -2%;
+    padding: 1%;
 }
 
 main section form.borrar-carrito{
@@ -369,9 +339,9 @@ main section form.borrar-carrito{
 }
 
 main section form button{
-    background-color: white;
+    background-color: black;
     border: none;
-    color: #a19696;
+    color: white;
     text-align: left;
     width: 40%;
     font-size: 120%;
@@ -382,14 +352,14 @@ main section form button{
 .subtotal-cantidad{
     margin-left: 7%;
     margin-top: 0.5%;
-    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-family: 'Homenaje', sans-serif;
     font-size: 160%;
 
 }
 
 .texto-envio{
     display: flex;
-    background-color: #ebebeb;
+    background-color: black;
     padding: 1%;
 }
 
@@ -397,6 +367,10 @@ main section form button{
     margin-top: 2%;
     width: 80%;
     margin-left: 10%;
+    width: 80%;
+    margin-left: 10%;
+    background-color: black;
+    border: white 6px solid;
     
 }
 
@@ -416,7 +390,7 @@ section form div input.check{
 
 .nombre-cliente{
     margin-top: 4%;
-    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-family: 'Homenaje', sans-serif;
     font-size: 135%;
 }
 
@@ -438,6 +412,13 @@ section form div input.check{
 
 main section button.pagar-ahora{
     width: 200%;
+    border: solid white 2px;
+}
+
+.titulo-mas{
+    background-color: black;
+    padding: 2%;
+    margin-top: 5%;
 }
 
 .producto{
@@ -457,10 +438,23 @@ main section div.producto article img{
     width: 100%;
     margin-top: 10%;
 }
+
+.producto-container{
+    background-color: black;
+    padding: 2%;
+    padding-bottom: -10%;
+    border: 6px solid white;
+}
 .precio-sug{
     width: 20%;
-    margin-left: 10%;
-    font-size: 90%;
+    margin-left: 15%;
+    margin-top: 10%;
+    font-size: 135%;
+}
+
+.nombre-art{
+    text-align: center;
+    
 }
 main section div.producto article b{
    font-size: 150%;
@@ -468,4 +462,171 @@ main section div.producto article b{
 
 .center{
     margin-top: -2%;
+}
+
+
+
+
+
+
+
+
+
+
+.container_foot{
+    display: flex;
+    background-color: black;
+    color:white;
+    width: auto;
+    height: 70px;
+} 
+.to_menu{
+    margin: auto;
+}
+
+.container_foot2{
+    display: flex;
+    background-color: rgb(73, 6, 6);
+    height: 250px;
+    width: auto;      
+}
+
+.vinculos_footer{
+    margin: 30px 30px 5px 70px;
+    /* border: solid white 2px; */
+}
+
+.vinculos_footer li{
+    list-style-type: square;
+    margin: 20px;
+    font-size: 18px;
+}
+
+.vinculos_footer b{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.vinculos_footer_Contact{
+
+    width: 180px;
+    list-style-type: none;
+    margin: 30px 30px 5px 100px;
+    
+}
+
+.vinculos_footer_Contact b{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.FaceLogo, .twitchLogo, .youtubeLogo, .twitterLogo{
+    width: 40px;
+}
+
+.socialMedia{
+    display: flex;
+    width: 250px;
+    margin: 20px 20px 20px 0;
+    /* border: 2px solid white; */
+}
+
+.socialMedia a{
+    margin: 10px;
+}
+
+.Terms_Conditions{
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    height: 30px;
+    /* border: solid white 2px; */
+    background-color: rgb(73, 6, 6);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 10px;
+}
+
+
+
+header{
+    background: linear-gradient(70deg, rgb(0, 0, 0)80%, rgb(26, 4, 4), rgb(24, 7, 7));
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    flex-wrap: wrap;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.container{
+    width: 50%;
+    margin:auto;
+    align-items: flex-start;
+    margin:10px;
+
+}
+
+/*Navigation*/
+
+.nav-main{
+    
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    height: 170px;
+    width: 900px;
+    padding: 0px;
+    margin-top: 5px;
+    flex-direction: column;
+    /*border: 1px solid #fff;*/
+}
+
+.brand{
+    /*border: blanchedalmond solid 1px;*/
+    width: 320px;
+    height: 100px;
+    margin: 25px;
+    align-self: center;
+}
+
+.nav-main ul{
+    display: flex;
+   }
+
+.nav-main ul li {
+    padding: 10px ;
+    margin-right: 5px;
+}
+
+.nav-menu{
+    flex: 1;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.buscador{
+    width: 600px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.search-buttom{
+    width: 70px;
+    height: 22px;
+}
+
+.fa-search{
+    margin-left: 7px; 
+    height: 18px;
+}
+
+div.Banner img{
+    width: 100%;
 }
