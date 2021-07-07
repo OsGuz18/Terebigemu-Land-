@@ -10,6 +10,10 @@ app.use(express.static(publicPath));
 app.set("view engine","ejs")
 app.set("views",path.join(__dirname , "views") )
 
+const mainRouter = require("./routes/mainRouter")
+
+app.use("/",mainRouter)
+
 app.listen(3030, () => {
     console.log('Servidor corriendo en el puerto 3030');
 });
@@ -17,23 +21,4 @@ app.listen(3030, () => {
 
 
 
-app.get("/",(req,res) => {
-    res.sendFile(path.resolve(__dirname, './views/index.html'));
-});
 
-app.get("/productDetail",(req,res) => {
-    res.sendFile(path.resolve(__dirname, './views/productDetail.html'));
-});
-
-app.get("/login",(req,res) => {
-    res.sendFile(path.resolve(__dirname, './views/login.html'));
-});
-
-
-app.get("/register",(req,res) =>{
-    res.sendFile(path.resolve(__dirname,'./views/register.html'))
-});
-
-app.get("/shopping-car",(req,res) =>{
-    res.sendFile(path.resolve(__dirname,'./views/shopping-car.html'))
-});

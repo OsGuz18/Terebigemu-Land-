@@ -11,44 +11,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        
-        <a href="/"><img src="/images/TL_logo1.jpg" alt="LOGO" class="brand"></a>
-        
-        <div class="container">
-            
-            <nav class="nav-main">
-               
-                <ul class="nav-menu">
-                    <li><a href="/register">Registrarse     |</a></li>
-                    <li><a href="/login">Ingresar     |</a></li>
-                    <li><a href="#">Ofertas     |</a></li>
-                    <li><a href="#">Preventas     |</a></li>
-                    <li><a href="#">Vender/Comprar     |</a></li>
-                </ul>
-    
-                <div>
-                <input class="buscador" type="text" placeholder="Videojuegos, consolas y más...">
-                <button type="submit" class="search-buttom">Buscar</button>
-                <i class="fas fa-search"></i>
-                </div>
-                <br>
-                
-                <ul class="nav-menu-bottom">
-                    <li><a href="#">Categorias</a></li>
-                    <li><a href="#">Videojuegos</a></li>
-                    <li><a href="#">Consolas</a></li>
-                    <li><a href="#">Revistas</a></li>
-                    <li><a href="#">Ropa</a></li>
-                    <li><a href="#">Figuras</a></li>
-                </ul>
-            
-            </nav>
-        
-             
-        </div>
-       
-</header>
+    <%- include("../partials/header") %>
        <div class="Banner">
             <img src="/images/Banner_SuperMario.jpg" alt="Banner">
         </div>
@@ -264,57 +227,6 @@
     </main>
     
 
-    <footer>
-        <div class="container_foot">
-            <a class="to_menu" href="/">INICIO DE PÁGINA</a>
-        </div>
-
-    <div class="container_foot2">
-
-        <ul class="vinculos_footer">
-             <b>INFORMACIÓN</b> 
-            <li><a href="#">Acerca de</a></li>
-            <li><a href="#">Visión, Misión y Valores</a></li>
-            <li><a href="#">Trabaja con nosotros</a></li>
-            <li><a href="#">Otros recursos</a></li>
-        </ul>
-
-        <ul class="vinculos_footer">
-            <b>ATENCIÓN A CLIENTES</b> 
-            <li><a href="#">Quejas y sugerencias</a></li>
-            <li><a href="#">Soporte</a></li>
-            <li><a href="#">Garantías</a></li>
-        </ul>
-
-        <ul class="vinculos_footer">
-            <b>COMPRAS Y VENTAS</b>
-            <li><a href="#">Vender</a></li>
-            <li><a href="#">Comprar</a></li>
-            <li><a href="#">Reglas de transacción</a></li>
-        </ul>
-
-    
-        <ul class="vinculos_footer_Contact">
-            <b>CONTACTO</b>
-            <div class="socialMedia">
-            <a href="#"><img src="/images/FaceLogo.png" class="FaceLogo"></a>
-            <a href="#"><img src="/images/twitchLogo.png" class="twitchLogo"></a>
-            <a href="#"><img src="/images/twitterLogo.png" class="twitterLogo"></a>
-            <a href="#"><img src="/images/youtubeLogo.png" class="youtubeLogo"></a>
-            
-            
-            <!-- <li><img src="/images/twitchLogo.png" class="FaceLogo"></li>
-            <li><img src="/images/twitterLogo.png" class="FaceLogo"></li>
-            <li><img src="/images/youtubeLogo.png" class="FaceLogo"></li> -->
-            </div>
-        </ul>
-
-    </div>
-    
-</footer>
-
-    <div class="Terms_Conditions">
-        <b>Términos y condiciones | Aviso de privacidad @2021 TerebigemuLand. Todos los derechos reservados.</b>
-    </div>
+    <%- include("../partials/footer") %>
 </body>
 </html>
