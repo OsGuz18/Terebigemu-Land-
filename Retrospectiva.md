@@ -10,3 +10,18 @@ Siguiento el esquema de la estrella de mar podemos realizar la siguiente restros
     4.- Hacer menos: Dejar las tareas sin fecha límite intentando realizar todo al mismo tiempo.
 
     5.-Dejar de hacer: Mantener una desorganización en cuanto a secuencia de las actividades repartidas en el tiempo del Sprint. 
+
+    Sprint 2
+
+     1.-Comenzar a hacer: Coordinar las estilos y vistas comunes para evitar retrabajos 
+
+    2.-Hacer más: Comunicación y coordinación de tareas 
+
+    3.-Continuar haciendo: Programar las actividades de manera eficiente y equitativa 
+
+    4.- Hacer menos: Separación entre juntas 
+
+    5.-Dejar de hacer: Dar poco tiempo a la revisión de los resultados.
+
+
+    
