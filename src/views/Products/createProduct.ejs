@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/createProduct.css">
+    <title>createProduct</title>
+
+    <script type="text/javascript">
+     function recibir(){
+        const nomId=document.getElementById("name").value;
+        const descId=document.getElementById("description").value;
+        const categId=document.getElementById("category").value;
+        const consoleId=document.getElementById("console").value;
+        const priceId=document.getElementById("price").value;
+        const imageId=document.getElementById("image").value;
+
+
+        document.getElementById("escribir").innerHTML=" \
+            Producto: "+nomId+" \
+            <br> descripción: "+descId+" \
+            <br> categoría: "+categId+" \
+            <br> consola: "+consoleId+" \
+            <br> precio: "+priceId+" \
+            <br> imagen: "+imageId;
+     }
+
+
+    </script>
+</head>
+<body>
+    
+    <%- include("../partials/header") %>
+        
+    <main>
+
+
+          <form id="formEdition" class="productEdition">
+    
+            <h2>Agregar producto</h2>
+
+                <label for="ProductName" class="formLabel"> Nombre del producto </label>
+                <input type="text" name="name" id="name" class="formImput">
+          
+    
+            
+                <label for="description" class="formLabel"> Descripción </label>
+                <input type="text" name="description" id="description" class="formImput">      
+                  
+
+            
+                <label for= "category" class="formLabel"> Categoría </label>
+                <input type="text" name="category" id="category" class="formImput">
+         
+    
+           
+                <label for= "console" class="formLabel"> consola </label>
+                <input type="text" name="console" id="console" class="formImput">
+            
+
+            
+                <label for= "price" class="formLabel"> precio </label>
+                <input type="text" name="price" id="price" class="formImput">
+            
+
+                <label for= "image" class="formLabel"> Imagen </label>
+                <input type="file" id="image" name="image" accept=".jpg" multiple  class="formImage">
+           
+                <input type="button" class="send" value="Enviar" onclick="recibir()">
+            
+
+            
+                <input type="reset" class="reset">
+            
+          </form>
+    
+          <br>
+
+          <div class="escribir" id="escribir"></div>
+   
+</main>
+    
+<%- include("../partials/footer") %>
+
+</body>
+
+
+</html>
