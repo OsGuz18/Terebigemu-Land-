@@ -11,33 +11,12 @@
     <title>Login</title>
 </head>
 <body>
-    <header>
-        
-        <a href="/"><img src="/images/Sello_1.jpg" alt="LOGO" class="brand1"></a>
-        <a href="/"><img src="/images/TL_logo1.jpg" alt="LOGO" class="brand2"></a>
-        
-        <div class="container">
-            
-            <nav class="nav-main">
-               
-                <ul class="nav-menu">
-                    <li><a href="/register">Registrarse     |</a></li>
-                    <li><a href="#">Ofertas     |</a></li>
-                    <li><a href="#">Preventas     |</a></li>
-                    <li><a href="#">Vender/Comprar     |</a></li>
-                </ul>
-    
-            
-            </nav>
-        
-             
-        </div>
-       
-</header>
+  
+    <%- include("../partials/header") %>
         
     <main>
         <section class="loginSection">
-          <form action="/login"  method="GET">
+          <form action="/login"  method="POST">
     
             <p class="userName">
                  <label for="User"> Usuario: </label>
