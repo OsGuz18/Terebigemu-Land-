@@ -19,6 +19,10 @@ let controlador={
 
     productDetail:(req,res)=>{
         res.render("Products/productDetail")
+    },
+
+    createProduct:(req,res)=>{
+        res.render("Products/createProduct")
     }
 }
 
