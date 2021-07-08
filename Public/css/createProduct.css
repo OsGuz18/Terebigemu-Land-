@@ -1,0 +1,107 @@
+*  {
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Homenaje', sans-serif;
+    background-color:rgb(0, 0, 0);
+    color: white;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='52' viewBox='0 0 52 52'%3E%3Cpath fill='%23e32828' fill-opacity='0.4' d='M0 17.83V0h17.83a3 3 0 0 1-5.66 2H5.9A5 5 0 0 1 2 5.9v6.27a3 3 0 0 1-2 5.66zm0 18.34a3 3 0 0 1 2 5.66v6.27A5 5 0 0 1 5.9 52h6.27a3 3 0 0 1 5.66 0H0V36.17zM36.17 52a3 3 0 0 1 5.66 0h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 0 1 0-5.66V52H36.17zM0 31.93v-9.78a5 5 0 0 1 3.8.72l4.43-4.43a3 3 0 1 1 1.42 1.41L5.2 24.28a5 5 0 0 1 0 5.52l4.44 4.43a3 3 0 1 1-1.42 1.42L3.8 31.2a5 5 0 0 1-3.8.72zm52-14.1a3 3 0 0 1 0-5.66V5.9A5 5 0 0 1 48.1 2h-6.27a3 3 0 0 1-5.66-2H52v17.83zm0 14.1a4.97 4.97 0 0 1-1.72-.72l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1 0-5.52l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43c.53-.35 1.12-.6 1.72-.72v9.78zM22.15 0h9.78a5 5 0 0 1-.72 3.8l4.44 4.43a3 3 0 1 1-1.42 1.42L29.8 5.2a5 5 0 0 1-5.52 0l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1-.72-3.8zm0 52c.13-.6.37-1.19.72-1.72l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43a5 5 0 0 1 5.52 0l4.43-4.43a3 3 0 1 1 1.42 1.41l-4.44 4.43c.36.53.6 1.12.72 1.72h-9.78zm9.75-24a5 5 0 0 1-3.9 3.9v6.27a3 3 0 1 1-2 0V31.9a5 5 0 0 1-3.9-3.9h-6.27a3 3 0 1 1 0-2h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 1 1 2 0v6.27a5 5 0 0 1 3.9 3.9h6.27a3 3 0 1 1 0 2H31.9z'%3E%3C/path%3E%3C/svg%3E");
+    font-size: 16px;
+}
+
+
+
+/*main*/
+
+main{
+    background-color: #790d0d;
+}
+.productEdition{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    max-width: 50%;
+    margin: auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+     
+}
+
+h2{
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    font-size: 30px;
+    color: black;
+}
+
+.formImput .formLabel, .send, .reset{
+     display: block;
+     width: 100%;
+     
+}
+
+.formImput{
+    padding: 20px;
+    background-color:rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+
+}
+
+.formImput:focus {
+    outline: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.formImput:focus + .formLabel{
+    margin-top: 15px;
+}
+
+.formLabel{
+    padding-left:20px;
+    position:relative;
+    margin-top: 10px;
+    z-index: 10;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 5px;
+
+}
+
+.formImage{
+    background-color: rgb(141, 141, 141);
+    border:solid 1px rgb(255, 255, 255);
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.send, .reset{
+    border-radius: 6px;
+    border:none;
+    font-size: 18px;
+    padding: 8px;
+    text-align: center;
+    color: white;
+    background-color: rgb(58, 9, 9);
+    margin:auto;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px 2px rgba(177, 7, 7, 0.3);
+    cursor:pointer;
+    margin-top: 20px;
+
+} 
+
+.escribir{
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin: auto;
+    font-size: 20px;
+    width: 40%;
+    text-align: center;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
