@@ -17,13 +17,7 @@ let controlador={
         res.render("Products/shopping-car")
     },
 
-    productDetail:(req,res)=>{
-        res.render("Products/productDetail")
-    },
-
-    createProduct:(req,res)=>{
-        res.render("Products/createProduct")
-    }
+  
 }
 
 module.exports=controlador;
