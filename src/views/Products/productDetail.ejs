@@ -12,20 +12,16 @@
 </head>
 <body>
     <%- include("../partials/header") %>
-    <div class="Banner">
-        <img src="/images/Banner_SuperMario.jpg" alt="Banner">
-    </div>
-       
+  
 <main> 
     <div class="Views">
-  
         <ul class="Previews">
             <b>VISTA PREVIA</b>
             <div class="Prevs">
-            <a href="#"><img src="/images/MarioKartDeluxe.jpg" class="Prev1" width="50px"></a>
-            <a href="#"><img src="/images/MarioKartDeluxe.jpg" class="Prev2"  width="50px"></a>
-            <a href="#"><img src="/images/MarioKartDeluxe.jpg" class="Prev3"  width="50px"></a>
-            <a href="#"><img src="/images/MarioKartDeluxe.jpg" class="Prev4"  width="50px"></a>
+            <a href="#"><img src="/images/<%= producto.Image %>" class="Prev1" width="50px"></a>
+            <a href="#"><img src="/images/<%= producto.Image %>" class="Prev2"  width="50px"></a>
+            <a href="#"><img src="/images/<%= producto.Image %>" class="Prev3"  width="50px"></a>
+            <a href="#"><img src="/images/<%= producto.Image %>" class="Prev4"  width="50px"></a>
             
             
             <!-- <li><img src="/images/twitchLogo.png" class="FaceLogo"></li>
@@ -35,25 +31,22 @@
         </ul>
 
             <div>
-                <a href="#"><img src="/images/MarioKartDeluxe.jpg" class="productView"></a>
+                <a href="#"><img src="/images/<%= producto.Image %>" class="productView"></a>
                 <br>
-                <p class="productName">Mario Kart Deluxe</p>
+                <p class="productName"><%= producto.name %></p>
             </div>
 
             <div class="product_Description">
                 <h2>Detalles del producto</h2>
                 <p>
-                    Última versión de Mario Kart con nuevas características
-                    y desafios íncreibles. Incluye una nueva serie de escenarios y 
-                    personajes. Además, tienes la posibilidad de jugar en tiempo real 
-                    con otros jugadores en el mundo y ganar puntos virtuales que puedes
-                    canjear en la tienda por souvenirs o mejoras.
+                    <%= producto.description %>
                 </p>
                 <br>
                 <ul>
-                    <li>Costo: $1,250 MXN</li>
-                    <li>Descuento Online: 15%</li>
-                    <li>Compatibilidad: Nintendo Switch</li> 
+                    <li>Costo: $ <%= (producto.price).toLocaleString('en-US',
+                        {minimumFractionDigits:2}) %> MXN</li>
+                    <li>Descuento Online: <%= producto.discount %> %</li>
+                    <li>Compatibilidad: <%= producto.subcategory %></li> 
                 </ul>
 
                 <div class="toCar">
@@ -63,6 +56,10 @@
                     
                     <p>
                     <button type="submit" class="buy">Comprar ahora</button>
+                    </p>
+
+                    <p>
+                        <button type="submit" class="buy">Editar</button>
                     </p>
                 </div>
                 

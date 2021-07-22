@@ -8,12 +8,18 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); //const
 const controller = {
     
     productList: (req, res)=>{
-        res.render("Products/productList")
+        res.render("Products/productList",{productos:products})
     },
     
     
     productDetail:(req,res)=>{
-        res.render("Products/productDetail")
+        let productoDetalle;
+        for(let producto of products){
+            if(producto.id == req.params.id){
+               productoDetalle = producto;
+            }
+        }
+        res.render("Products/productDetail",{producto:productoDetalle});
     },
     
 
@@ -22,23 +28,40 @@ const controller = {
     },
 
 	store: (req, res) => {                                  /// método de almacenamiento dirigido hacia el productList
-            let product={
-                "id": date,
-                "name":req.body.productName,
-                "description": req.body.description,
-                "Image": req.file.filename,
-                "category": req.body.category,
-                "subcateory":req.body.subcategory,
-                "price": req.body.price,
-                "discount":req.body.discount
+        id=products.length + 1
+        console.log(req.file)
+        let newproduct={}
+        if(req.file){
+             newproduct={
+                id: Date.now() + id,
+                name:req.body.name,
+                description: req.body.description,
+                category: req.body.category,
+                subcateory:req.body.subcategory,
+                price: parseFloat(req.body.price) ,
+                discount:parseFloat(req.body.discount),
+                Image: req.file.filename
+            };
+        }else{
+                newproduct={
+                id: Date.now() + id,
+                name:req.body.name,
+                description: req.body.description,
+                category: req.body.category,
+                subcateory:req.body.subcategory,
+                price: parseFloat(req.body.price) ,
+                discount:parseFloat(req.body.discount),
+                Image: "pikachu.png"
+            };
+        }
+        
+        
 
-            }
+        products.push(newproduct);
+        productListJSON = JSON.stringify(products,null,2);
 
-            productList.push(product);
-            productListJSON = JSON.stringify(productList);
-
-            fs.writeFileSync(productListFilePath, productListJSON);
-            res.redirect("/productList");
+        fs.writeFileSync(productsFilePath, productListJSON);
+        res.redirect("/");
 	},
 
 

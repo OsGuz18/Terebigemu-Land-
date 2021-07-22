@@ -6,6 +6,8 @@ const app = express();
 const publicPath = path.resolve(__dirname,'../public');
 
 app.use(express.static(publicPath));
+
+app.use(express.urlencoded({extended: false}))
 app.use(express.json());                                    //configuración para el json
 
 app.set("view engine","ejs")                           
@@ -15,7 +17,7 @@ const mainRouter = require("./routes/mainRouter")
 const productRouter = require('./routes/productRouter');    ///Nueva constante requerida para el productRouter
 
 app.use("/",mainRouter)
-app.use('/productList', productRouter);                     ///Configuración del product Router
+app.use('/products', productRouter);                     ///Configuración del product Router
 
 app.listen(3030, () => {
     console.log('Servidor corriendo en el puerto 3030');

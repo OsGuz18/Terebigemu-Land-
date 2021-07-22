@@ -1,0 +1,61 @@
+.encabezado{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 150%;
+    background-color: black;
+  }
+
+.products-container{
+    display: flex;
+    width: 90%;
+    
+    justify-content: space-around;
+  }
+
+.product-container{
+    background-color: black;
+    margin-bottom: 30px;
+    width: 200%;
+    height: 300px;
+    border: white 5px solid;
+    
+}
+.products-precio{
+    display: flex;
+    margin-left: 5%;
+    width: 90%;
+    justify-content: center;
+}
+
+.products-precio div{
+    text-align: center;
+}
+
+section figure{
+    text-align: center;
+}
+
+section figure img{
+    width: 130px;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.product-name{
+    text-align: center;
+    font-size: 175%;
+
+}
+
+.precio-principal{
+    font-size:18px ;
+   
+    
+}
+
+.precio-descuento{
+    font-size:14px ;
+    color: grey;
+    align-self:center;
+}

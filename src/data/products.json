@@ -1,1 +1,34 @@
-[{"id":1,"name":"Chionis alba","description":"quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis","price":3239.88,"discount":31,"category":"in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis","subCategory":"semper rutrum nulla nunc purus phasellus in felis donec semper","image":"product_1.jpg"}]
+[
+  {
+    "id": 1,
+    "name": "Zelda",
+    "description": "Juego de Zelda",
+    "price": 1500,
+    "discount": 30,
+    "category": "Videojuego",
+    "subcategory": [
+      "Nintendo Switch"
+    ],
+    "Image": "zelda.jpg"
+  },
+  {
+    "id": 1626994357050,
+    "name": "Prueba",
+    "description": "Es una prueba ",
+    "Image": "product-1626994356992.jpg",
+    "category": "videojuegos",
+    "subcategory": "Playstation",
+    "price": 3000,
+    "discount": 50
+  },
+  {
+    "id": 1626996551653,
+    "name": "Reactor",
+    "description": "Reactor de Iron-Man",
+    "category": "videojuegos",
+    "subcateory": "PC",
+    "price": 5000,
+    "discount": null,
+    "Image": "product-1626996551174.jpg"
+  }
+]

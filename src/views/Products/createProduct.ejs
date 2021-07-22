@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/createProduct.css">
     <title>createProduct</title>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
      function recibir(){
         const nomId=document.getElementById("name").value;
         const descId=document.getElementById("description").value;
@@ -30,92 +30,73 @@
      }
 
 
-    </script>
+    </script> -->
 </head>
 <body>
     
     <%- include("../partials/header") %>
         
     <main>
-
-
-          <form action="/Products/createProduct" method=POST enctype="multipart/form-data" class="productEdition">
-    
+        <form action="/products/create" method=POST  class="productEdition" enctype="multipart/form-data">
             <h2>Agregar producto</h2>
-
-                <label for="productName" class="formLabel"> Nombre del producto </label>
-                <input type="text" name="name" id="name" class="formImput">
+            <label for="productName" class="formLabel"> Nombre del producto </label>
+            <input type="text" name="name" id="name" class="formImput">
           
-    
-            
-                <label for="description" class="formLabel"> Descripción </label>
-                <input type="text" name="description" id="description" class="formImput">      
+            <label for="description" class="formLabel"> Descripción </label>
+            <input type="text" name="description" id="description" class="formImput">      
                   
+            <label for= "image" class="formLabel"> Imagen </label>
+            <input type="file" id="image" name="image" accept=".jpg" multiple  class="formImage">
+            
+            <select class="category"  name="category" id="category">             <!-- Nuevas funcionalidades con la etiqueta select -->
+                <option value="">Seleccione una opción</option>
+                <option value="videojuegos">Videojuegos</option>
+                <option value="consolas">Consolas</option>
+                <option value="revistas">Revistas</option>
+                <option value="ropa">Ropa</option>
+                <option value="figuras">Figuras</option>
+            </select>
 
-                <label for= "image" class="formLabel"> Imagen </label>
-                <input type="file" id="image" name="image" accept=".jpg" multiple  class="formImage">
-                
-                    <select name="category" id="category">             <!-- Nuevas funcionalidades con la etiqueta select -->
-                    <option value="">Seleccione una opción</option>
-                    <option value="videojuegos">videojuegos</option>
-                    <option value="consolas">consolas</option>
-                    <option value="revistas">revistas</option>
-                    <option value="ropa">ropa</option>
-                    <option value="figuras">Figuras</option>
+           <!-- <label for= "subcategory" class="formLabel"> Subcategoría </label>
+            <input type="text" name="subcategory" id="subcategory" class="formImput"> -->
 
-                </select>
-
-                <select name="subcategory" id="subcategory">
-                    <option value="">Seleccione una opción</option>
-                    <option value="accion">acción</option>
-                    <option value="infantil">infantil</option>
-                    <option value="estrategia">estrategia</option>
-                    <option value="deportivo">deportivo</option>
-                    <option value="arcade">arcade</option>
-                    <option value="simulación">simulación</option>
-
-                    <option value="playstation">playstation</option>
-                    <option value="xbox">xbox</option>
-                    <option value="nintendo">nintendo</option>
-                   
-                    <option value="marvel">marvel</option>
-                    <option value="dc">dc</option>
-                    <option value="mangas">mangas</option>
-
-                    <option value="hombre">hombre</option>
-                    <option value="mujer">mujer</option>
-                    <option value="niñ@s">niñ@s</option>
-
-                    <option value="coleccionables">coleccionables</option>
-                    <option value="novedades">novedades</option>
-
-                </select>
+            <select name="subcategory" id="subcategory" class="category">
+                <option value="">Seleccione una opción</option>
+               <!-- <option value="accion">Acción</option>
+                <option value="infantil">Infantil</option>
+                <option value="estrategia">Estrategia</option>
+                <option value="deportivo">Deportivo</option>
+                <option value="arcade">Arcade</option>
+                <option value="simulación">Simulación</option> -->
+                <option value="PC">PC</option>
+                <option value="Playstation">Playstation</option>
+                <option value="Xbox">Xbox</option>
+                <option value="Nintendo">Nintendo Switch</option>
+               <!-- <option value="marvel">Marvel</option>
+                <option value="dc">DC</option>
+                <option value="mangas">Mangas</option>
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+                <option value="niñ@s">Niñ@s</option>
+                <option value="coleccionables">Coleccionables</option>
+                <option value="novedades">Novedades</option> -->
+            </select>
                 
                 <!-- <label for= "category" class="formLabel"> Categoría </label>
                 <input type="text" name="category" id="category" class="formImput"> -->
-         
-                <label for= "subcategory" class="formLabel"> Subcategoría </label>
-                <input type="text" name="subcategory" id="subcategory" class="formImput">
            
-                <label for= "price" class="formLabel"> precio </label>
-                <input type="text" name="price" id="price" class="formImput">
+            <label for= "price" class="formLabel"> Precio </label>
+            <input type="text" name="price" id="price" class="formImput">
 
-                <label for= "discount" class="formLabel"> descuento </label>
-                <input type="text" name="discount" id="discount" class="formImput">
+            <label for= "discount" class="formLabel"> Descuento </label>
+            <input type="text" name="discount" id="discount" class="formImput">
 
-                
-           
-                <input type="button" class="send" value="Enviar" onclick="recibir()">
+            <button type="submit" class="send">Enviar</button>
+            <input type="reset" class="reset">
             
-
-            
-                <input type="reset" class="reset">
-            
-          </form>
+        </form>
     
-          <br>
 
-          <div class="escribir" id="escribir"></div>
    
 </main>
     

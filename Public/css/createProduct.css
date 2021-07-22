@@ -80,6 +80,13 @@ h2{
     margin-bottom: 20px;
 }
 
+.category{
+   font-size: 125%;
+   margin-bottom: 5%;
+}
+
+
+
 .send, .reset{
     border-radius: 6px;
     border:none;
