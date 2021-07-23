@@ -30,5 +30,15 @@
     "price": 5000,
     "discount": null,
     "Image": "product-1626996551174.jpg"
+  },
+  {
+    "id": 1627081205290,
+    "name": "Prueba de falla",
+    "description": "Esto es una prueba para ver si falla el código ",
+    "category": "videojuegos",
+    "subcateory": "Nintendo",
+    "price": 5000,
+    "discount": 20,
+    "Image": "product-1627081204959.jpg"
   }
 ]
