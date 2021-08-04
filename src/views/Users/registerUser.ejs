@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/createProduct.css">
+        <title>createProduct</title>
+    </head>
+    
+    <body>
+        <%- include("../partials/header") %>
+        <main>
+            <form action="/users/register" method=POST  class="productEdition" enctype="multipart/form-data">
+                <h2>Registrarse</h2>
+                
+                <label for="name" class="formLabel"> Nombre (s) </label>
+                <input type="text" name="name" id="name" class= "formImput" value="<%= locals.oldData && oldData.name ? oldData.name : '' %>"  required>
+                <% if(locals.errors && errors.name){ %>
+                    <div  style="color: red;">
+                        <%= errors.name.msg %>
+                    </div>
+                <% } %>
+            
+                <label for="lastName" class="formLabel"> Apellidos </label>
+                <input type="text" name="lastName" id="lastName" class="formImput" value="<%= locals.oldData && oldData.lastName ? oldData.lastName : '' %>" required >
+                <% if(locals.errors && errors.lastName){ %>
+                    <div  style="color: red;">
+                        <%= errors.lastName.msg %>
+                    </div>
+                <% } %> 
+
+                <label for="age" class="formLabel"> Edad </label>
+                <input type="text" name="age" id="age" class="formImput" value="<%= locals.oldData && oldData.age ? oldData.age : '' %>" required>
+                <% if(locals.errors && errors.age){ %>
+                    <div  style="color: red;">
+                        <%= errors.age.msg %>
+                    </div>
+                <% } %>   
+                
+                <label for="email" class="formLabel"> Email </label>
+                <input type="email" name="email" id="email" class="formImput" value="<%= locals.oldData && oldData.email ? oldData.email : '' %>" required> 
+               <% if(locals.errors && errors.email){ %>
+                    <div style="color: red;">
+                        <%= errors.email.msg %>
+                    </div>
+                <% } %> 
+
+                <label for="password" class="formLabel"> Contraseña </label>
+                <input type="password" name="password" id="password" class="formImput" required >
+
+                 
+                <label for="gender" class="formLabel"> Genero </label>
+                
+                <div style="display: flex;">
+                    <input type="radio" class="formLabel" name="gender" value="M" id="gender" <%= locals.oldData && oldData.gender == "M" ? "checked" : "" %>  required>
+                    <p style="color: black; margin-top: 2%; margin-left: 1%;">Masculino</p>
+                </div>
+                
+                <div style="display: flex;">
+                    <input type="radio" class="formLabel" name="gender" value="F" id="gender" <%= locals.oldData && oldData.gender == "F" ? "checked" : "" %>  required>
+                    <p style="color: black; margin-top: 2%; margin-left: 1%;">Femenino</p>
+                </div>
+
+                <label for="address" class="formLabel"> Dirección </label>
+                <input type="text" name="address" id="address" class="formImput" value="<%= locals.oldData && oldData.address ? oldData.address : '' %>" required >
+
+                <label for="level" class="formLabel"> Nivel </label>
+                <select class="category"  name="level" id="level" required >           
+                    <option value="">Seleccione una opción</option>
+                    <option value="basico" <%= locals.oldData && oldData.level == "basico" ? "selected" : "" %> >Básico</option>
+                    <option value="plata" <%= locals.oldData && oldData.level == "plata" ? "selected" : "" %> >Plata</option>
+                    <option value="oro" <%= locals.oldData && oldData.level == "oro" ? "selected" : "" %> >Oro</option>
+                    <option value="platino" <%= locals.oldData && oldData.level == "platino" ? "selected" : "" %>>Platino</option>
+                </select>
+                
+                
+                <label for= "image" class="formLabel"> Imagen </label>
+                <input type="file" id="image" name="avatar" accept=".jpg" multiple  class="formImage" >
+                <% if(locals.errors && errors.image){ %>
+                    <div style="color: red;">
+                        <%= errors.image.msg %>
+                    </div>
+                <% } %> 
+                
+                <button type="submit" class="send">Registrar</button>
+                
+                <input type="reset" class="reset">
+                
+            </form>
+        </main>
+        <%- include("../partials/footer") %>
+    </body>
+</html>

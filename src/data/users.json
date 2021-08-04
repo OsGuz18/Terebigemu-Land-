@@ -1,9 +1,14 @@
-[{"id":1,
-    "name":"Manouria emys",
-    "lastName":"Paradoxurus hermaphroditus",
-    "email":"mchalcraft0@toplist.cz",
-    "password":"8CB8YjTwXu",
-    "gender":"Non-binary",
-    "address":"6126 Ridgeway Crossing",
-    "level":"eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum",
-    "image":"product_1.jpg"}]
+[
+  {
+    "id": 1628093407284,
+    "name": "Osmar Humberto",
+    "lastName": "Mariscal",
+    "age": "26",
+    "email": "$2a$10$59RDG55srBLk3pnYSQLUROtUMhdfVc3brXHBrdSIir.NNdMVQxXKK",
+    "password": "$2a$10$1r/fSucx0D3ZJn.454bNQ.O18yf32HsFfH0TXpXhBK50sfzSONqtW",
+    "gender": "M",
+    "address": "Calle 25 Norte #5145 Col.Las Brisas",
+    "level": "basico",
+    "Image": "user-1628093406535.jpg"
+  }
+]

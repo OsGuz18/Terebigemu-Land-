@@ -172,3 +172,10 @@ main section article img{
     margin: 35px 40px 0 40px;
     width: 400px;
 }
+.botones-edit-elim{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    
+}
+

@@ -1,232 +1,240 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terebigemu Land Register</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <%- include("../partials/header") %>
-       <div class="Banner">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Terebigemu Land Register</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <%- include("../partials/header") %>
+        
+        <div class="Banner">
             <img src="/images/Banner_SuperMario.jpg" alt="Banner">
         </div>
     
-    <main>
-        <section class="banner-section" >
-            <img class="banner2" src="images/banner.jpg" alt="">
-        </section>
-
-        <section class="articulos">
-            <section>
-                <div class="shopping-car"><i class="fas fa-shopping-cart"></i> Shopping car</div>
+        <main>
+            <section class="banner-section" >
+                <img class="banner2" src="images/banner.jpg" alt="">
             </section>
 
-            <form action="articulo">
-                <div class="articulo">
-                    <div class="checkbox-articulo"> 
-                        <input class="check" type="checkbox" id="articulo">
-                        <label for="articulo">Hot Toy Miguel O'hara</label>
-                    </div>
-                   <div class="picture-articulo">
-                        <img class="articulo-foto" src="images/2044.jpg" alt="">
-                   </div> 
-                   <div class="description-articulo">
-                        <b>Descripción</b>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, 
-                           perferendis fugit iusto nemo debitis
-                        </p>
-                   </div>
-
-                   <div class="description-articulo">
-                        <b>Precio</b>
-                        <p>$ 10,000.00 MXN</p>
-                    </div>
-                </div>
-
-                <div class="relleno-linea">
-                    <div >linea</div>
-                </div>
-
-
-                <div class="articulo">
-                    <div class="checkbox-articulo"> 
-                        <input class="check" type="checkbox" id="articulo">
-                        <label for="articulo">Memoria RAM</label>
-                    </div>
-                   <div class="picture-articulo">
-                        <img class="articulo-foto" src="images/memoria.jpg" alt="">
-                   </div> 
-                   <div class="description-articulo">
-                        <b>Descripción</b>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, 
-                           perferendis fugit iusto nemo debitis
-                        </p>
-                   </div>
-
-                   <div class="description-articulo">
-                        <b>Precio</b>
-                        <p>$ 2,500.00 MXN</p>
-                    </div>
-                </div>
-
-                <div class="relleno-linea">
-                    <div >linea</div>
-                </div>
-            </form> 
-        </section>
-
-        <section class="seccion-total">
-            <div class="texto-total">
-                <b>Total de artículos a pagar:</b> <b>2  </b> <b>|</b>
-            </div>
-            <form class="borrar-carrito" action="borrar-carrito">
-                <button>Eliminar del carrito</button>
-            </form>
-            <div>
-                <b>Subtotal</b>
-            </div>
-            <div class="subtotal-cantidad">
-                $12,500 MXN
-            </div>
-        </section>
-        <div class="relleno-linea">
-            <div >linea</div>
-        </div>
-        
-        <section class="datos-envio">
-            <section class="texto-envio">
-                <i class="fas fa-shipping-fast"></i>
-                <div class="texto-total"><b>Datos de envío</b></div>
-            </section>
-            <section class="formulario-pagar">
-                <section class="datos">
-                    <div class="nombre-cliente">
-                        <b>Cliente</b>
-                        <p>Cosme Fulanito</p>
-                    </div>
-                    <div class="nombre-cliente">
-                        <b>Dirección</b>
-                        <p>P. Sherman Calle Walabi 42 Sydney</p>
-                    </div>
-                    <div class="nombre-cliente">
-                        <b>Teléfono</b>
-                        <p>222-223-47-59</p>
-                    </div>
+            <section class="articulos">
+                <section>
+                    <div class="shopping-car"><i class="fas fa-shopping-cart"></i> Shopping car</div>
                 </section>
 
-                <section class="boton-pagar">
-                    <div>
-                        <i class="fas fa-wallet"></i>
-                    </div>
-                    <div>
-                        <button class="pagar-ahora">Pagar ahora</button>
-                    </div>
-                </section>
-            </section>
-        </section>
+                <form action="articulo">
+                    <div class="articulo">
+                        <div class="checkbox-articulo"> 
+                            <input class="check" type="checkbox" id="articulo">
+                            <label for="articulo">Hot Toy Miguel O'hara</label>
+                        </div>
+                        
+                        <div class="picture-articulo">
+                            <img class="articulo-foto" src="images/products/2044.jpg" alt="">
+                        </div> 
+                        
+                        <div class="description-articulo">
+                            <b>Descripción</b>
+                            
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, 
+                           perferendis fugit iusto nemo debitis
+                            </p>
+                        </div>
 
-        <section>
-            <div class="titulo-mas"><b>Más Artículos por explorar...</b></div>
-            
-            <div class="producto">
-                <article class="producto-container">
-                    <img class="articulo-foto2" src="images/mario-maker.jpg" alt="">
-                    <p class="precio-sug"> $ 1,600 MXN</p>
-                    <b class="nombre-art">Mario Maker 2</b>
-                </article>
-                <article class="producto-container">
-                    <img class="articulo-foto2" src="images/zelda.jpg" alt="">
-                    <p class="precio-sug"> $ 1,400 MXN</p>
-                    <b class="nombre-art">Zelda breath of the wild</b>
-                </article>
-                <article class="producto-container">
-                    <img class="articulo-foto2" src="images/control.jpg" alt="">
-                    <p class="precio-sug">$ 1,900 MXN</p>
-                    <b>Control PS5</b>
-                </article>
-                <article class="producto-container">
-                    <img class="articulo-foto2" src="images/playera.jpg" alt="">
-                    <p class="precio-sug">$ 200 MXN</p>
-                    <b class="nombre-art">Playera Batman</b>
-                </article>
-            </div>
-        </section>
+                        <div class="description-articulo">
+                            <b>Precio</b>
+                        
+                            <p>$ 10,000.00 MXN</p>
+                        </div>
+                    </div>
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <section class="banner">
-            <img  src="images/banner.jpg" alt="">
-        </section>
-        
-        
-        <section class="under">
-            <div class="navegacion-under">
-                <article>
-                   <a href="#">
-                       <img src="images/ofertas.jpg" alt="">
-                   </a> 
-                   <div class="Titulo-under">
-                        Ofertas
-                   </div>
+                    <div class="relleno-linea">
+                        <div >linea</div>
+                    </div>
+
+                    <div class="articulo">
+                        <div class="checkbox-articulo"> 
+                            <input class="check" type="checkbox" id="articulo">
+                            <label for="articulo">Memoria RAM</label>
+                        </div>
+                        
+                        <div class="picture-articulo">
+                            <img class="articulo-foto" src="images/products/memoria.jpg" alt="">
+                        </div> 
                    
-                </article>
-                
-                
-                <article>
-                    <a href="#">
-                        <img src="images/nuevo.jpg" alt="">
-                    </a> 
-                    <div class="Titulo-under">
-                        Lo nuevo
-                    </div>
-                </article>
-                <article>
-                    <a href="#">
-                        <img src="images/vendidos.jpg" alt="">
-                    </a> 
-                    <div class="Titulo-under">
-                        Mas vendidos
-                    </div>
-                </article>
-                <article>
-                    <a href="#">
-                        <img src="images/beneficios.jpg" alt="">
-                    </a> 
-                    <div class="Titulo-under">
-                        Beneficios
-                    </div>
-                </article>
-            </div>
-        </section>
-    </main>
-    
+                        <div class="description-articulo">
+                            <b>Descripción</b>
+                            
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, 
+                           perferendis fugit iusto nemo debitis
+                            </p>
+                        </div>
 
-    <%- include("../partials/footer") %>
-</body>
+                        <div class="description-articulo">
+                            <b>Precio</b>
+                            
+                            <p>$ 2,500.00 MXN</p>
+                        </div>
+                    </div>
+
+                    <div class="relleno-linea">
+                        <div >linea</div>
+                    </div>
+                </form> 
+            </section>
+
+            <section class="seccion-total">
+                <div class="texto-total">
+                    <b>Total de artículos a pagar:</b> <b>2  </b> <b>|</b>
+                </div>
+                
+                <form class="borrar-carrito" action="borrar-carrito">
+                    <button>Eliminar del carrito</button>
+                </form>
+            
+                <div>
+                    <b>Subtotal</b>
+                </div>
+            
+                <div class="subtotal-cantidad">
+                    $12,500 MXN
+                </div>
+            </section>
+        
+            <div class="relleno-linea">
+                <div >linea</div>
+            </div>
+        
+            <section class="datos-envio">
+                <section class="texto-envio">
+                    <i class="fas fa-shipping-fast"></i>
+                    <div class="texto-total"><b>Datos de envío</b></div>
+                </section>
+                
+                <section class="formulario-pagar">
+                    <section class="datos">
+                        <div class="nombre-cliente">
+                            <b>Cliente</b>
+                            
+                            <p>Cosme Fulanito</p>
+                        </div>
+                    
+                        <div class="nombre-cliente">
+                            <b>Dirección</b>
+                        
+                            <p>P. Sherman Calle Walabi 42 Sydney</p>
+                        </div>
+                    
+                        <div class="nombre-cliente">
+                            <b>Teléfono</b>
+                            
+                            <p>222-223-47-59</p>
+                        </div>
+                    </section>
+
+                    <section class="boton-pagar">
+                        <div>
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        
+                        <div>
+                            <button class="pagar-ahora">Pagar ahora</button>
+                        </div>
+                    </section>
+                </section>
+            </section>
+
+            <section>
+                <div class="titulo-mas"><b>Más Artículos por explorar...</b></div>
+            
+                <div class="producto">
+                    <article class="producto-container">
+                        <img class="articulo-foto2" src="images/products/mario-maker.jpg" alt="">
+                    
+                        <p class="precio-sug"> $ 1,600 MXN</p>
+                    
+                        <b class="nombre-art">Mario Maker 2</b>
+                    </article>
+                
+                    <article class="producto-container">
+                        <img class="articulo-foto2" src="images/products/zelda.jpg" alt="">
+                    
+                        <p class="precio-sug"> $ 1,400 MXN</p>
+                    
+                        <b class="nombre-art">Zelda breath of the wild</b>
+                    </article>
+                
+                    <article class="producto-container">
+                        <img class="articulo-foto2" src="images/products/control.jpg" alt="">
+                    
+                        <p class="precio-sug">$ 1,900 MXN</p>
+                    
+                        <b>Control PS5</b>
+                    </article>
+                
+                    <article class="producto-container">
+                        <img class="articulo-foto2" src="images/products/playera.jpg" alt="">
+                    
+                        <p class="precio-sug">$ 200 MXN</p>
+                    
+                        <b class="nombre-art">Playera Batman</b>
+                    </article>
+                </div>
+            </section>
+
+            <section class="banner">
+                <img  src="images/banner.jpg" alt="">
+            </section>
+        
+            <section class="under">
+                <div class="navegacion-under">
+                    <article>
+                        <a href="#">
+                            <img src="images/ofertas.jpg" alt="">
+                        </a> 
+                    
+                        <div class="Titulo-under">
+                            Ofertas
+                        </div>
+                   </article>
+                
+                    <article>
+                        <a href="#">
+                            <img src="images/nuevo.jpg" alt="">
+                        </a> 
+                        
+                        <div class="Titulo-under">
+                            Lo nuevo
+                        </div>
+                    </article>
+                
+                    <article>
+                        <a href="#">
+                            <img src="images/vendidos.jpg" alt="">
+                        </a> 
+                    
+                        <div class="Titulo-under">
+                            Mas vendidos
+                        </div>
+                    </article>
+                
+                    <article>
+                        <a href="#">
+                            <img src="images/beneficios.jpg" alt="">
+                        </a> 
+                    
+                        <div class="Titulo-under">
+                            Beneficios
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <%- include("../partials/footer") %>
+    </body>
 </html>

@@ -1,136 +1,141 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/productDetail.css">
-    <title>Product_Detail</title>
-</head>
-<body>
-    <%- include("../partials/header") %>
-  
-<main> 
-    <div class="Views">
-        <ul class="Previews">
-            <b>VISTA PREVIA</b>
-            <div class="Prevs">
-            <a href="#"><img src="/images/<%= producto.Image %>" class="Prev1" width="50px"></a>
-            <a href="#"><img src="/images/<%= producto.Image %>" class="Prev2"  width="50px"></a>
-            <a href="#"><img src="/images/<%= producto.Image %>" class="Prev3"  width="50px"></a>
-            <a href="#"><img src="/images/<%= producto.Image %>" class="Prev4"  width="50px"></a>
-            
-            
-            <!-- <li><img src="/images/twitchLogo.png" class="FaceLogo"></li>
-            <li><img src="/images/twitterLogo.png" class="FaceLogo"></li>
-            <li><img src="/images/youtubeLogo.png" class="FaceLogo"></li> -->
-            </div>
-        </ul>
-
-            <div>
-                <a href="#"><img src="/images/<%= producto.Image %>" class="productView"></a>
-                <br>
-                <p class="productName"><%= producto.name %></p>
-            </div>
-
-            <div class="product_Description">
-                <h2>Detalles del producto</h2>
-                <p>
-                    <%= producto.description %>
-                </p>
-                <br>
-                <ul>
-                    <li>Costo: $ <%= (producto.price).toLocaleString('en-US',
-                        {minimumFractionDigits:2}) %> MXN</li>
-                    <li>Descuento Online: <%= producto.discount %> %</li>
-                    <li>Compatibilidad: <%= producto.subcategory %></li> 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/productDetail.css">
+        <title>Product_Detail</title>
+    </head>
+    <body>
+        <%- include("../partials/header") %>
+        <main> 
+            <div class="Views">
+                <ul class="Previews">
+                    <b>VISTA PREVIA</b>
+                    
+                    <div class="Prevs">
+                        <a href="#"><img src="/images/products/<%= producto.Image %>" class="Prev1" width="50px"></a>
+                        <a href="#"><img src="/images/products/<%= producto.Image %>" class="Prev2"  width="50px"></a>
+                        <a href="#"><img src="/images/products/<%= producto.Image %>" class="Prev3"  width="50px"></a>
+                        <a href="#"><img src="/images/products/<%= producto.Image %>" class="Prev4"  width="50px"></a>
+                    </div>
                 </ul>
 
-                <div class="toCar">
-                    <p>
-                    <a href="/shopping-car"><button type="submit" class="car">Agregar al Carrito</button></a>
-                    </p>
+                <div>
+                    <a href="#"><img src="/images/products/<%= producto.Image %>" class="productView"></a>
+                    <br>
+                    <p class="productName"><%= producto.name %></p>
+                </div>
+
+                <div class="product_Description">
+                    <h2>Detalles del producto</h2>
                     
                     <p>
-                    <button type="submit" class="buy">Comprar ahora</button>
+                        <%= producto.description %>
                     </p>
-
-                    <p>
-                        <button type="submit" class="buy">Editar</button>
-                    </p>
+                    <br>
+                    
+                    <ul>
+                        <li>Costo: $ <%= (producto.price).toLocaleString('en-US',
+                            {minimumFractionDigits:2}) %> MXN</li>
+                        <li>Descuento Online: <%= producto.discount %> %</li>
+                        <li>Compatibilidad: <%= producto.subcategory %></li> 
+                    </ul>
+                    
+                    <div class="toCar">
+                        <p>
+                        <a href="/shopping-car"><button type="submit" class="car">Agregar al Carrito</button></a>
+                        </p>
+                        
+                        <p>
+                        <button type="submit" class="buy">Comprar ahora</button>
+                        </p>
+                        
+                        <div class="botones-edit-elim">
+                            <p>
+                                <form  action="/products/editProduct/<%= producto.id %>" method="GET">
+                                    <button type="submit" class="buy" >Editar</button>
+                                </form>
+                            </p>
+                            <p>
+                                <form  action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
+                                    <button type="submit" class="buy" >Borrar</button>
+                                </form>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                
             </div>
 
-    </div>
-
-    <div>
-        <p class="last_Visits">Ofertas Similares</p>
-
-        <section class="visits">
-            <article>
-                <img src="/images/MarioKartDeluxe.jpg">
-                    <p class="price">$1,200</p>
-                    <p class="description">Mario Kart Deluxe</p>
+            <div>
+                <p class="last_Visits">Ofertas Similares</p>
                 
-            </article>
-            <article>
-                <img src="/images/SuperMario3D.jpg">
-                    <p class="price"> $1,150</p>
-                    <p class="description">Super Mario 3D</p>
-            </article>
+                <section class="visits">
+                    <article>
+                        <img src="/images/products/MarioKartDeluxe.jpg">
+                        <p class="price">$1,200</p>
+                        <p class="description">Mario Kart Deluxe</p>
+                    </article>
+                
+                    <article>
+                        <img src="/images/products/SuperMario3D.jpg">
+                        
+                        <p class="price"> $1,150</p>
+                        
+                        <p class="description">Super Mario 3D</p>
+                    </article>
 
-            <article>
-                <img src="/images/TheLastOfUsII.jpg"d>
-                    <p class="price">$1,900</p>
-                    <p class="description">The Last of Us II</p>
-            </article>
+                    <article>
+                        <img src="/images/products/TheLastOfUsII.jpg"d>
+                        
+                        <p class="price">$1,900</p>
+                        
+                        <p class="description">The Last of Us II</p>
+                    </article>
 
-            <article>
-                 <img src="/images/HalloInfinite.jpg">
-                    <p class="price"> $1,200</p>
-                    <p class="description">Hallo Infinite</p>
-            </article>
-        </section>
+                    <article>
+                        <img src="/images/products/HalloInfinite.jpg">
+                    
+                        <p class="price"> $1,200</p>
+                        
+                        <p class="description">Hallo Infinite</p>
+                    </article>
+                </section>
+            </div>
 
+            <div class="clientOpinion">
+                <h2>Opiniones de otros clientes</h2>
 
+                <p>
+                Cosme Fulanito
+                </p>
+                <br>
+                
+                <p>
+                El mejor juego de carreras de Mario. Sin duda lo volvería a comprar sin pensarlo.
+                Tiene grandes efectos y un sin fin de posibilidades, y lo mejor, integra a personajes 
+                que completan la saga.
+                </p>
 
-    </div>
+            </div>
 
-        <div class="clientOpinion">
-            <h2>Opiniones de otros clientes</h2>
+            <div class="clientOpinion">
+                <p>
+                Homer simpsom
+                </p>
+                <br>
+                
+                <p>
+                De los mejores juegos que he tenido la oportunidad de comprar. Creo que es entretenido, con buenos efectos
+                con mejoras notables y económicamente viable.
+                </p>
 
-            <p>
-             Cosme Fulanito
-            </p>
-            <br>
-            <p>
-            El mejor juego de carreras de Mario. Sin duda lo volvería a comprar sin pensarlo.
-            Tiene grandes efectos y un sin fin de posibilidades, y lo mejor, integra a personajes 
-            que completan la saga.
-            </p>
-
-        </div>
-
-        <div class="clientOpinion">
-            <p>
-             Homer simpsom
-            </p>
-            <br>
-            <p>
-            De los mejores juegos que he tenido la oportunidad de comprar. Creo que es entretenido, con buenos efectos
-            con mejoras notables y económicamente viable.
-            </p>
-
-        </div>
-
-    </div>
-
-      
-</main>
-<%- include("../partials/footer") %>
-</body>
+            </div>
+        </main>  <!--</div> --> 
+        <%- include("../partials/footer") %>
+    </body>
 </html>

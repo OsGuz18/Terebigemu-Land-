@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/createProduct.css">
+        <title>createProduct</title>
+    </head>
+    
+    <body>
+        <%- include("../partials/header") %>
+        <main>
+            <form action="/products/editProduct/<%= producto.id %>?_method=PUT" method=POST  class="productEdition" enctype="multipart/form-data">
+                <h2>Editar producto</h2>
+                
+                <label for="productName" class="formLabel"> Nombre</label>
+                <input type="text" name="name" id="name" class="formImput" value="<%= producto.name %>">
+            
+                <label for="description" class="formLabel"> Descripción </label>
+                <input type="text" name="description" id="description" class="formImput" value="<%= producto.description %>">      
+                    
+                <label for= "image" class="formLabel"> Imagen </label>
+                <input type="file" id="image" name="imageupdate" accept=".jpg" multiple  class="formImage">
+                
+                <label for="imageactual" class="formLabel">Imagen Actual</label>
+                <img src="/images/products/<%= producto.Image %>" id="imageactual" class="formImage">
+                
+                <select class="category"  name="category" id="category">           
+                    <option value="">Seleccione una opción</option>
+                    <option value="videojuegos" <%= producto.category === "videojuegos" ? "selected" : "" %> >Videojuegos</option>
+                    <option value="consolas" <%= producto.category === "consolas" ? "selected" : "" %> >Consolas</option>
+                    <option value="revistas" <%= producto.category === "revistas" ? "selected" : "" %> >Revistas</option>
+                    <option value="ropa" <%= producto.category === "ropa" ? "selected" : "" %> >Ropa</option>
+                    <option value="figuras" <%= producto.category === "figuras" ? "selected" : "" %> >Figuras</option>
+                </select>
+
+                <select name="subcategory" id="subcategory" class="category">
+                    <option value="">Seleccione una opción</option>
+                    <option value="PC" <%= producto.subcateory === "PC" ? "selected" : "" %>>PC</option>
+                    <option value="Playstation" <%= producto.subcateory === "Playstation" ? "selected" : "" %> >Playstation</option>
+                    <option value="Xbox" <%= producto.subcateory === "Xbox" ? "selected" : "" %> >Xbox</option>
+                    <option value="Nintendo" <%= producto.subcateory === "Nintendo" ? "selected" : "" %> >Nintendo Switch</option>
+                </select>
+                
+                <label for= "price" class="formLabel"> Precio </label>
+                <input type="text" name="price" id="price" class="formImput" value="<%= producto.price %>">
+                <label for= "discount" class="formLabel"> Descuento </label>
+                <input type="text" name="discount" id="discount" class="formImput" value="<%= producto.discount %>">
+
+                <button type="submit" class="send">Editar</button>
+            </form>
+        </main>
+        <%- include("../partials/footer") %>
+    </body>
+</html>

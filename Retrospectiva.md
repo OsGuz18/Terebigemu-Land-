@@ -37,4 +37,17 @@ Siguiento el esquema de la estrella de mar podemos realizar la siguiente restros
     5.-Dejar de hacer: Dar poco tiempo a la revisión de los resultados.
 
 
+    Sprint 4
+
+    1.-Comenzar a hacer: Designar juntas de repaso para los conceptos nuevos y que requieren mayor estudio. 
+
+    2.-Hacer más: Trabajo colaborativo en la resolución de problemas
+
+    3.-Continuar haciendo: Comunicación en el equipo
+
+    4.- Hacer menos: Designar actividades totalmente independientes 
+
+    5.-Dejar de hacer: Dejar pasar tiempo en la resolución de problemas
+
+
     
