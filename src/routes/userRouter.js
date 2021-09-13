@@ -5,6 +5,8 @@ const multer = require('multer'); //Requerimos la paquetería de "Multer" para s
 const path = require("path") //Requerimos la paquetería "path" contenida en node
 const userController = require("../controllers/userController") //Requerimos el controlador para usuarios
 const { body }=require("express-validator")
+const guestMiddleware = require("../middlewares/guestMiddleware")
+const authMiddleware = require("../middlewares/authMiddleware")
 
 //Configuración para subir archivos al servidor mediante Multer
 let storage = multer.diskStorage({    
@@ -53,14 +55,19 @@ const validaciones=[
     })
 ]; 
 
-router.get("/register",userController.register)
+const validacionesLogin =[
+    body("email").isEmail().withMessage("El email no es válido"),        
+]
+
+router.get("/register",guestMiddleware, userController.register)
 router.post("/register",upload.single("avatar"),validaciones,userController.storage)
 
-/*router.get("/login",userController.login)
-router.post("/login",userController.validation)*/
 
+router.get("/login", guestMiddleware,userController.login)
+router.post("/login",validacionesLogin, userController.loginProcces)
 
-
+router.get ("/profile",authMiddleware, userController.profile)
+router.get("/logout",userController.logout)
 
 
 module.exports=router;

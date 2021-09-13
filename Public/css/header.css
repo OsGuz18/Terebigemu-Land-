@@ -104,3 +104,7 @@ ul{
 div.Banner img{
     width: 100%;
 }
+
+.shopping{
+    list-style-type: none;
+}

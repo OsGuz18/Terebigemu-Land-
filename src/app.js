@@ -7,19 +7,31 @@ const methodOverride = require("method-override"); //Requerimos la paquetería "
 const mainRouter = require("./routes/mainRouter"); //Requerimos el ruteador principal 
 const productRouter = require('./routes/productRouter'); //Requerimos el ruteador de productos 
 const userRouter = require("./routes/userRouter"); //Requerimos el ruteador de usuarios
+const session = require("express-session");
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware")
+const cookies = require("cookie-parser")
 
 app.set("view engine","ejs"); //Seteamos la aplicación para ocupar ejs (previamente instalado)                           
 app.set("views",path.join(__dirname , "views")); //Declaramos la carpeta "default" para las vistas
 
 
 // Configuración de las propiedades que usará la aplicación 
+app.use(session({
+    secret:"code",
+    resave: false,
+    saveUninitialized:false
+}));
+app.use(cookies()) 
+app.use(userLoggedMiddleware);
 app.use(express.static(publicPath)); //Declaramos el uso de "publicPath" como carpeta estática 
 app.use(express.urlencoded({extended: false})); 
 app.use(express.json()); //Declaramos el uso de formato JSON
-app.use(methodOverride("_method")); //Declaramos el uso de methodOverride para poder usar PUT y DELETE en HTTP                             
+app.use(methodOverride("_method")); //Declaramos el uso de methodOverride para poder usar PUT y DELETE en HTTP 
+                           
 app.use("/",mainRouter); //Configuramos la ruta principaL
 app.use('/products', productRouter); //Configuración del product Router
 app.use("/users",userRouter); //Configuración del users Router
+
 
 // Configuramos el arranque del servidor y el puerto
 app.listen(3030, () => {

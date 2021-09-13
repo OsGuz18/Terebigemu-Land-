@@ -64,6 +64,59 @@ const controller = {
             res.redirect("/");
         }
         
+    },
+
+    login: (req,res)=>{
+        res.render("Users/login")
+    },
+
+    loginProcces:(req,res)=>{
+       let errores =validationResult(req);
+
+        if(errores.errors.length > 0){
+            return  res.render("Users/login",{
+                  errors:errores.mapped(),
+                  oldData: req.body
+              })
+        }
+
+        users.forEach(user => {
+            let userToLogin = bcrypt.compareSync(req.body.email, user.email)
+            if(userToLogin){
+                let userPassword = bcrypt.compareSync(req.body.password,user.password)
+                if (userPassword){
+                    delete user.password;
+                    req.session.userLogged= user
+                    if(req.body.remind){
+                        res.cookie("userEmail",req.body.email,{maxAge:(1000*60)*60})
+                    }
+
+                    return res.redirect("/users/profile");
+                }
+            }
+
+            return res.render("Users/login",{
+                errorscred: {
+                    email:{
+                        msg:"Credenciales inválidas"
+                    }
+                }
+            })
+        });
+    },
+
+    profile:(req,res)=>{
+        console.log(req.cookies.userEmail)
+        res.render("Users/userProfile",{
+            user: req.session.userLogged
+        })
+    },
+    
+    logout:(req,res)=>{
+        res.clearCookie("userEmail")
+        req.session.destroy()
+        users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+        res.redirect("/")
     }
 }
 

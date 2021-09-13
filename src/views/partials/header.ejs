@@ -18,21 +18,30 @@
     <div class="container">
         
         <nav class="nav-main">
-           
-            <ul class="nav-menu">
-                <li><a href="/users/register">Registrarse|</a></li>
-                <li><a href="/login">Ingresar|</a></li>
-                <li><a href="#">Ofertas|</a></li>
-                <li><a href="#">Preventas|</a></li>
-                <li><a href="#">Vender/Comprar|</a></li>
-                <li><a href="/createProduct">Administrador|</a></li>
-            </ul>
 
+            <li class="shopping"><a href="/shopping-car">Comprar <i class="fas fa-cart-arrow-down"></i></a></li>
+
+            <ul class="nav-menu">
+                <% if (locals.isLogged){ %>
+                    <li><a href="/users/profile">Perfil</a></li>
+                    <li><a href="/users/logout">Logout</a></li>
+                <% } else{%>
+                    <li><a href="/users/register">Registrarse</a></li>
+                    <li><a href="/users/login">Ingresar</a></li>
+                <% } %>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Preventas</a></li>
+                <li><a href="#">Vender/Comprar</a></li>
+                <li><a href="/createProduct">Administrador</a></li>
+            </ul>
+           
             <div>
             <input class="buscador" type="text" placeholder="Videojuegos, consolas y más...">
             <button type="submit" class="search-buttom">Buscar</button>
             <i class="fas fa-search"></i>
             </div>
+
+            
             <br>
             
             <ul class="nav-menu-bottom">

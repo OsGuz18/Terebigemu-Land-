@@ -1,0 +1,44 @@
+*{
+    padding: 0%;
+     margin: 0%;
+     box-sizing: border-box;
+     font-family: 'Homenaje', sans-serif;
+    
+}
+
+
+ 
+ .header{
+     width: 90%;
+     margin-left: 5%;
+     font-size: 100%;
+     background-color: black;
+     border: white 5px solid;
+     height: 200%;
+     padding-bottom: 5%;
+ }
+
+ .header div{
+     font-size: 200%;
+ }
+
+ .header div img{
+     margin-left: 5%;
+     margin-top: 5%;
+     width: 40%;
+ }
+
+ .header div div{
+    margin-left: 5%;
+    margin-top: 5%;
+ }
+
+ .email{
+     background-color: gray;
+     width: 30%;
+     margin-left: 5%;
+ }
+
+ .email div{
+    font-size: 100%;
+ }
