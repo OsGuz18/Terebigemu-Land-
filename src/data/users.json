@@ -10,5 +10,17 @@
     "address": "Calle 25 Norte #5145 Col.Las Brisas",
     "level": "basico",
     "Image": "user-1628093406535.jpg"
+  },
+  {
+    "id": 1631671921922,
+    "name": "Paganini",
+    "lastName": "Mozart",
+    "age": "34",
+    "email": "$2a$10$ebAWbIviZQkcOIfzFuAMQ.NpPtqfXZ.IOPLVQeI.0YYaye6DCJLdW",
+    "password": "$2a$10$hGUbnVxazjWC5AKoNHTFj.tXFIRyK7iAn3rPJW/0lBb2yPnWQ..Qu",
+    "gender": "M",
+    "address": "avenida sonidos 34",
+    "level": "basico",
+    "Image": "user-1631671921610.jpg"
   }
 ]
