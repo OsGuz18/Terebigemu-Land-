@@ -9,7 +9,6 @@
 .products-container{
     display: flex;
     width: 90%;
-    
     justify-content: space-around;
   }
 
@@ -18,7 +17,8 @@
     margin-bottom: 30px;
     width: 200%;
     height: 300px;
-    border: white 5px solid;
+    box-shadow: 0 0 10px 10px rgb(131, 0, 0);
+    border-radius: 3px;
     
 }
 .products-precio{

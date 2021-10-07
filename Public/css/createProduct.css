@@ -16,16 +16,19 @@ body{
 
 /*main*/
 
-main{
-    background-color: #790d0d;
-}
+/* main{
+    align-content: center;
+} */
 .productEdition{
     display: flex;
     flex-direction: column;
     width: 40%;
     max-width: 50%;
     margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
     padding: 20px;
+    border-radius: 10px;
     background-color: #f8f8f8;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
     font-size: 20px;

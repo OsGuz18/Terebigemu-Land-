@@ -72,11 +72,13 @@ ul{
 }
 .nav-main ul{
     display: flex;
+    margin-top: 0px;
    }
 
 .nav-main ul li {
     padding: 10px ;
     margin-right: 5px;
+    
 }
 
 .nav-menu{
@@ -100,11 +102,13 @@ ul{
     margin-left: 7px; 
     height: 18px;
 }
+li.shopping{
+    display: flex;
+    margin-right: -150%;
+
+   
+}
 
 div.Banner img{
     width: 100%;
-}
-
-.shopping{
-    list-style-type: none;
 }

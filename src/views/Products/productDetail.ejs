@@ -48,25 +48,25 @@
                     
                     <div class="toCar">
                         <p>
-                        <a href="/shopping-car"><button type="submit" class="car">Agregar al Carrito</button></a>
+                            <a href="/shopping-car"><button type="submit" class="car">Agregar al Carrito</button></a>
                         </p>
                         
                         <p>
                         <button type="submit" class="buy">Comprar ahora</button>
                         </p>
-                        
-                        <div class="botones-edit-elim">
-                            <p>
-                                <form  action="/products/editProduct/<%= producto.id %>" method="GET">
-                                    <button type="submit" class="buy" >Editar</button>
-                                </form>
-                            </p>
-                            <p>
-                                <form  action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
-                                    <button type="submit" class="buy" >Borrar</button>
-                                </form>
-                            </p>
-                        </div>
+                    </div>
+                    
+                    <div class="edition-delete">
+                        <p>
+                            <form  action="/products/editProduct/<%= producto.id %>" method="GET">
+                                <button type="submit" class="edit" >Editar</button>
+                            </form>
+                        </p>
+                        <p>
+                            <form  action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
+                                <button type="submit" class="delete" >Borrar</button>
+                            </form>
+                        </p>
                     </div>
                 </div>
             </div>

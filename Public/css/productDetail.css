@@ -94,23 +94,46 @@ main{
 .toCar{
     margin-top: 15px;
     color: rgb(255, 255, 255);
-    height: 140px;
+    height: 150px;
     /* border: 2px solid white; */
     border-radius: 5px
+
+}
+
+.edition-delete{
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 2px solid white; */
+    width: 500px;
+    height: 80px;
+
 
 }
 
 .car, .buy{
     border-radius: 6px;
     border: rgb(177, 7, 7) solid 2px;
-    font-size: 14px;
-    margin: 20px 100px 15px 120px;
+    font-size: 16px;
+    margin: 20px 100px 15px 80px;
     padding: 8px;
-    width: 140px;
+    width: 200px;
     height: 40px;
     text-align: center;
     color: white;
     background-color: rgb(58, 9, 9);
+} 
+
+.edit, .delete{
+    border-radius: 6px;
+    box-shadow: 0 0 8px 1px rgba(255, 255, 255, 0.5);
+    box-shadow: rgb(255, 255, 255);
+    font-size: 17px;
+    margin: 30px 20px 15px 80px;
+    width: 120px;
+    height: 35px;
+    text-align: center;
+    color: rgb(121, 0, 0);
+    background-color: rgb(255, 255, 255);
 } 
 
 .last_Visits{
@@ -176,6 +199,7 @@ main section article img{
     display: flex;
     justify-content: space-around;
     width: 20%;
+    border: 2px solid white;
     
 }
 
