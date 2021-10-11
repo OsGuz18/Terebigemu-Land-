@@ -44,5 +44,57 @@ Soluciones propuestas:
   sin perder en cuenta lo que el compañero se encuentra desarrollando. 
 * Mantener la comunicación por los canales que han resultado efectivos (Slack)
 
+Actualización: 04 de agosto
+
+Tareas completadas:
+
+* Tablero de trabajo actualizado con actividades parciales del sprint 5.
+* Actualización del archivo daily a la fecha.
+
+Impedimentos encontrados:
+
+* Comunicación complicada por actividades principales de cada integrante.
+* Al existir actividades por complementar, los sprints se han atrasado algún tiempo.
+
+Soluciones propuestas:
+
+* Aplicar nuevos canales de comunicación y mayor apoyo en la solución de las tareas.
+* Una reunión urgente para reestructurar las ideas y las actividades.
 
 
+ Actualización: 25 de septiembre.
+
+Tareas completadas:
+
+* Actividades restantes del Sprint 5.
+* Actualización de la retrospectiva.
+* Actualización del archivo weekly.
+
+
+Impedimentos encontrados:
+
+* Corto espacios para completar las actividades a tiempo.
+* La falta de reuniones ha sido impedimento para avanzar de mejor manera las actividades.
+
+Soluciones propuestas:
+
+* Nueva comunicación por Whatsapp y reuniones en fines de semana para completar las actividades y redirigir el plan de desarrollo del proyecto.
+
+ Actualización: 09 de octubre.
+
+Tareas completadas:
+
+* Actividades parciales del sprint 6.
+* Actualización de la retrospectiva.
+* Actualización del archivo weekly.
+
+
+Impedimentos encontrados:
+
+* Errores en la generación del structure.sql.
+
+Soluciones propuestas:
+
+* Reestructuración del diagrama de entidad-relación.
+* Reestructuración del structure.sql y del data.sql.
+* Aprovechamiento de las próximas sesiones dedicadas al proyecto integrador.

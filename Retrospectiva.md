@@ -50,4 +50,27 @@ Siguiento el esquema de la estrella de mar podemos realizar la siguiente restros
     5.-Dejar de hacer: Dejar pasar tiempo en la resolución de problemas
 
 
+    Sprint 5
+
+    1.-Comenzar a hacer: Mejorar la comunicación por otros medios (Whatsapp, zoom, email, etc). 
+
+    2.-Hacer más: Mayores esfuerzos de trabajo en conjunto para librar los sprints futuros.
+
+    3.-Continuar haciendo: Apoyarnos en los detalles que van dificultando los desafios de cada sprint.
+
+    4.- Hacer menos: Trabajar de forma aislada.
+
+    5.-Dejar de hacer: Acumular tareas de sprints pasados.
+
     
+    Sprint 6
+
+    1.-Comenzar a hacer: Adherir nuevas formas de organización que compaginen los tiempos de cada integrante.
+
+    2.-Hacer más: Concentrarse en las partes débiles o poco resueltas del proyecto.
+
+    3.-Continuar haciendo: Trabajo en conjunto y consultas a los profesores para librar algunas dudas. 
+
+    4.- Hacer menos: Dejar pasar mucho tiempo para resolver los sprints.
+
+    5.-Dejar de hacer: Acumular tareas de sprints pasados.

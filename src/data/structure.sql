@@ -14,26 +14,6 @@ DROP DATABASE IF EXISTS terebigemuland_db;
 CREATE DATABASE terebigemuland_db;
 USE terebigemuland_db;
 
-
-/*Creación de tabla de empleados/administrador*/
-
-DROP TABLE IF EXISTS `terebigemuland_db`.`employee`;
-CREATE TABLE `terebigemuland_db`.`employee` (
-  `employee_ID` INT NOT NULL AUTO_INCREMENT,
-  `FirstName` VARCHAR(100) NOT NULL,
-  `LastName` VARCHAR(100) NOT NULL,
-  `BirthDate` DATE NULL,
-  `HireDate` DATETIME NOT NULL,
-  `Address` VARCHAR(100) NOT NULL,
-  `Telephone` INT UNSIGNED NOT NULL,
-  `Photo` VARBINARY(256) NOT NULL,
-  `Password` VARCHAR(15) NOT NULL,
-  `Email` VARCHAR(100) NOT NULL,
-  PRIMARY KEY (`employee_ID`))
-  ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_unicode_ci;
-
 /*Creación de tabla de categorias de usuario*/
 
 DROP TABLE IF EXISTS `terebigemuland_db`.`userCategory`;
@@ -47,10 +27,10 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci;
 
-/*Creación de tabla de clientes*/
+/*Creación de tabla de usuarios*/
 
-DROP TABLE IF EXISTS `terebigemuland_db`.`users`;
-CREATE TABLE `terebigemuland_db`.`users` (
+DROP TABLE IF EXISTS `terebigemuland_db`.`user`;
+CREATE TABLE `terebigemuland_db`.`user` (
   `User_ID` INT NOT NULL AUTO_INCREMENT,
   `FirstName` VARCHAR(100) NOT NULL,
   `LastName` VARCHAR(100) NOT NULL,
@@ -72,32 +52,90 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci;
 
+/*Creación de tabla de tipo de entrega*/
+
+DROP TABLE IF EXISTS `terebigemuland_db`.`deliverytype`;
+CREATE TABLE `terebigemuland_db`.`deliverytype` (
+  `DeliveryType_ID` INT NOT NULL AUTO_INCREMENT,
+  `Type` VARCHAR(45) NOT NULL,
+  `Description` LONGTEXT NOT NULL,
+  `RequiredDate` DATETIME NOT NULL,
+  PRIMARY KEY (`DeliveryType_ID`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+
+/*Creación de tabla de servicio de entrega*/
+
+DROP TABLE IF EXISTS `terebigemuland_db`.`deliveryservice`;
+CREATE TABLE `terebigemuland_db`.`deliveryservice` (
+  `DeliveryService_ID` INT NOT NULL AUTO_INCREMENT,
+  `DeliveryType_ID` INT NOT NULL,
+  `DeliveryCompany` VARCHAR(45) NOT NULL,
+  `Telephone` INT NOT NULL,
+  `Email` VARCHAR(45) NOT NULL,
+  `HomePage` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`DeliveryService_ID`),
+  INDEX `FK_DeliveryService_DeliveryType_idx` (`DeliveryType_ID` ASC),
+  CONSTRAINT `FK_DeliveryService_DeliveryType`
+    FOREIGN KEY (`DeliveryType_ID`)
+    REFERENCES `terebigemuland_db`.`deliverytype` (`DeliveryType_ID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+  ENGINE = InnoDB
+  DEFAULT CHARACTER SET = utf8
+  COLLATE = utf8_unicode_ci;
 
 /*Creación de tabla de órdenes o pedidos*/
 
 DROP TABLE IF EXISTS `terebigemuland_db`.`orders`;
 CREATE TABLE `terebigemuland_db`.`orders` (
   `Order_ID` INT NOT NULL AUTO_INCREMENT,
-  `employee_ID` INT NOT NULL,
   `User_ID` INT NOT NULL,
+  `DeliveryService_ID` INT NOT NULL,
   `OrderDate` DATETIME NOT NULL,
-  `RequiredDate` DATETIME NOT NULL,
-  `DeliveryDate` DATETIME NOT NULL,
-  `DeliveryService` VARCHAR(100) NOT NULL,
-  `DeliveryAddress` VARCHAR(100) NOT NULL,
+  `PaymentMethod` VARCHAR(45) NOT NULL,
+  `OrderStatus` VARCHAR(45) NOT NULL,
+  `Price` DECIMAL(6,2) NOT NULL,
+  `Disccount` DECIMAL(3,0) NOT NULL,
+  `Quantity` INT NOT NULL,
+  `Taxes` VARCHAR(45) NOT NULL,
+  `Total` DECIMAL(6,2) NOT NULL,
+  `Paid` VARCHAR(45) NOT NULL,
+  `PaymentDate` DATETIME NOT NULL,
+  `Canceled` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`Order_ID`),
-  INDEX `FK_Orders_employee_idx` (`employee_ID` ASC),
-  INDEX `FK_Orders_User_idx` (`User_ID` ASC),
-  CONSTRAINT `FK_Orders_Employee`
-    FOREIGN KEY (`employee_ID`)
-    REFERENCES `terebigemu_land`.`employee` (`employee_ID`)
+  INDEX `FK_Order_User_idx` (`User_ID` ASC),
+  INDEX `FK_Order_DeliveryService_idx` (`DeliveryService_ID` ASC),
+  CONSTRAINT `FK_Order_User`
+    FOREIGN KEY (`User_ID`)
+    REFERENCES `terebigemuland_db`.`users` (`User_ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `FK_Orders_Users`
-    FOREIGN KEY (`User_ID`)
-    REFERENCES `terebigemu_land`.`users` (`User_ID`)
+  CONSTRAINT `FK_Order_DeliveryService`
+    FOREIGN KEY (`DeliveryService_ID`)
+    REFERENCES `terebigemuland_db`.`deliveryservice` (`DeliveryService_ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+
+/*Creación de tabla de detalles de productos*/
+
+DROP TABLE IF EXISTS `terebigemuland_db`.`productdetail`;
+CREATE TABLE `terebigemuland_db`.`productdetail` (
+  `ProductDetail_ID` INT NOT NULL AUTO_INCREMENT,
+  `Description` LONGTEXT NOT NULL,
+  `Ranking` INT NOT NULL,
+  `Weight` DECIMAL(6,3) NOT NULL,
+  `Size` VARCHAR(45) NOT NULL,
+  `Stock` INT NOT NULL,
+  `ImageDetail1` VARBINARY(255) NOT NULL,
+  `ImageDetail2` VARBINARY(255) NOT NULL,
+  `ImageDetail3` VARBINARY(255) NOT NULL,
+  `ImageDetail4` VARBINARY(255) NOT NULL,
+  PRIMARY KEY (`ProductDetail_ID`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci;
@@ -115,74 +153,80 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci;
 
-/*Creación de tabla de proveedores*/
+/*Creación de tabla de marcas*/
 
-DROP TABLE IF EXISTS `terebigemuland_db`.`suppliers`;
-CREATE TABLE `terebigemuland_db`.`suppliers` (
-  `Supplier_ID` INT NOT NULL AUTO_INCREMENT,
+DROP TABLE IF EXISTS `terebigemuland_db`.`brand`;
+CREATE TABLE `terebigemuland_db`.`brand` (
+  `Brand_ID` INT NOT NULL AUTO_INCREMENT,
   `CompanyName` VARCHAR(45) NOT NULL,
-  `ContactName` VARCHAR(45) NOT NULL,
-  `Address` VARCHAR(100) NOT NULL,
-  `Telephone` INT NOT NULL,
+  `CompanyContact` VARCHAR(45) NOT NULL,
+  `ContactAddress` VARCHAR(45) NOT NULL,
+  `ContactPhone` VARCHAR(45) NOT NULL,
   `Email` VARCHAR(45) NOT NULL,
   `HomePage` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`Supplier_ID`))
+  PRIMARY KEY (`Brand_ID`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci;
 
 /*Creación de tabla de productos*/
 
-DROP TABLE IF EXISTS `terebigemuland_db`.`products`;
-CREATE TABLE `terebigemuland_db`.`products` (
+DROP TABLE IF EXISTS `terebigemuland_db`.`product`;
+CREATE TABLE `terebigemuland_db`.`product` (
   `Product_ID` INT NOT NULL AUTO_INCREMENT,
+  `ProductDetail_ID` INT NOT NULL,
   `ProductCategory_ID` INT NOT NULL,
-  `Supplier_ID` INT NOT NULL,
+  `Brand_ID` INT NOT NULL,
+  `ProductName` VARCHAR(45) NOT NULL,
   `Price` DECIMAL(6,2) NOT NULL,
-  `Quantity` INT NOT NULL,
-  `Disccount` DECIMAL(3,1) NOT NULL,
-  `Image` VARBINARY(256) NOT NULL,
+  `Disccount` DECIMAL(3,0) NOT NULL,
+  `Image` VARBINARY(255) NOT NULL,
   PRIMARY KEY (`Product_ID`),
-  INDEX `FK_Product_Category_idx` (`ProductCategory_ID` ASC),
-  INDEX `FK_Product_Supplier_idx` (`Supplier_ID` ASC),
-  CONSTRAINT `FK_Product_Category`
-    FOREIGN KEY (`ProductCategory_ID`)
-    REFERENCES `terebigemu_land`.`productCategory` (`ProductCategory_ID`)
+  INDEX `FK_Product_ProductDetail_idx` (`ProductDetail_ID` ASC),
+  INDEX `FK_Product_ProductCategory_idx` (`ProductCategory_ID` ASC),
+  INDEX `FK_Product_Brand_idx` (`Brand_ID` ASC),
+  CONSTRAINT `FK_Product_ProductDetail`
+    FOREIGN KEY (`ProductDetail_ID`)
+    REFERENCES `terebigemuland_db`.`productdetail` (`ProductDetail_ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `FK_Product_Supplier`
-    FOREIGN KEY (`Supplier_ID`)
-    REFERENCES `terebigemu_land`.`suppliers` (`Supplier_ID`)
+  CONSTRAINT `FK_Product_ProductCategory`
+    FOREIGN KEY (`ProductCategory_ID`)
+    REFERENCES `terebigemuland_db`.`productcategory` (`ProductCategory_ID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `FK_Product_Brand`
+    FOREIGN KEY (`Brand_ID`)
+    REFERENCES `terebigemuland_db`.`brand` (`Brand_ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci;
 
-/*Creación de tabla de detalles de productos*/
+/*Creación de tabla intermedia Orden-Producto*/
 
-CREATE TABLE `terebigemuland_db`.`productdetail` (
-  `ProductDetail_ID` INT NOT NULL AUTO_INCREMENT,
+DROP TABLE IF EXISTS `terebigemuland_db`.`orderproduct`;
+CREATE TABLE `terebigemuland_db`.`orderproduct` (
+  `OrderProduct_ID` INT NOT NULL AUTO_INCREMENT,
   `Order_ID` INT NOT NULL,
   `Product_ID` INT NOT NULL,
-  `Price` DECIMAL(6,2) NOT NULL,
-  `Quantity` INT NOT NULL,
-  `Disccount` DECIMAL(3,1) NOT NULL,
-  PRIMARY KEY (`ProductDetail_ID`),
-  INDEX `FK_Order_idx` (`Order_ID` ASC),
-  INDEX `FK_Product_idx` (`Product_ID` ASC),
-  CONSTRAINT `FK_Order`
+  PRIMARY KEY (`OrderProduct_ID`),
+  INDEX `FK_OrderProduct_Order_idx` (`Order_ID` ASC),
+  INDEX `FK_OrderProduct_Product_idx` (`Product_ID` ASC),
+  CONSTRAINT `FK_OrderProduct_Order`
     FOREIGN KEY (`Order_ID`)
-    REFERENCES `terebigemuland_db`.`orders` (`Order_ID`)
+    REFERENCES `terebigemuland_db`.`order` (`Order_ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `FK_Product`
+  CONSTRAINT `FK_OrderProduct_Product`
     FOREIGN KEY (`Product_ID`)
-    REFERENCES `terebigemuland_db`.`products` (`Product_ID`)
+    REFERENCES `terebigemuland_db`.`product` (`Product_ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci;
+
 
 
