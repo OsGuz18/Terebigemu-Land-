@@ -18,10 +18,10 @@
                     <b>VISTA PREVIA</b>
                     
                     <div class="Prevs">
-                        <a href="#"><img src="/images/products/<%= producto.Image %>" class="Prev1" width="50px"></a>
-                        <a href="#"><img src="/images/products/<%= producto.Image %>" class="Prev2"  width="50px"></a>
-                        <a href="#"><img src="/images/products/<%= producto.Image %>" class="Prev3"  width="50px"></a>
-                        <a href="#"><img src="/images/products/<%= producto.Image %>" class="Prev4"  width="50px"></a>
+                        <a href="#"><img src="/images/products/<%= detalle.ImageDetail1 %>" class="Prev1" width="50px"></a>
+                        <a href="#"><img src="/images/products/<%= detalle.ImageDetail2 %>" class="Prev2"  width="50px"></a>
+                        <a href="#"><img src="/images/products/<%= detalle.ImageDetail3 %>" class="Prev3"  width="50px"></a>
+                        <a href="#"><img src="/images/products/<%= detalle.ImageDetail4 %>" class="Prev4"  width="50px"></a>
                     </div>
                 </ul>
 
@@ -35,15 +35,15 @@
                     <h2>Detalles del producto</h2>
                     
                     <p>
-                        <%= producto.description %>
+                        <%= detalle.Description %>
                     </p>
                     <br>
                     
                     <ul>
-                        <li>Costo: $ <%= (producto.price).toLocaleString('en-US',
+                        <li>Costo: $ <%= (producto.Price).toLocaleString('en-US',
                             {minimumFractionDigits:2}) %> MXN</li>
-                        <li>Descuento Online: <%= producto.discount %> %</li>
-                        <li>Compatibilidad: <%= producto.subcategory %></li> 
+                        <li>Descuento Online: <%= producto.Disccount %> %</li> 
+                        <li>Compatible con: <%= producto.brand.CompanyName %> </li> 
                     </ul>
                     
                     <div class="toCar">
@@ -58,12 +58,12 @@
                     
                     <div class="edition-delete">
                         <p>
-                            <form  action="/products/editProduct/<%= producto.id %>" method="GET">
+                            <form  action="/products/editProduct/<%= producto.Product_ID %>" method="GET">
                                 <button type="submit" class="edit" >Editar</button>
                             </form>
                         </p>
                         <p>
-                            <form  action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
+                            <form  action="/products/delete/<%= producto.Product_ID %>?_method=DELETE" method="POST">
                                 <button type="submit" class="delete" >Borrar</button>
                             </form>
                         </p>

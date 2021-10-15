@@ -40,5 +40,19 @@
     "price": 5000,
     "discount": 10,
     "Image": "product-1627081204959.jpg"
-  }
+  },
+  {
+    "id": 1634194011711,
+    "name": "",
+    "description": "",
+    "category": "1",
+    "price": null,
+    "discount": null,
+    "Image": "pikachu.png"
+  },
+  {},
+  {},
+  {},
+  {},
+  {}
 ]

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/createProduct.css">
+        <title>Usuario</title>
+    </head>
+    
+    <body>
+        <%- include("../partials/header") %>
+        
+        <main>
+            <form action="/products/userEdit/<%= user.User_ID %>?_method=PUT" method=POST  class="productEdition" enctype="multipart/form-data">
+                <h2>Registrarse</h2>
+                
+                <label for="editName" class="formLabel"> Nombre (s) </label>
+                <input type="text" name="editName" id="editName" class="formImput" value="<%=  user.FirstName %>"   required>
+
+            
+              <!--  <label for="lastName" class="formLabel"> Apellidos </label>
+                <input type="text" name="editLastName" id="lastName" class="formImput" value="<%=  user.LastName %>"  required >
+
+
+                <label for="age" class="formLabel"> Edad </label>
+                <input type="text" name="editAge" id="age" class="formImput" value="<%=  user.Age %>"  required>
+  
+                
+                <label for="email" class="formLabel"> Email </label>
+                <input type="email" name="editEmail" id="email" class="formImput" value="<%=  user.Email %>"  required> 
+
+
+
+
+                 
+                <label for="gender" class="formLabel"> Genero </label>
+                
+                <div style="display: flex;">
+                    <input type="radio" class="formLabel" name="editGender" value="M" id="gender" <%= user.Gender == "M" ? "checked" : "" %>  required>
+                    <p style="color: black; margin-top: 2%; margin-left: 1%;">Masculino</p>
+                </div>
+                
+                <div style="display: flex;">
+                    <input type="radio" class="formLabel" name="editGender" value="F" id="gender" <%= user.Gender == "F" ? "checked" : "" %>  required>
+                    <p style="color: black; margin-top: 2%; margin-left: 1%;">Femenino</p>
+                </div>
+
+                <label for="address" class="formLabel"> Dirección </label>
+                <input type="text" name="editAddress" id="address" class="formImput" value="<%= user.Address %>" required >
+
+                <label for="phone" class="formLabel"> Teléfono </label>
+                <input type="text" name="editPhone" id="phone" class="formImput" value="<%= user.Telephone %>" required >
+
+              <label for="level" class="formLabel"> Nivel </label>
+                <select class="category"  name="level" id="level" required >           
+                    <option value="">Seleccione una opción</option>
+                    <option value="basico" <%= locals.oldData && oldData.level == "basico" ? "selected" : "" %> >Básico</option>
+                    <option value="plata" <%= locals.oldData && oldData.level == "plata" ? "selected" : "" %> >Plata</option>
+                    <option value="oro" <%= locals.oldData && oldData.level == "oro" ? "selected" : "" %> >Oro</option>
+                    <option value="platino" <%= locals.oldData && oldData.level == "platino" ? "selected" : "" %>>Platino</option>
+                </select> -->
+                
+
+                
+                <button type="submit" class="send">Editar</button>
+                
+            </form>
+        </main>
+        <%- include("../partials/footer") %>
+    </body>
+</html>
+
+<!--"/products/editProduct/<%= producto.Product_ID %>?_method=PUT"

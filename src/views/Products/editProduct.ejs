@@ -14,42 +14,56 @@
     <body>
         <%- include("../partials/header") %>
         <main>
-            <form action="/products/editProduct/<%= producto.id %>?_method=PUT" method=POST  class="productEdition" enctype="multipart/form-data">
+            <form action="/products/editProduct/<%= producto.Product_ID %>?_method=PUT" method=POST  class="productEdition" enctype="multipart/form-data">
                 <h2>Editar producto</h2>
                 
                 <label for="productName" class="formLabel"> Nombre</label>
-                <input type="text" name="name" id="name" class="formImput" value="<%= producto.name %>">
+                <input type="text" name="name" id="name" class="formImput" value="<%= producto.ProductName %>">
             
                 <label for="description" class="formLabel"> Descripción </label>
-                <input type="text" name="description" id="description" class="formImput" value="<%= producto.description %>">      
+                <input type="text" name="description" id="description" class="formImput" value= "<%= detalle.Description %>" >      
                     
-                <label for= "image" class="formLabel"> Imagen </label>
+               <label for= "image" class="formLabel"> Imagen </label>
                 <input type="file" id="image" name="imageupdate" accept=".jpg" multiple  class="formImage">
                 
                 <label for="imageactual" class="formLabel">Imagen Actual</label>
                 <img src="/images/products/<%= producto.Image %>" id="imageactual" class="formImage">
                 
+                <label for="category" class="formLabel">Seleccione una categoría (*)</label>
                 <select class="category"  name="category" id="category">           
-                    <option value="">Seleccione una opción</option>
-                    <option value="videojuegos" <%= producto.category === "videojuegos" ? "selected" : "" %> >Videojuegos</option>
-                    <option value="consolas" <%= producto.category === "consolas" ? "selected" : "" %> >Consolas</option>
-                    <option value="revistas" <%= producto.category === "revistas" ? "selected" : "" %> >Revistas</option>
-                    <option value="ropa" <%= producto.category === "ropa" ? "selected" : "" %> >Ropa</option>
-                    <option value="figuras" <%= producto.category === "figuras" ? "selected" : "" %> >Figuras</option>
+                    <option value="1" <%= producto.ProductCategory_ID == "1" ? "selected" : "" %> >Consolas</option>
+                    <option value="2" <%= producto.ProductCategory_ID == "2" ? "selected" : "" %> >Revistas</option>
+                    <option value="3" <%= producto.ProductCategory_ID == "3" ? "selected" : "" %> >Ropa</option>
+                    <option value="4" <%= producto.ProductCategory_ID == "4" ? "selected" : "" %> >Figuras</option>
+                    <option value="5" <%= producto.ProductCategory_ID == "5" ? "selected" : "" %> >Videojuegos</option>
                 </select>
 
-                <select name="subcategory" id="subcategory" class="category">
-                    <option value="">Seleccione una opción</option>
-                    <option value="PC" <%= producto.subcateory === "PC" ? "selected" : "" %>>PC</option>
-                    <option value="Playstation" <%= producto.subcateory === "Playstation" ? "selected" : "" %> >Playstation</option>
-                    <option value="Xbox" <%= producto.subcateory === "Xbox" ? "selected" : "" %> >Xbox</option>
-                    <option value="Nintendo" <%= producto.subcateory === "Nintendo" ? "selected" : "" %> >Nintendo Switch</option>
+                <label for="brand" class="formLabel">Seleccione una marca (*)</label>
+                <select name="brand" id="brand" class="category">
+                    <option value="1" <%= producto.Brand_ID == "1" ? "selected" : "" %> >Xbox</option>
+                    <option value="2" <%= producto.Brand_ID == "2" ? "selected" : "" %> >PlayStation</option>
+                    <option value="3" <%= producto.Brand_ID == "3" ? "selected" : "" %> >PC</option>
+                    <option value="4" <%= producto.Brand_ID == "4" ? "selected" : "" %> >Figuras</option>
+                    <option value="5" <%= producto.Brand_ID == "5" ? "selected" : "" %> >Ropa</option>
+                    <option value="6" <%= producto.Brand_ID == "6" ? "selected" : "" %> >Nintendo</option>
                 </select>
                 
                 <label for= "price" class="formLabel"> Precio </label>
-                <input type="text" name="price" id="price" class="formImput" value="<%= producto.price %>">
+                <input type="text" name="price" id="price" class="formImput" value="<%= producto.Price %>">
                 <label for= "discount" class="formLabel"> Descuento </label>
-                <input type="text" name="discount" id="discount" class="formImput" value="<%= producto.discount %>">
+                <input type="text" name="discount" id="discount" class="formImput" value="<%= producto.Disccount %>">
+
+                <label for= "ranking" class="formLabel"> Ranking (*) </label>
+                <input type="text" name="ranking" id="ranking" class="formImput" value="<%= detalle.Ranking %>" required>
+
+                <label for= "weight" class="formLabel"> Weight(Kg) (*) </label>
+                <input type="text" name="weight" id="weight" class="formImput" value="<%= detalle.Weight %>" required>
+
+                <label for= "size" class="formLabel"> Size(cm) (*) </label>
+                <input type="text" name="size" id="size" class="formImput" value="<%= detalle.Size %>" required>
+
+                <label for= "stock" class="formLabel"> Stock (*) </label>
+                <input type="text" name="stock" id="stock" class="formImput" value="<%= detalle.Stock %>" required> 
 
                 <button type="submit" class="send">Editar</button>
             </form>

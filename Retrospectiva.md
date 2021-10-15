@@ -74,3 +74,16 @@ Siguiento el esquema de la estrella de mar podemos realizar la siguiente restros
     4.- Hacer menos: Dejar pasar mucho tiempo para resolver los sprints.
 
     5.-Dejar de hacer: Acumular tareas de sprints pasados.
+
+
+    Sprint 7
+
+    1.-Comenzar a hacer: Ponerse al corriente con los trabajos atrazados de los sprints
+
+    2.-Hacer más: Resolver problemas en el código que surgen en la migración a bases de datos
+
+    3.-Continuar haciendo: Continuar con el nuevo ritmo de trabajo y pulir detalles en el funcionamiento del proyecto
+
+    4.- Hacer menos: Consumir tiempo en tareas que representan un probelma y dejarlas a lo último para poder avanzar en los demás rubros
+
+    5.-Dejar de hacer: Postergar la resolución de problemas que impiden el correcto funcionamiento del proyecto
