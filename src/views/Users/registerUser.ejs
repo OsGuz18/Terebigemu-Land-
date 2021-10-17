@@ -14,11 +14,14 @@
     <body>
         <%- include("../partials/header") %>
         <main>
+            <div class="errores">
+                <ul></ul>
+            </div>
             <form action="/users/register" method=POST  class="productEdition" enctype="multipart/form-data">
                 <h2>Registrarse</h2>
                 
                 <label for="name" class="formLabel"> Nombre (s) </label>
-                <input type="text" name="name" id="name" class= "formImput" value="<%= locals.oldData && oldData.name ? oldData.name : '' %>"  required>
+                <input type="text" name="name" id="name" class= "formImput" value="<%= locals.oldData && oldData.name ? oldData.name : '' %>" required>
                 <% if(locals.errors && errors.name){ %>
                     <div  style="color: red;">
                         <%= errors.name.msg %>
@@ -93,5 +96,7 @@
             </form>
         </main>
         <%- include("../partials/footer") %>
+
+        <script src=/validator.js></script>
     </body>
 </html>

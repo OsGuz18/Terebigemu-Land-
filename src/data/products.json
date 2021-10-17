@@ -22,16 +22,6 @@
     "discount": 50
   },
   {
-    "id": 1626996551653,
-    "name": "Reactor",
-    "description": "Reactor de Iron-Man",
-    "category": "videojuegos",
-    "subcateory": "PC",
-    "price": 5000,
-    "discount": null,
-    "Image": "product-1626996551174.jpg"
-  },
-  {
     "id": 1627081205290,
     "name": "Prueba de falla",
     "description": "Esto es una prueba para ver si falla el código ",
@@ -40,5 +30,65 @@
     "price": 5000,
     "discount": 10,
     "Image": "product-1627081204959.jpg"
+  },
+  {
+    "id": 1634102643090,
+    "name": "Super Mario 3D",
+    "description": "Edición Deluxe de super Mario 3D",
+    "category": "videojuegos",
+    "subcateory": "Playstation",
+    "price": 2000,
+    "discount": 10,
+    "Image": "product-1634102643028.jpg"
+  },
+  {
+    "id": 1634103754810,
+    "name": "Smash",
+    "description": "Smash",
+    "category": "videojuegos",
+    "subcateory": "Nintendo",
+    "price": 1300,
+    "discount": 10,
+    "Image": "product-1634103754695.jpg"
+  },
+  {
+    "id": 1634106722269,
+    "name": "Luigi",
+    "description": "Nuevo juego",
+    "category": "videojuegos",
+    "subcateory": "Nintendo",
+    "price": 2000,
+    "discount": 20,
+    "Image": "product-1634106722240.jpg"
+  },
+  {
+    "id": 1634106980153,
+    "name": "Mario maker",
+    "description": "Nuevo juego",
+    "category": "videojuegos",
+    "subcateory": "Nintendo",
+    "price": 1000,
+    "discount": 15,
+    "Image": "product-1634106980106.jpg"
+  },
+  {
+    "id": 1634107451880,
+    "name": "Playera Batman",
+    "description": "Ropa casual",
+    "category": "ropa",
+    "subcateory": "",
+    "price": 200,
+    "discount": 0,
+    "Image": "product-1634107451867.jpg"
+  },
+  {
+    "id": 1634107538230,
+    "name": "Control",
+    "description": "Control de Playstation",
+    "category": "consolas",
+    "subcateory": "Xbox",
+    "price": 950,
+    "discount": 10,
+    "Image": "product-1634107538216.jpg"
   }
 ]

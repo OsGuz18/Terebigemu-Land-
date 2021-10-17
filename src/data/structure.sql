@@ -41,11 +41,11 @@ CREATE TABLE `terebigemuland_db`.`user` (
   `Password` VARCHAR(15) NOT NULL,
   `PaymentMethod` VARCHAR(20) NOT NULL,
   `UserCategory_ID` INT NOT NULL,
-  PRIMARY KEY (`USER_ID`),
+  PRIMARY KEY (`User_ID`),
   INDEX `FK_User_Category_idx` (`UserCategory_ID` ASC),
   CONSTRAINT `FK_User_Category`
   FOREIGN KEY (`UserCategory_ID`)
-  REFERENCES `terebigemu_land`.`UserCategory` (`UserCategory_ID`)
+  REFERENCES `terebigemu_land`.`userCategory` (`UserCategory_ID`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -109,7 +109,7 @@ CREATE TABLE `terebigemuland_db`.`orders` (
   INDEX `FK_Order_DeliveryService_idx` (`DeliveryService_ID` ASC),
   CONSTRAINT `FK_Order_User`
     FOREIGN KEY (`User_ID`)
-    REFERENCES `terebigemuland_db`.`users` (`User_ID`)
+    REFERENCES `terebigemuland_db`.`user` (`User_ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `FK_Order_DeliveryService`
@@ -192,7 +192,7 @@ CREATE TABLE `terebigemuland_db`.`product` (
     ON UPDATE NO ACTION,
   CONSTRAINT `FK_Product_ProductCategory`
     FOREIGN KEY (`ProductCategory_ID`)
-    REFERENCES `terebigemuland_db`.`productcategory` (`ProductCategory_ID`)
+    REFERENCES `terebigemuland_db`.`productCategory` (`ProductCategory_ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `FK_Product_Brand`
@@ -216,7 +216,7 @@ CREATE TABLE `terebigemuland_db`.`orderproduct` (
   INDEX `FK_OrderProduct_Product_idx` (`Product_ID` ASC),
   CONSTRAINT `FK_OrderProduct_Order`
     FOREIGN KEY (`Order_ID`)
-    REFERENCES `terebigemuland_db`.`order` (`Order_ID`)
+    REFERENCES `terebigemuland_db`.`orders` (`Order_ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `FK_OrderProduct_Product`
