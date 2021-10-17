@@ -14,10 +14,15 @@
     <body>
         <%- include("../partials/header") %>
         <main>
-            <form action="/products/create" method=POST  class="productEdition" enctype="multipart/form-data">
+            <form action="/products/create" method=POST  class="productCreation" enctype="multipart/form-data">
                 <h2>Agregar producto</h2>
+
+                <div class="errores">
+                    <ul></ul>
+                </div>
+
                 <label for="productName" class="formLabel"> Nombre del producto (*) </label>
-                <input type="text" name="name" id="name" class="formImput" value="<%= locals.oldData && oldData.name ? oldData.name : '' %>" required>
+                <input type="text" name="name" id="name" class="name" value="<%= locals.oldData && oldData.name ? oldData.name : '' %>">
                 <% if(locals.errors && errors.name){ %>
                     <div  style="color: red;">
                         <%= errors.name.msg %>
@@ -25,7 +30,7 @@
                 <% } %>
             
                 <label for="description" class="formLabel"> Descripción (*) </label>
-                <input type="text" name="description" id="description" class="formImput" value="<%= locals.oldData && oldData.description ? oldData.description : '' %>" required>
+                <input type="text" name="description" id="description" class="description" value="<%= locals.oldData && oldData.description ? oldData.description : '' %>" >
                 <% if(locals.errors && errors.description){ %>
                     <div  style="color: red;">
                         <%= errors.description.msg %>
@@ -33,7 +38,7 @@
                 <% } %>      
                     
                 <label for= "image" class="formLabel"> Imagen(Max 5) (*) </label>
-                <input type="file" id="image" name="images"  multiple  class="formImage" required>
+                <input type="file" id="image" name="images"  multiple  class="formImage" >
                 <% if(locals.errors && errors.images){ %>
                     <div  style="color: red;">
                         <%= errors.images.msg %>
@@ -64,22 +69,22 @@
                 </select>
                 
                 <label for= "price" class="formLabel"> Precio (*) </label>
-                <input type="text" name="price" id="price" class="formImput" value="<%= locals.oldData && oldData.price ? oldData.price : '' %>" required>
+                <input type="text" name="price" id="price" class="price" value="<%= locals.oldData && oldData.price ? oldData.price : '' %>">
 
                 <label for= "discount" class="formLabel"> Descuento (%) </label>
-                <input type="text" name="discount" id="discount" class="formImput" value="<%= locals.oldData && oldData.discount ? oldData.discount : '' %>">
+                <input type="text" name="discount" id="discount" class="discount" value="<%= locals.oldData && oldData.discount ? oldData.discount : '' %>">
 
                 <label for= "ranking" class="formLabel"> Ranking (*) </label>
-                <input type="text" name="ranking" id="ranking" class="formImput" value="<%= locals.oldData && oldData.ranking ? oldData.ranking : '' %>" required>
+                <input type="text" name="ranking" id="ranking" class="ranking" value="<%= locals.oldData && oldData.ranking ? oldData.ranking : '' %>">
 
                 <label for= "weight" class="formLabel"> Weight(Kg) (*) </label>
-                <input type="text" name="weight" id="weight" class="formImput" value="<%= locals.oldData && oldData.weight ? oldData.weight : '' %>" required>
+                <input type="text" name="weight" id="weight" class="weight" value="<%= locals.oldData && oldData.weight ? oldData.weight : '' %>" >
 
                 <label for= "size" class="formLabel"> Size(cm) (*) </label>
-                <input type="text" name="size" id="size" class="formImput" value="<%= locals.oldData && oldData.size ? oldData.size : '' %>" required>
+                <input type="text" name="size" id="size" class="size" value="<%= locals.oldData && oldData.size ? oldData.size : '' %>" >
 
                 <label for= "stock" class="formLabel"> Stock (*) </label>
-                <input type="text" name="stock" id="stock" class="formImput" value="<%= locals.oldData && oldData.stock ? oldData.stock : '' %>" required>
+                <input type="text" name="stock" id="stock" class="stock" value="<%= locals.oldData && oldData.stock ? oldData.stock : '' %>" >
 
                 <button type="submit" class="send">Enviar</button>
                 <input type="reset" class="reset">
@@ -87,5 +92,7 @@
             </form>
         </main>
         <%- include("../partials/footer") %>
+
     </body>
+    <script src="/js/validator.js"></script>
 </html>

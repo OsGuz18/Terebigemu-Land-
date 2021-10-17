@@ -7,21 +7,23 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="/css/createProduct.css">
-        <title>createProduct</title>
+        <link rel="stylesheet" href="/css/userRegister.css">
+        <title>userRegister</title>
     </head>
     
     <body>
         <%- include("../partials/header") %>
         <main>
-            <div class="errores">
-                <ul></ul>
-            </div>
-            <form action="/users/register" method=POST  class="productEdition" enctype="multipart/form-data">
+            
+            <form action="/users/register" method=POST  class="userRegistration" enctype="multipart/form-data">
                 <h2>Registrarse</h2>
+
+                <div class="errores">
+                    <ul></ul>
+                </div>
                 
                 <label for="name" class="formLabel"> Nombre (s) </label>
-                <input type="text" name="name" id="name" class= "formImput" value="<%= locals.oldData && oldData.name ? oldData.name : '' %>" required>
+                <input type="text" name="name" id="name" class= "name" value="<%= locals.oldData && oldData.name ? oldData.name : '' %>">
                 <% if(locals.errors && errors.name){ %>
                     <div  style="color: red;">
                         <%= errors.name.msg %>
@@ -29,7 +31,7 @@
                 <% } %>
             
                 <label for="lastName" class="formLabel"> Apellidos </label>
-                <input type="text" name="lastName" id="lastName" class="formImput" value="<%= locals.oldData && oldData.lastName ? oldData.lastName : '' %>" required >
+                <input type="text" name="lastName" id="lastName" class="lastName" value="<%= locals.oldData && oldData.lastName ? oldData.lastName : '' %>" >
                 <% if(locals.errors && errors.lastName){ %>
                     <div  style="color: red;">
                         <%= errors.lastName.msg %>
@@ -37,7 +39,7 @@
                 <% } %> 
 
                 <label for="age" class="formLabel"> Edad </label>
-                <input type="text" name="age" id="age" class="formImput" value="<%= locals.oldData && oldData.age ? oldData.age : '' %>" required>
+                <input type="text" name="age" id="age" class="age" value="<%= locals.oldData && oldData.age ? oldData.age : '' %>">
                 <% if(locals.errors && errors.age){ %>
                     <div  style="color: red;">
                         <%= errors.age.msg %>
@@ -45,7 +47,7 @@
                 <% } %>   
                 
                 <label for="email" class="formLabel"> Email </label>
-                <input type="email" name="email" id="email" class="formImput" value="<%= locals.oldData && oldData.email ? oldData.email : '' %>" required> 
+                <input type="email" name="email" id="email" class="email" value="<%= locals.oldData && oldData.email ? oldData.email : '' %>"> 
                <% if(locals.errors && errors.email){ %>
                     <div style="color: red;">
                         <%= errors.email.msg %>
@@ -53,7 +55,7 @@
                 <% } %> 
 
                 <label for="password" class="formLabel"> Contraseña </label>
-                <input type="password" name="password" id="password" class="formImput" required >
+                <input type="password" name="password" id="password" class="password"  >
                 <% if(locals.errors && errors.password){ %>
                     <div  style="color: red;">
                         <%= errors.password.msg %>
@@ -64,20 +66,20 @@
                 <label for="gender" class="formLabel"> Genero </label>
                 
                 <div style="display: flex;">
-                    <input type="radio" class="formLabel" name="gender" value="M" id="gender" <%= locals.oldData && oldData.gender == "M" ? "checked" : "" %>  required>
+                    <input type="radio" class="formLabel" name="gender" value="M" id="gender" <%= locals.oldData && oldData.gender == "M" ? "checked" : "" %>  >
                     <p style="color: black; margin-top: 2%; margin-left: 1%;">Masculino</p>
                 </div>
                 
                 <div style="display: flex;">
-                    <input type="radio" class="formLabel" name="gender" value="F" id="gender" <%= locals.oldData && oldData.gender == "F" ? "checked" : "" %>  required>
+                    <input type="radio" class="formLabel" name="gender" value="F" id="gender" <%= locals.oldData && oldData.gender == "F" ? "checked" : "" %>  >
                     <p style="color: black; margin-top: 2%; margin-left: 1%;">Femenino</p>
                 </div>
 
                 <label for="address" class="formLabel"> Dirección </label>
-                <input type="text" name="address" id="address" class="formImput" value="<%= locals.oldData && oldData.address ? oldData.address : '' %>" required >
+                <input type="text" name="address" id="address" class="address" value="<%= locals.oldData && oldData.address ? oldData.address : '' %>">
 
                 <label for="phone" class="formLabel"> Teléfono </label>
-                <input type="text" name="phone" id="phone" class="formImput" value="<%= locals.oldData && oldData.phone ? oldData.phone : '' %>" required >
+                <input type="text" name="phone" id="phone" class="phone" value="<%= locals.oldData && oldData.phone ? oldData.phone : '' %>"  >
                 <% if(locals.errors && errors.phone){ %>
                     <div style="color: red;">
                         <%= errors.phone.msg %>
@@ -110,6 +112,6 @@
         </main>
         <%- include("../partials/footer") %>
 
-        <script src=/validator.js></script>
+        <script src="/js/validator.js"></script>
     </body>
 </html>

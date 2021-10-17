@@ -23,7 +23,7 @@ const validaciones=[
         .isLength({min:5}).withMessage("El nombre debe contener 5 o más caracteres"),
     
     body("description")
-        .isLength({min:20}).withMessage("El apellido debe 20 o más caracteres"),
+        .isLength({min:20}).withMessage("La descripción debe contener al menos 20 caracteres"),
     
     body("images").custom((value,{req})=>{
         let file = req.files;

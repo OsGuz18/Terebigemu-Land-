@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="/css/createProduct.css">
+        <link rel="stylesheet" href="/css/editProduct.css">
         <title>createProduct</title>
     </head>
     
@@ -16,12 +16,16 @@
         <main>
             <form action="/products/editProduct/<%= producto.Product_ID %>?_method=PUT" method=POST  class="productEdition" enctype="multipart/form-data">
                 <h2>Editar producto</h2>
+
+                <div class="errores">
+                    <ul></ul>
+                </div>
                 
                 <label for="productName" class="formLabel"> Nombre</label>
-                <input type="text" name="name" id="name" class="formImput" value="<%= producto.ProductName %>">
+                <input type="text" name="name" id="name" class="name" value="<%= producto.ProductName %>">
             
                 <label for="description" class="formLabel"> Descripción </label>
-                <input type="text" name="description" id="description" class="formImput" value= "<%= detalle.Description %>" >      
+                <input type="text" name="description" id="description" class="description" value= "<%= detalle.Description %>" >      
                     
                <label for= "image" class="formLabel"> Imagen </label>
                 <input type="file" id="image" name="imageupdate" accept=".jpg" multiple  class="formImage">
@@ -49,25 +53,27 @@
                 </select>
                 
                 <label for= "price" class="formLabel"> Precio </label>
-                <input type="text" name="price" id="price" class="formImput" value="<%= producto.Price %>">
+                <input type="text" name="price" id="price" class="price" value="<%= producto.Price %>">
                 <label for= "discount" class="formLabel"> Descuento </label>
-                <input type="text" name="discount" id="discount" class="formImput" value="<%= producto.Disccount %>">
+                <input type="text" name="discount" id="discount" class="discount" value="<%= producto.Disccount %>">
 
                 <label for= "ranking" class="formLabel"> Ranking (*) </label>
-                <input type="text" name="ranking" id="ranking" class="formImput" value="<%= detalle.Ranking %>" required>
+                <input type="text" name="ranking" id="ranking" class="ranking" value="<%= detalle.Ranking %>" required>
 
                 <label for= "weight" class="formLabel"> Weight(Kg) (*) </label>
-                <input type="text" name="weight" id="weight" class="formImput" value="<%= detalle.Weight %>" required>
+                <input type="text" name="weight" id="weight" class="weight" value="<%= detalle.Weight %>" required>
 
                 <label for= "size" class="formLabel"> Size(cm) (*) </label>
-                <input type="text" name="size" id="size" class="formImput" value="<%= detalle.Size %>" required>
+                <input type="text" name="size" id="size" class="size" value="<%= detalle.Size %>" required>
 
                 <label for= "stock" class="formLabel"> Stock (*) </label>
-                <input type="text" name="stock" id="stock" class="formImput" value="<%= detalle.Stock %>" required> 
+                <input type="text" name="stock" id="stock" class="stock" value="<%= detalle.Stock %>" required> 
 
                 <button type="submit" class="send">Editar</button>
             </form>
         </main>
         <%- include("../partials/footer") %>
     </body>
+
+    <script src="/js/validator.js"></script>
 </html>

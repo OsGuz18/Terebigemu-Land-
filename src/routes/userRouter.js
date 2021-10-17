@@ -22,7 +22,7 @@ const upload = multer({ storage: storage })
 const validaciones=[
     body("name")
         .isAlpha('es-ES',{ignore:" "}).withMessage("El nombre no puede contener números").bail()
-        .isLength({min:5}).withMessage("El nombre debe contener 5 o más caracteres"),
+        .isLength({min:2}).withMessage("El nombre debe contener 2 o más caracteres"),
     
     body("lastName")
         .isAlpha('es-ES',{ignore:" "}).withMessage("El apellido no puede contener números").bail()

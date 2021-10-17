@@ -19,7 +19,7 @@ body{
 /* main{
     align-content: center;
 } */
-.productCreation{
+.userRegistration{
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -47,21 +47,23 @@ h2{
     color: red;
     text-align: center;
     background-color: black;
+
 }
 
-.formImput .formLabel, .send, .reset{
+.formImput .formLabel, .send, .reset, .name, .lastName, .age, .email, .password, .address, .phone{
      display: block;
      width: 100%;
      
 }
 
-.name, .description, .price, .discount, .ranking, .weight, .size, .stock{
+.name, .lastName, .age, .email, .password, .address, .phone{
     padding: 20px;
     background-color:rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(0, 0, 0, 0.3);
     margin-bottom: 15px;
 
 }
+
 
 .formImput:focus {
     outline: 1px solid rgba(0, 0, 0, 0.5);
