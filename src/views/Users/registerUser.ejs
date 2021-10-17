@@ -54,6 +54,11 @@
 
                 <label for="password" class="formLabel"> Contraseña </label>
                 <input type="password" name="password" id="password" class="formImput" required >
+                <% if(locals.errors && errors.password){ %>
+                    <div  style="color: red;">
+                        <%= errors.password.msg %>
+                    </div>
+                <% } %>
 
                  
                 <label for="gender" class="formLabel"> Genero </label>
@@ -71,14 +76,22 @@
                 <label for="address" class="formLabel"> Dirección </label>
                 <input type="text" name="address" id="address" class="formImput" value="<%= locals.oldData && oldData.address ? oldData.address : '' %>" required >
 
-                <label for="level" class="formLabel"> Nivel </label>
+                <label for="phone" class="formLabel"> Teléfono </label>
+                <input type="text" name="phone" id="phone" class="formImput" value="<%= locals.oldData && oldData.phone ? oldData.phone : '' %>" required >
+                <% if(locals.errors && errors.phone){ %>
+                    <div style="color: red;">
+                        <%= errors.phone.msg %>
+                    </div>
+                <% } %> 
+
+               <!-- <label for="level" class="formLabel"> Nivel </label>
                 <select class="category"  name="level" id="level" required >           
                     <option value="">Seleccione una opción</option>
                     <option value="basico" <%= locals.oldData && oldData.level == "basico" ? "selected" : "" %> >Básico</option>
                     <option value="plata" <%= locals.oldData && oldData.level == "plata" ? "selected" : "" %> >Plata</option>
                     <option value="oro" <%= locals.oldData && oldData.level == "oro" ? "selected" : "" %> >Oro</option>
                     <option value="platino" <%= locals.oldData && oldData.level == "platino" ? "selected" : "" %>>Platino</option>
-                </select>
+                </select> -->
                 
                 
                 <label for= "image" class="formLabel"> Imagen </label>

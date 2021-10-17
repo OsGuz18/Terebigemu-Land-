@@ -32,6 +32,7 @@
     "Image": "product-1627081204959.jpg"
   },
   {
+<<<<<<< HEAD
     "id": 1634102643090,
     "name": "Super Mario 3D",
     "description": "Edición Deluxe de super Mario 3D",
@@ -91,4 +92,19 @@
     "discount": 10,
     "Image": "product-1634107538216.jpg"
   }
+=======
+    "id": 1634194011711,
+    "name": "",
+    "description": "",
+    "category": "1",
+    "price": null,
+    "discount": null,
+    "Image": "pikachu.png"
+  },
+  {},
+  {},
+  {},
+  {},
+  {}
+>>>>>>> 8e923aba6f92e5e98eed39ae7c0a2ec1de9bd4b7
 ]

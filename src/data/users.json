@@ -22,5 +22,16 @@
     "address": "avenida sonidos 34",
     "level": "basico",
     "Image": "user-1631671921610.jpg"
+  },
+  {
+    "id": 1634022757459,
+    "name": "Osmar Humberto",
+    "lastName": "Mariscal",
+    "age": "26",
+    "email": "$2a$10$ImaPo7DE7ipvBpaHs6Ie8.giq.WsWYfFAvEYSjwix9IPo8ItoZwsu",
+    "password": "$2a$10$ULpirHGTEYs7fUzibxIlnOUezF/aoZN6aXLGBT9q.7Bscv7g6fcoK",
+    "gender": "M",
+    "address": "Calle 20 Sur #5116 Col. Villa Carmel",
+    "Image": "user-1634022757274.jpg"
   }
 ]

@@ -30,7 +30,7 @@
 
             <section class="correo">
                 <label for="email"> Correo electrónico: </label>
-               <input type="text" name="email" id="email"  placeholder="correo electrónico" class="email">
+               <input type="text" name="email" id="email"  placeholder="correo electrónico" class="email" required>
             </section>
             <% if(locals.errors && errors.email){ %>
                 <div  style="color: red;">

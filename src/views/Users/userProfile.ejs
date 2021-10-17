@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="/css/profile.css">
+        <link rel="stylesheet" href="/css/productDetail.css">
         <title>User Profile</title>
     </head>
     
@@ -16,10 +17,22 @@
         <main>
             <div class="header">
                 <div>
-                    <div >Hi <%= user.name %> </div>
+                    <div >Hola <%= user.FirstName + " " + user.LastName %> </div>
                 </div>
                 <div>
-                    <img src="/images/users/<%= user.Image %>" alt="No">
+                    <img src="/images/users/<%= user.Photo %>" alt="No">
+                </div>
+                <div>
+                    <% if(user.UserCategory_ID == "0"){
+                            nivel="Básico"
+                        }%>
+                    <div>Nivel: <%= nivel %></div>
+                </div>
+                <div>
+                    
+                    <form  action="/users/userEdit/<%= user.User_ID%>" method="GET">
+                        <button type="submit" class="edit" >Editar Información</button>
+                    </form>
                 </div>
             </div>
         </main>

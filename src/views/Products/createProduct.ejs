@@ -16,37 +16,70 @@
         <main>
             <form action="/products/create" method=POST  class="productEdition" enctype="multipart/form-data">
                 <h2>Agregar producto</h2>
-                <label for="productName" class="formLabel"> Nombre del producto </label>
-                <input type="text" name="name" id="name" class="formImput">
+                <label for="productName" class="formLabel"> Nombre del producto (*) </label>
+                <input type="text" name="name" id="name" class="formImput" value="<%= locals.oldData && oldData.name ? oldData.name : '' %>" required>
+                <% if(locals.errors && errors.name){ %>
+                    <div  style="color: red;">
+                        <%= errors.name.msg %>
+                    </div>
+                <% } %>
             
-                <label for="description" class="formLabel"> Descripción </label>
-                <input type="text" name="description" id="description" class="formImput">      
+                <label for="description" class="formLabel"> Descripción (*) </label>
+                <input type="text" name="description" id="description" class="formImput" value="<%= locals.oldData && oldData.description ? oldData.description : '' %>" required>
+                <% if(locals.errors && errors.description){ %>
+                    <div  style="color: red;">
+                        <%= errors.description.msg %>
+                    </div>
+                <% } %>      
                     
-                <label for= "image" class="formLabel"> Imagen </label>
-                <input type="file" id="image" name="image" accept=".jpg" multiple  class="formImage">
+                <label for= "image" class="formLabel"> Imagen(Max 5) (*) </label>
+                <input type="file" id="image" name="images"  multiple  class="formImage" required>
+                <% if(locals.errors && errors.images){ %>
+                    <div  style="color: red;">
+                        <%= errors.images.msg %>
+                    </div>
+                <% } %>
+
+               <!-- <label for= "imagedetail1" class="formLabel"> Imagen de detalle 1 </label>
+                <input type="file" id="imagedetail1" name="imagedetail1" accept=".jpg" multiple  class="formImage">
+
+                <label for= "imagedetail2" class="formLabel"> Imagen de detalle 2 </label>
+                <input type="file" id="imagedetail2" name="imagedetail2" accept=".jpg" multiple  class="formImage">
+
+                <label for= "imagedetail3" class="formLabel"> Imagen de detalle 3 </label>
+                <input type="file" id="imagedetail3" name="imagedetail3" accept=".jpg" multiple  class="formImage"> -->
                 
-                <select class="category"  name="category" id="category">           
-                    <option value="">Seleccione una opción</option>
-                    <option value="videojuegos">Videojuegos</option>
-                    <option value="consolas">Consolas</option>
-                    <option value="revistas">Revistas</option>
-                    <option value="ropa">Ropa</option>
-                    <option value="figuras">Figuras</option>
+                <label for="category" class="formLabel">Seleccione una categoría (*)</label>
+                <select class="category"  name="category" id="category" required>          
+                    <% for(let i = 0; i < categorias.length; i++){ %>
+                        <option value="<%=categorias[i].dataValues.ProductCategory_ID %>"><%= categorias[i].dataValues.CategoryType %></option>
+                   <% } %>
                 </select>
 
-                <select name="subcategory" id="subcategory" class="category">
-                    <option value="">Seleccione una opción</option>
-                    <option value="PC">PC</option>
-                    <option value="Playstation">Playstation</option>
-                    <option value="Xbox">Xbox</option>
-                    <option value="Nintendo">Nintendo Switch</option>
+                <label for="brand" class="formLabel">Seleccione una marca (*)</label>
+                <select class="category"  name="brand" id="brand" required>          
+                    <% for(let i = 0; i < marcas.length; i++){ %>
+                        <option value="<%= marcas[i].dataValues.Brand_ID %>"><%= marcas[i].dataValues.CompanyName %></option>
+                   <% } %>
                 </select>
                 
-                <label for= "price" class="formLabel"> Precio </label>
-                <input type="text" name="price" id="price" class="formImput">
+                <label for= "price" class="formLabel"> Precio (*) </label>
+                <input type="text" name="price" id="price" class="formImput" value="<%= locals.oldData && oldData.price ? oldData.price : '' %>" required>
 
-                <label for= "discount" class="formLabel"> Descuento </label>
-                <input type="text" name="discount" id="discount" class="formImput">
+                <label for= "discount" class="formLabel"> Descuento (%) </label>
+                <input type="text" name="discount" id="discount" class="formImput" value="<%= locals.oldData && oldData.discount ? oldData.discount : '' %>">
+
+                <label for= "ranking" class="formLabel"> Ranking (*) </label>
+                <input type="text" name="ranking" id="ranking" class="formImput" value="<%= locals.oldData && oldData.ranking ? oldData.ranking : '' %>" required>
+
+                <label for= "weight" class="formLabel"> Weight(Kg) (*) </label>
+                <input type="text" name="weight" id="weight" class="formImput" value="<%= locals.oldData && oldData.weight ? oldData.weight : '' %>" required>
+
+                <label for= "size" class="formLabel"> Size(cm) (*) </label>
+                <input type="text" name="size" id="size" class="formImput" value="<%= locals.oldData && oldData.size ? oldData.size : '' %>" required>
+
+                <label for= "stock" class="formLabel"> Stock (*) </label>
+                <input type="text" name="stock" id="stock" class="formImput" value="<%= locals.oldData && oldData.stock ? oldData.stock : '' %>" required>
 
                 <button type="submit" class="send">Enviar</button>
                 <input type="reset" class="reset">

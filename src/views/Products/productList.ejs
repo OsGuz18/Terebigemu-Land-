@@ -17,26 +17,26 @@
                 </div>
                 
                 <div class="products-container">
-                <% for(let producto of productos){ %>
-                    <a href="/products/productDetail/<%= producto.id %>">  
+                <% for(let i = 0; i < productos.length; i++){ %>
+                    <a href="/products/productDetail/<%= productos[i].Product_ID %>">  
                         <section class="product-container" >
-                            <figure class="figure">
-                                <img src="/images/products/<%= producto.Image %>" alt="imagen del producto">
+                             <figure class="figure">
+                                <img src="/images/products/<%= productos[i].Image %>" alt="imagen del producto">
                             </figure>
                             
-                            <div class="product-name"><%= producto.name %></div>
+                            <div class="product-name"><%= productos[i].ProductName %></div>
                             
                             <div class="products-precio">
-                                <% if(producto.discount == 0 || producto.discount == null){ %>
-                                    <div class="precio-principal">$ <%= (producto.price).toLocaleString('en-US',
+                                <% if(productos[i].Disccount == 0 || productos[i].Disccount == null){ %>
+                                    <div class="precio-principal">$ <%= (productos[i].Price).toLocaleString('en-US',
                                         {minimumFractionDigits:2}) %> 
                                     </div>
                                 <% }else { %>
-                                    <div class="precio-principal"> $ <%=(producto.price -((producto.price*producto.discount)/100)).toLocaleString('en-US',
+                                    <div class="precio-principal"> $ <%=(productos[i].Price -((productos[i].Price*productos[i].Disccount)/100)).toLocaleString('en-US',
                                         {minimumFractionDigits:2})%> 
                                     </div> 
                                     <div class="precio-descuento"> 
-                                        <del> / $ <%=(producto.price).toLocaleString('en-US',
+                                        <del> / $ <%=(productos[i].Price).toLocaleString('en-US',
                                         {minimumFractionDigits:2})%>
                                         </del>
                                     </div>
