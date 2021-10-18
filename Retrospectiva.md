@@ -87,3 +87,16 @@ Siguiento el esquema de la estrella de mar podemos realizar la siguiente restros
     4.- Hacer menos: Consumir tiempo en tareas que representan un probelma y dejarlas a lo último para poder avanzar en los demás rubros
 
     5.-Dejar de hacer: Postergar la resolución de problemas que impiden el correcto funcionamiento del proyecto
+
+
+    Sprint 8
+
+    1.-Comenzar a hacer: Terminar de resolver probelmáticas pasadas
+
+    2.-Hacer más: Coordinar las actividades en tiempo y forma
+
+    3.-Continuar haciendo: Mantener el canal de comunicación entre el equipo para obtener avances sustanciales.
+
+    4.- Hacer menos: Postergar tareas secundarias o no críticas para el funcionamiento del proyecto
+
+    5.-Dejar de hacer: Aplazar los avances y el desarrollo de las tareas críticas para el funcionamiento de la aplicación.
