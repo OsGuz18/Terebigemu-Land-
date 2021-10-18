@@ -81,7 +81,7 @@ const controller = {
         let imagesDetails=[]
         let disscount = ""
         let errores =validationResult(req);
-        console.log(errores)
+        
 
         if(req.files[1]){
             imagesDetails[0] = req.files[1].filename
@@ -99,7 +99,7 @@ const controller = {
             imagesDetails[2] = "default_product.jpg"
         }
         if(req.files[4]){
-            imagesDetails[3] = req.files[3].filename
+            imagesDetails[3] = req.files[4].filename
         }else{
             imagesDetails[3] = "default_product.jpg"
         }
@@ -107,7 +107,6 @@ const controller = {
         if(req.body.disccount == ""){
             disccount="0"
         }
-        console.log(req.files)
         if(errores.errors.length > 0){
             let marcas = db.brand.findAll()
             let categorias = db.productcategory.findAll()
@@ -208,8 +207,8 @@ const controller = {
 	},
 
 	update: (req, res) => {
-        console.log(req.body)
-        /*db.productdetail.update({
+        
+        db.productdetail.update({
             Description: req.body.description,
             Ranking:req.body.ranking,
             Weight:req.body.weight,

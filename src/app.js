@@ -27,7 +27,17 @@ app.use(express.static(publicPath)); //Declaramos el uso de "publicPath" como ca
 app.use(express.urlencoded({extended: false})); 
 app.use(express.json()); //Declaramos el uso de formato JSON
 app.use(methodOverride("_method")); //Declaramos el uso de methodOverride para poder usar PUT y DELETE en HTTP 
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
                            
+
+const usersAPIRouter = require("./routes/api/userAPIRouter")
+const productsAPIRouter = require("./routes/api/productsAPIRouter")
+
+app.use("/api/users",usersAPIRouter)
+app.use("/api/products",productsAPIRouter)
+
 app.use("/",mainRouter); //Configuramos la ruta principaL
 app.use('/products', productRouter); //Configuración del product Router
 app.use("/users",userRouter); //Configuración del users Router

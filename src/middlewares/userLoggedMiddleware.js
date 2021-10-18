@@ -23,7 +23,6 @@ function userLoggedMiddleware(req,res,next){
             }
         }).then(()=>{
             if(req.session && req.session.userLogged){
-                console.log(req.session)
                 res.locals.isLogged=true;
                 res.locals.userLogged = req.session.userLogged
             }
