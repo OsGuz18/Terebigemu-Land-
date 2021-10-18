@@ -19,14 +19,15 @@ let formRegist = document.querySelector("form.userRegistration");
             errores.push("El campo de apellido es obligatorio");
         } else if (campoApellido.value.length < 2 ) {
             errores.push("El campo de apellido debe tener al menos dos caracteres"); 
-        }
+        } 
 
         let campoEmail = document.querySelector('input.email');
+        let emailVal = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         if (campoEmail.value == ''){
             errores.push("El campo email es obligatorio");
-         } else if(!campoEmail.value.valid){
+        } else if(!emailVal.test(campoEmail.value)){
              errores.push("email no válido")
-         } 
+        }
                   
         let campoContraseña = document.querySelector('input.password');
         let expReg = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/;
@@ -44,14 +45,30 @@ let formRegist = document.querySelector("form.userRegistration");
             errores.push("El campo imagen sólo acepta formatos jpg, jpeg, png o gif");
         }
 
+        // function validacion(e){
+
+        //     if(errores.length == 0 && confirm("¿Confirmas que quieres enviar este formulario?")){
+        //         return true
+        //     }
+
+        //     else{
+        //         e.preventDefault();
+        //         return false;
+        //     }
+        // }
         if(errores.length > 0){
             e.preventDefault();
 
+       
             let ulErrores = document.querySelector("div.errores ul");
             for (let i = 0; i < errores.length; i++){
                 ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
-            }
+                }
+            } else if (errores.length == 0 && confirm("¿Confirmas que quieres enviar este formulario?")){
+                    return true
         }
+
+        
     });
 });
 
@@ -66,11 +83,12 @@ window.addEventListener("load", function() {
             let errores = [];
        
             let campoEmail = document.querySelector('input.email');
+            let emailVal = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
             if (campoEmail.value == ''){
-                errores.push("El email es obligatorio");
-             } else if(!campoEmail.value.valid){
-                 errores.push("email no válido")
-             } 
+            errores.push("El email es obligatorio");
+            } else if(!emailVal.test(campoEmail.value)){
+             errores.push("email no válido")
+            } 
                       
             let campoContraseña = document.querySelector('input.password');
             if (campoContraseña.value == ''){
@@ -84,7 +102,10 @@ window.addEventListener("load", function() {
                 for (let i = 0; i < errores.length; i++){
                     ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
                 }
-            }
+                // errores.forEach(error =>{
+                //     ulErrores.innerHTML += "<li>${error}</li>"
+                // });
+            } 
         });
     });
 
