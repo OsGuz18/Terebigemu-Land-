@@ -73,14 +73,38 @@ h2{
     margin-top: 15px;
 }
 
+div.gender{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(12, 12, 12);
+    margin-bottom: 5%;
+}
+
+div.gender p{
+    color: black; 
+    margin: 2% 6%;
+    /* border:solid 2px yellow; */
+    color:white;
+    font-size: 22px;
+    font-style: italic;
+
+}
+
 .formLabel{
-    padding-left:20px;
+    padding-left:10px;
     position:relative;
     margin-top: 10px;
     z-index: 10;
     color: rgba(0, 0, 0, 0.8);
     margin-bottom: 5px;
+    margin-left: 2%;
 
+}
+
+.genderM, .genderF, .genderO{
+    margin-left: 10%;
+    margin-right: -5%;
 }
 
 .formImage{

@@ -19,30 +19,30 @@
                 <div class="products-container">
                 <% for(let i = 0; i < productos.length; i++){ %>
                     <a href="/products/productDetail/<%= productos[i].Product_ID %>">  
-                        <section class="product-container" >
-                             <figure class="figure">
-                                <img src="/images/products/<%= productos[i].Image %>" alt="imagen del producto">
-                            </figure>
-                            
-                            <div class="product-name"><%= productos[i].ProductName %></div>
-                            
-                            <div class="products-precio">
-                                <% if(productos[i].Disccount == 0 || productos[i].Disccount == null){ %>
-                                    <div class="precio-principal">$ <%= (productos[i].Price).toLocaleString('en-US',
-                                        {minimumFractionDigits:2}) %> 
-                                    </div>
-                                <% }else { %>
-                                    <div class="precio-principal"> $ <%=(productos[i].Price -((productos[i].Price*productos[i].Disccount)/100)).toLocaleString('en-US',
-                                        {minimumFractionDigits:2})%> 
-                                    </div> 
-                                    <div class="precio-descuento"> 
-                                        <del> / $ <%=(productos[i].Price).toLocaleString('en-US',
-                                        {minimumFractionDigits:2})%>
-                                        </del>
-                                    </div>
-                                <% } %>
-                            </div>
-                        </section>
+                        <div class="product-container" >
+                               <figure class="figure">
+                                   <img src="/images/products/<%= productos[i].Image %>" alt="imagen del producto">
+                                </figure>
+                                
+                                <div class="product-name"><%= productos[i].ProductName %></div>
+                                
+                                <div class="products-precio">
+                                    <% if(productos[i].Disccount == 0 || productos[i].Disccount == null){ %>
+                                        <div class="precio-principal">$ <%= (productos[i].Price).toLocaleString('en-US',
+                                            {minimumFractionDigits:2}) %> 
+                                        </div>
+                                    <% }else { %>
+                                        <div class="precio-principal"> $ <%=(productos[i].Price -((productos[i].Price*productos[i].Disccount)/100)).toLocaleString('en-US',
+                                            {minimumFractionDigits:2})%> 
+                                        </div> 
+                                        <div class="precio-descuento"> 
+                                            <del> / $ <%=(productos[i].Price).toLocaleString('en-US',
+                                            {minimumFractionDigits:2})%>
+                                            </del>
+                                        </div>
+                                    <% } %>
+                                </div>
+                        </div>
                     </a> 
                 <% } %>
                 </div>

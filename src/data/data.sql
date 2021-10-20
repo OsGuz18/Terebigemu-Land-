@@ -20,7 +20,7 @@
 
 LOCK TABLES `brand` WRITE;
 /*!40000 ALTER TABLE `brand` DISABLE KEYS */;
-INSERT INTO `brand` VALUES (0,'Nintendo','Contacto N','Dirección N','22222222','N@email.com','.........'),(1,'Xbox','Contando X','Dirección X','2222222','X@email.com','.........'),(2,'PlayStation','Contacto P ','Dirección P','2222222','P@email.com','.........'),(3,'Adidas','Contacto A','Direeción A','2222222','A@email.com','.........'),(4,'Hot Toys','Contacto H','Dirección H','2222222','H@email.com','...........'),(5,'Hasbro','Contacto Ha','Dirección Ha','2222222','Ha@email.com','...........');
+INSERT INTO `brand` VALUES (1,'Nintendo','Contacto N','Dirección N','22222222','N@email.com','.........'),(2,'Xbox','Contando X','Dirección X','2222222','X@email.com','.........'),(3,'PlayStation','Contacto P ','Dirección P','2222222','P@email.com','.........'),(4,'Adidas','Contacto A','Direeción A','2222222','A@email.com','.........'),(5,'Hot Toys','Contacto H','Dirección H','2222222','H@email.com','...........'),(6,'Hasbro','Contacto Ha','Dirección Ha','2222222','Ha@email.com','...........');
 /*!40000 ALTER TABLE `brand` ENABLE KEYS */;
 UNLOCK TABLES;
 

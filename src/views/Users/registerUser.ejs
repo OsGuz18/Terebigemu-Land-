@@ -63,16 +63,17 @@
                 <% } %>
 
                  
-                <label for="gender" class="formLabel"> Genero </label>
+                <label for="gender" class="formLabel"> Género </label>
                 
-                <div style="display: flex;">
-                    <input type="radio" class="formLabel" name="gender" value="M" id="gender" <%= locals.oldData && oldData.gender == "M" ? "checked" : "" %>  >
-                    <p style="color: black; margin-top: 2%; margin-left: 1%;">Masculino</p>
-                </div>
-                
-                <div style="display: flex;">
-                    <input type="radio" class="formLabel" name="gender" value="F" id="gender" <%= locals.oldData && oldData.gender == "F" ? "checked" : "" %>  >
-                    <p style="color: black; margin-top: 2%; margin-left: 1%;">Femenino</p>
+                <div class="gender">
+                    <input type="radio" class="genderM" name="gender" value="M" id="gender" <%= locals.oldData && oldData.gender == "M" ? "checked" : "" %>  >
+                    <p>Masculino</p>
+                          
+                    <input type="radio" class="genderF" name="gender" value="F" id="gender" <%= locals.oldData && oldData.gender == "F" ? "checked" : "" %>  >
+                    <p>Femenino</p>
+
+                    <input type="radio" class="genderO" name="gender" value="F" id="gender" <%= locals.oldData && oldData.gender == "F" ? "checked" : "" %>  >
+                    <p>Otro</p>
                 </div>
 
                 <label for="address" class="formLabel"> Dirección </label>

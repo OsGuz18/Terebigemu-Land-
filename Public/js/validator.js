@@ -45,29 +45,20 @@ let formRegist = document.querySelector("form.userRegistration");
             errores.push("El campo imagen sólo acepta formatos jpg, jpeg, png o gif");
         }
 
-        // function validacion(e){
-
-        //     if(errores.length == 0 && confirm("¿Confirmas que quieres enviar este formulario?")){
-        //         return true
-        //     }
-
-        //     else{
-        //         e.preventDefault();
-        //         return false;
-        //     }
-        // }
-        if(errores.length > 0){
+        
+        if (errores.length > 0) {
             e.preventDefault();
 
-       
-            let ulErrores = document.querySelector("div.errores ul");
-            for (let i = 0; i < errores.length; i++){
-                ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
-                }
-            } else if (errores.length == 0 && confirm("¿Confirmas que quieres enviar este formulario?")){
-                    return true
-        }
+            let ulErrores = document.querySelector('div.errores ul');
+            ulErrores.innerHTML = '';
 
+            for (let i = 0; i < errores.length; i++) {
+                ulErrores.innerHTML += `<li >  ${errores[i]} </li>`;
+            };
+        } else if (errores.length == 0 && confirm("¿Confirmas que quieres enviar este formulario?")){
+            alert('La validación fué exitosa')
+            form.submit();
+        }
         
     });
 });
@@ -95,17 +86,20 @@ window.addEventListener("load", function() {
                 errores.push("El campo contraseña es obligatorio");
             }
     
-            if(errores.length > 0){
+            if (errores.length > 0) {
                 e.preventDefault();
     
-                let ulErrores = document.querySelector("div.errores ul");
-                for (let i = 0; i < errores.length; i++){
-                    ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
-                }
-                // errores.forEach(error =>{
-                //     ulErrores.innerHTML += "<li>${error}</li>"
-                // });
-            } 
+                let ulErrores = document.querySelector('div.errores ul');
+                ulErrores.innerHTML = '';
+    
+                for (let i = 0; i < errores.length; i++) {
+                    ulErrores.innerHTML += `<li >  ${errores[i]} </li>`;
+                };
+            } else if (errores.length == 0 && confirm("¿Confirmas que quieres enviar este formulario?")){
+                alert('La validación fué exitosa')
+                form.submit();
+            }
+            
         });
     });
 
@@ -137,13 +131,18 @@ window.addEventListener("load", function() {
                     errores.push("El campo imagen sólo acepta formatos jpg, jpeg, png o gif");
                 }
         
-                if(errores.length > 0){
+                if (errores.length > 0) {
                     e.preventDefault();
         
-                    let ulErrores = document.querySelector("div.errores ul");
-                    for (let i = 0; i < errores.length; i++){
-                        ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
-                    }
+                    let ulErrores = document.querySelector('div.errores ul');
+                    ulErrores.innerHTML = '';
+        
+                    for (let i = 0; i < errores.length; i++) {
+                        ulErrores.innerHTML += `<li >  ${errores[i]} </li>`;
+                    };
+                } else if (errores.length == 0 && confirm("¿Confirmas que quieres enviar este formulario?")){
+                    alert('La validación fué exitosa')
+                    form.submit();
                 }
             });
         });
@@ -177,13 +176,18 @@ window.addEventListener("load", function() {
                     errores.push("El campo imagen sólo acepta formatos jpg, jpeg, png o gif");
                 }
         
-                if(errores.length > 0){
+                if (errores.length > 0) {
                     e.preventDefault();
         
-                    let ulErrores = document.querySelector("div.errores ul");
-                    for (let i = 0; i < errores.length; i++){
-                        ulErrores.innerHTML += "<li>" + errores[i] + "</li>"
-                    }
+                    let ulErrores = document.querySelector('div.errores ul');
+                    ulErrores.innerHTML = '';
+        
+                    for (let i = 0; i < errores.length; i++) {
+                        ulErrores.innerHTML += `<li >  ${errores[i]} </li>`;
+                    };
+                } else if (errores.length == 0 && confirm("¿Confirmas que quieres enviar este formulario?")){
+                    alert('La validación fué exitosa')
+                    form.submit();
                 }
             });
         });

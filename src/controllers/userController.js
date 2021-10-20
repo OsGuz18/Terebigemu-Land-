@@ -19,6 +19,7 @@ const controller = {
 
     storage:(req,res) => {
         
+        
         let errores =validationResult(req);
         let find = 0;
         
@@ -28,6 +29,8 @@ const controller = {
                 oldData: req.body
             })
         }
+
+    
         
         db.user.findOne({
             where:{
@@ -35,8 +38,10 @@ const controller = {
             }
         })
         .then((resultado) =>{
+            
             if(resultado != null){
                 find=1
+                
             }
         })
         .then(()=>{
