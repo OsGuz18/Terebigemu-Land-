@@ -128,7 +128,7 @@ CREATE TABLE `product` (
   `ProductCategory_ID` int(200) NOT NULL,
   `Brand_ID` int(200) NOT NULL,
   `ProductName` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  `Price` decimal(6,2) unsigned NOT NULL,
+  `Price` decimal(10,2) unsigned NOT NULL,
   `Disccount` decimal(3,0) NOT NULL,
   `Image` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`Product_ID`),
@@ -138,7 +138,7 @@ CREATE TABLE `product` (
   CONSTRAINT `FK_Product_Brand` FOREIGN KEY (`Brand_ID`) REFERENCES `brand` (`Brand_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `FK_Product_ProductCategory` FOREIGN KEY (`ProductCategory_ID`) REFERENCES `productcategory` (`ProductCategory_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `FK_Product_ProductDetail` FOREIGN KEY (`ProductDetail_ID`) REFERENCES `productdetail` (`ProductDetail_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -176,7 +176,7 @@ CREATE TABLE `productdetail` (
   `ImageDetail3` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
   `ImageDetail4` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`ProductDetail_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -195,14 +195,13 @@ CREATE TABLE `user` (
   `Email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `Photo` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `Password` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `PaymentMethod` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `UserCategory_ID` int(200) NOT NULL,
   `Age` varchar(3) COLLATE utf8_unicode_ci NOT NULL,
   `Gender` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`User_ID`),
   KEY `FK_User_Category_idx` (`UserCategory_ID`),
   CONSTRAINT `FK_User_Category` FOREIGN KEY (`UserCategory_ID`) REFERENCES `usercategory` (`UserCategory_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -230,4 +229,4 @@ CREATE TABLE `usercategory` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-17 22:53:10
+-- Dump completed on 2021-10-20 11:16:07
