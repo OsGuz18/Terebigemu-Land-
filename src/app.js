@@ -41,13 +41,13 @@ app.use(userLoggedMiddleware);
 app.use("/api/users",usersAPIRouter)
 app.use("/api/products",productsAPIRouter)
 
-app.use("/",mainRouter); //Configuramos la ruta principaL
-app.use('/products', productRouter); //Configuración del product Router
-app.use("/users",userRouter); //Configuración del users Router
 
+app.use('/products', productRouter); //Configuración del product Router
+app.use("/users",userRouter); //Configuración del users Router*/
+app.use("/",mainRouter); //Configuramos la ruta principaL
 
 // Configuramos el arranque del servidor y el puerto
-app.listen(3030, () => {
+app.listen(3000, () => {
     console.log('Servidor corriendo en el puerto 3030'); 
 });
 

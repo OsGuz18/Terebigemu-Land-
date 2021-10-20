@@ -1,9 +1,9 @@
 //Declaración de las constantes a usar
 const path = require("path") //Requerimos la paquetería de "path" incluida en node
-
 //Configuración de los métodos del controlador 
 let controlador={
     index:(req,res)=>{
+        
         res.render("index")
     },
 

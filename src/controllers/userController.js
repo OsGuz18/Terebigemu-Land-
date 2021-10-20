@@ -193,13 +193,26 @@ const controller = {
         db.user.findByPk(req.params.id)
          .then((ruser)=>{
              user=ruser.dataValues
-             res.render("Users/editUser2",{user})
+             res.render("Users/editUser",{user})
          })
     },
 
     edit1:(req,res,next) => {
-        console.log(req)
-
+        console.log(req.body)
+        console.log(req.params.id)
+        db.user.update({
+            FirstName: req.body.editName,
+            LastName:req.body.editLastName,
+            Address:req.body.editAddress,
+            Telephone:req.body.editPhone,
+            Email:req.body.editEmail,
+            UserCategory_ID:req.body.level,
+            Age:req.body.editAge,
+            Gender:req.body.editGender
+        },{where:{User_ID:req.params.id}})
+        .then(()=>{
+            res.redirect("/users/profile")
+        })
     },
 
     profile:(req,res)=>{
