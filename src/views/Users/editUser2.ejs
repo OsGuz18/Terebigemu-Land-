@@ -13,9 +13,12 @@
     
     <body>
         <%- include("../partials/header") %>
-        
-            <form action="/users/userEdit/<%=user.User_ID%>?_method=PUT" method=POST  class="productEdition" enctype="multipart/form-data">
-                <input type="text" name= "prueba">
+
+            <%=JSON.stringify(user)  %>
+            <form action="/users/userEdit/<%=user.User_ID%>?_method=PUT" method="post"  class="productEdition">
+                <input type="text" name= "prueba" value="">
+
+                <input type="text" name= "apellido" value="">
 
                 <button type="submit"> Enviar </button>
             </form>

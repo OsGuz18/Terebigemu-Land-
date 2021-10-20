@@ -202,10 +202,9 @@ const controller = {
          })
     },
 
-    edit1:(req,res) => {
-        (req.body)
+    edit1:(req,res,next) => {
+        console.log(req)
 
-        
     },
 
     profile:(req,res)=>{
