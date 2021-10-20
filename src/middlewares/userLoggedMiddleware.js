@@ -19,24 +19,28 @@ function userLoggedMiddleware(req,res,next){
         }).then((resultado)=>{
             userData = resultado.dataValues
             if(resultado != null){
-                req.session.userLogged = userData
+             return userData
             }
-        }).then(()=>{
-            if(req.session && req.session.userLogged){
+        }).then((resultado)=>{
+            req.session.userLogged = resultado
+            
+            if( req.session.userLogged){
                 res.locals.isLogged=true;
                 res.locals.userLogged = req.session.userLogged
+                next();
             }
         })
     }else{
         if(req.session && req.session.userLogged){
             res.locals.isLogged=true;
             res.locals.userLogged = req.session.userLogged
+            next();
         }
     }
 
     
     
-    next();
+    
 }
 
 module.exports = userLoggedMiddleware

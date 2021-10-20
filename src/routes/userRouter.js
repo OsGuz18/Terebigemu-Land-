@@ -8,6 +8,11 @@ const { body }=require("express-validator")
 const guestMiddleware = require("../middlewares/guestMiddleware")
 const authMiddleware = require("../middlewares/authMiddleware")
 
+
+
+
+    
+
 //Configuración para subir archivos al servidor mediante Multer
 let storage = multer.diskStorage({    
     destination: (req, file, cb)=>{
@@ -82,7 +87,5 @@ router.post("/login",validacionesLogin,userController.loginProcces)
 router.get ("/profile",authMiddleware, userController.profile)
 router.get("/logout",userController.logout)
 
-
-router.get ("/profile",authMiddleware,userController.profile)
 
 module.exports=router;
