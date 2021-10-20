@@ -87,5 +87,7 @@ router.post("/login",validacionesLogin,userController.loginProcces)
 router.get ("/profile",authMiddleware, userController.profile)
 router.get("/logout",userController.logout)
 
+router.delete('/delete/:id', userController.destroy); 
+
 
 module.exports=router;

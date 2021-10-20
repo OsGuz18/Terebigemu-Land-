@@ -6,6 +6,7 @@ const { Op } = require("sequelize");
 const fs = require('fs');  //Requerimos la paquetería de filesystem incluida en node
 const {validationResult} =require("express-validator")
 const bcrypt = require('bcryptjs');
+const { Console } = require('console');
 
 
 
@@ -229,7 +230,18 @@ const controller = {
         res.redirect("/")
     },
 
-    
+    destroy:(req,res)=>{
+        db.user.destroy({
+            where:{
+                User_ID : req.params.id
+            }
+        }).then(()=>{
+            res.clearCookie("userEmail")
+            req.session.destroy()
+        
+        res.redirect("/users/login")
+        })
+    }
 }
 
 module.exports= controller; //Exportación del controlador 
