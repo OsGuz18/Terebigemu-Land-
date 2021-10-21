@@ -47,7 +47,7 @@ app.use("/users",userRouter); //Configuración del users Router*/
 app.use("/",mainRouter); //Configuramos la ruta principaL
 
 // Configuramos el arranque del servidor y el puerto
-app.listen(3000, () => {
+app.listen(3030, () => {
     console.log('Servidor corriendo en el puerto 3030'); 
 });
 

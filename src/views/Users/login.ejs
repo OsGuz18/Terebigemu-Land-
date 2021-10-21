@@ -21,18 +21,20 @@
 
            
 
-            <form action="/users/login"  method="POST" class="formUserLogin">
+            <form action="/users/login"  method="POST" class="userLogin">
 
                 <h2> Ingresa </h2>
+
+                <div class="errores">
+                    <ul></ul>
+                </div>
+
                 <% if(locals.errorscred && errorscred.email){ %>
                     <div  style="color: red;">
                         <%= errorscred.email.msg %>
                     </div>
                 <% } %>
-
-                <div class="errores">
-                    <ul></ul>
-                </div>
+               
 
             <section class="correo">
                 <label for="email"> Correo electrónico: </label>
@@ -72,7 +74,7 @@
 
 </body>
 
-<!-- <script src="/js/validator.js"></script>-->
+<script src="/js/validator.js"></script>
 
 
 </html>

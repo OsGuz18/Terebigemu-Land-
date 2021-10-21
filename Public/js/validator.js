@@ -56,7 +56,7 @@ let formRegist = document.querySelector("form.userRegistration");
                 ulErrores.innerHTML += `<li >  ${errores[i]} </li>`;
             };
         } else if (errores.length == 0 && confirm("¿Confirmas que quieres enviar este formulario?")){
-            alert('La validación fué exitosa')
+            alert('La validación fue exitosa')
             form.submit();
         }
         
@@ -67,7 +67,7 @@ let formRegist = document.querySelector("form.userRegistration");
 
 window.addEventListener("load", function() {
 
-    let formLogin = document.querySelector("form.formUserLogin");
+    let formLogin = document.querySelector("form.userLogin");
     
         formLogin.addEventListener('submit', function(e){
             
@@ -75,11 +75,12 @@ window.addEventListener("load", function() {
        
             let campoEmail = document.querySelector('input.email');
             let emailVal = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-            if (campoEmail.value == ''){
+            if (campoEmailLogin.value == ''){
             errores.push("El email es obligatorio");
             } else if(!emailVal.test(campoEmail.value)){
              errores.push("email no válido")
             } 
+
                       
             let campoContraseña = document.querySelector('input.password');
             if (campoContraseña.value == ''){
@@ -93,10 +94,10 @@ window.addEventListener("load", function() {
                 ulErrores.innerHTML = '';
     
                 for (let i = 0; i < errores.length; i++) {
-                    ulErrores.innerHTML += `<li >  ${errores[i]} </li>`;
+                    ulErrores.innerHTML += "<li>" +  errores[i] + "</li>";
                 };
             } else if (errores.length == 0 && confirm("¿Confirmas que quieres enviar este formulario?")){
-                alert('La validación fué exitosa')
+                alert('La validación fue exitosa')
                 form.submit();
             }
             
@@ -141,7 +142,7 @@ window.addEventListener("load", function() {
                         ulErrores.innerHTML += `<li >  ${errores[i]} </li>`;
                     };
                 } else if (errores.length == 0 && confirm("¿Confirmas que quieres enviar este formulario?")){
-                    alert('La validación fué exitosa')
+                    alert('La validación fue exitosa')
                     form.submit();
                 }
             });
@@ -186,7 +187,7 @@ window.addEventListener("load", function() {
                         ulErrores.innerHTML += `<li >  ${errores[i]} </li>`;
                     };
                 } else if (errores.length == 0 && confirm("¿Confirmas que quieres enviar este formulario?")){
-                    alert('La validación fué exitosa')
+                    alert('La validación fue exitosa')
                     form.submit();
                 }
             });
