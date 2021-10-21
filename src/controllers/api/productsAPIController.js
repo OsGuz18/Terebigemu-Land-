@@ -1,20 +1,26 @@
-
+const path = require('path')
 const db = require('../../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
-const Brand = require('../../database/models/Brand');
+
 
 const Products = db.product
 
 productsAPIController={
     productsList:(req,res) =>{
-        console.log("voy")
         Products.findAll({
             include:["brand","productdetail","productcategory"]
-
         })
-        .then((products)=>{
-            res.json(products)
+        .then(products =>{
+            let respuesta ={
+                meta:{
+                    status:200,
+                    url:"/api/products/list",
+                    total: products.length
+                },
+                data:products
+            }
+            res.json(respuesta)
         })
     },
 
@@ -26,7 +32,7 @@ productsAPIController={
             let respuesta ={
                 meta:{
                     status:200,
-                    url:"api/users/:id"
+                    url:"api/products/:id"
                 },
                 data:product
             }

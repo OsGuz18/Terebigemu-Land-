@@ -171,11 +171,11 @@ window.addEventListener("load", function() {
                     errores.push("La descripción debe tener al menos veinte caracteres"); 
                 }
                 
-                let campoImagen = document.querySelector('input.formImage');
+               /* let campoImagen = document.querySelector('input.formImage');
                 let extValidas = /(.jpg|.jpeg|.png|.gif)$/i;
                 if (!extValidas.exec(campoImagen.value)){
                     errores.push("El campo imagen sólo acepta formatos jpg, jpeg, png o gif");
-                }
+                }*/
         
                 if (errores.length > 0) {
                     e.preventDefault();

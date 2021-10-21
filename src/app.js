@@ -10,8 +10,8 @@ const userRouter = require("./routes/userRouter"); //Requerimos el ruteador de u
 const session = require("express-session");
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware")
 const cookies = require("cookie-parser")
-const bodyParser = require('body-parser');
-
+const cors = require('cors')
+app.use(cors())
 
 app.set("view engine","ejs"); //Seteamos la aplicación para ocupar ejs (previamente instalado)                           
 app.set("views",path.join(__dirname , "views")); //Declaramos la carpeta "default" para las vistas
@@ -35,11 +35,13 @@ app.use(bodyParser.json())*/
 
 const usersAPIRouter = require("./routes/api/userAPIRouter")
 const productsAPIRouter = require("./routes/api/productsAPIRouter")
+const categoryAPIRouter = require("./routes/api/categoryAPIRouter")
 
 app.use(userLoggedMiddleware);
 
 app.use("/api/users",usersAPIRouter)
 app.use("/api/products",productsAPIRouter)
+app.use("/api/category",categoryAPIRouter)
 
 
 app.use('/products', productRouter); //Configuración del product Router

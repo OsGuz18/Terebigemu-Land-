@@ -1,5 +1,6 @@
 {
-  "name": "proyecto",
+  "proxy":"http://localhost:3030",
+  "name": "dashboard",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
