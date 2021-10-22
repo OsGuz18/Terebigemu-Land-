@@ -10,7 +10,12 @@ const Categories = db.productcategory
 
 const categoryAPIController = {
     all:(req,res)=>{
-        Categories.findAll()
+        Categories.findAll({
+            include:["product"],
+            order:[
+                ['CategoryType']
+            ]
+        })
         .then((categories)=>{
             let respuesta = {
                 meta:{

@@ -32,8 +32,7 @@
                                             {minimumFractionDigits:2}) %> 
                                         </div>
                                     <% }else { %>
-                                        <div class="precio-principal"> $ <%=(productos[i].Price -((productos[i].Price*productos[i].Disccount)/100)).toLocaleString('en-US',
-                                            {minimumFractionDigits:2})%> 
+                                        <div class="precio-principal"> $ <%=(productos[i].Price -((productos[i].Price*productos[i].Disccount)/100)).toLocaleString('en-US',{minimumFractionDigits:2})%> 
                                         </div> 
                                         <div class="precio-descuento"> 
                                             <del> / $ <%=(productos[i].Price).toLocaleString('en-US',

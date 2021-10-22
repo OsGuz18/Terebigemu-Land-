@@ -21,106 +21,41 @@
             <p class="last_Visits">Basado en tus últimas visitas</p>
 
             <section class="visits">
-                <article>
-                    <a href="/productDetail"><img src="/images/products/MarioKartDeluxe.jpg"></a>
+                <% for(let i = 0; i < productos.length; i++){ %>
+                    <article>
+                        <a href="/productDetail/<%=productos[i].dataValues.Product_ID %>"><img src="/images/products/<%=productos[i].dataValues.Image%>" ></a>
+                        <p class="description"><%=productos[i].dataValues.ProductName%></p>   
+                        <p class="price">$ <%= (productos[i].dataValues.Price).toLocaleString('en-US',{minimumFractionDigits:2}) %></p>
+                        <% if(productos[i].dataValues.Disccount != 0){%>
+                            <p class="price"> - <%= productos[i].dataValues.Disccount %> %</p>
+                        <%}%> 
                         
-                    <p class="price">$1,200</p>
+                           
                         
-                    <p class="description">Mario Kart Deluxe</p>
-                </article>
+                    </article>
+                <% } %>    
+                
                     
-                <article>
-                    <img src="/images/products/SuperMario3D.jpg">
-                            
-                    <p class="price"> $1,150</p>
-                            
-                    <p class="description">Super Mario 3D</p>
-                </article>
-
-                <article>
-                    <img src="/images/products/TheLastOfUsII.jpg"d>
-                            
-                    <p class="price">$1,900</p>
-                            
-                    <p class="description">The Last of Us II</p>
-                </article>
-
-                <article>
-                    <img src="/images/products/HalloInfinite.jpg">
-                            
-                    <p class="price"> $1,200</p>
-                            
-                    <p class="description">Hallo Infinite</p>
-                </article>
+                
             </section>
 
             <p class="Popular_Articles">Artículos populares</p>
                     
             <section class="Popular">
-                <article>
-                    <img src="/images/products/Fifa2021.jpg">
-                        
-                    <p class="price">$1,250</p>
-                        
-                    <p class="description">Fifa 2021</p>
-                </article>
-                    
-                <article>
-                    <img src="/images/products/DoomEternal.jpg">
-                    
-                    <p class="price">$2,300</p>
-                    
-                    <p class="description">Doom Eternal</p>
-                </article>
-
-                <article>
-                    <img src="/images/products/CrashBandicoot4.jpg">
-                    
-                    <p class="price">$900</p>
-                    
-                    <p class="description">Crash Bandicoot 4</p>
-                </article>
-
-                <article>
-                    <img src="/images/products/LuigiMansion3.jpg">
-                    
-                    <p class="precios">$950</p>
-                    
-                    <p class="description">Luigi's Mansion 3</p>
-                </article>
-
-                <article>
-                    <img src="/images/products/TheLastOfUsRemastered.jpg">
-                        
-                    <p class="price">$1,299</p>
-                        
-                    <p class="description">The Last of Us Remastered</p>
-                </article>
-                    
-                <article>
-                    <img src="/images/products/SuperSmashBrosUltimate.jpg">
-                    
-                    <p class="price">$1,700</p>
-                    
-                    <p class="description">Super Smash Bros Ultimate</p>
-                </article>
-
-                <article>
-                    <img src="/images/products/Spider-ManMM.jpg">
-                    
-                    <p class="price">$1,500</p>
-                    
-                    <p class="description">Spider-Man Miles Morales</p>
-                </article>
-
-                <article>
-                    <img src="/images/products/SuperMario3D.jpg">
-                    
-                    <p class="precios">$1,200</p>
-                    
-                    <p class="description">Super Mario 3D</p>
-                </article>
                 
+                <% for(let i = 0; i < pop.length; i++){ %>
+                    <article>
+                        <% console.log(pop[i].dataValues.product[0].dataValues.Image) %>
+                        <img src="/images/products/<%= pop[i].dataValues.product[0].dataValues.Image%>" >
+                        
+                        <p class="description"> <%= pop[i].dataValues.product[0].dataValues.ProductName %> </p>
+                        <p class="price">$ <%= (pop[i].dataValues.product[0].dataValues.Price).toLocaleString('en-US',{minimumFractionDigits:2})%> </p>
+
+                        <% if(pop[i].dataValues.product[0].dataValues.Disccount != 0){%>
+                            <p class="price"> - <%= (pop[i].dataValues.product[0].dataValues.Disccount).toLocaleString('en-US',{minimumFractionDigits:2}) %> %</p>
+                        <%}%> 
+                    </article>
+                <%} %>   
             </section>
         </main>
         <%- include("./partials/footer") %>

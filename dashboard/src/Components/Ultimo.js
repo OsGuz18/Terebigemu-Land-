@@ -1,5 +1,7 @@
 import React from 'react';
 
+//import Imagen from "../../darth-vader.jpg"
+
 function Ultimo(props){
     console.log(props)
     return(
@@ -13,7 +15,7 @@ function Ultimo(props){
 			        <div className="card-body">
                     <p>{props.ProductName}</p>
 			            <div className="text-center">
-				            <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 20 +'rem'}} src="" alt={props.Image}/>
+				            <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 20 +'rem'}} src=""  alt={props.Image}/>
 			            </div>
 			            <p>{props.productdetail.Description}</p>
 			            <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Detalle del producto</a>
