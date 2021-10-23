@@ -45,7 +45,6 @@
                 
                 <% for(let i = 0; i < pop.length; i++){ %>
                     <article>
-                        <% console.log(pop[i].dataValues.product[0].dataValues.Image) %>
                         <img src="/images/products/<%= pop[i].dataValues.product[0].dataValues.Image%>" >
                         
                         <p class="description"> <%= pop[i].dataValues.product[0].dataValues.ProductName %> </p>
