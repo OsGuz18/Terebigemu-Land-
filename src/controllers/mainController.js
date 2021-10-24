@@ -43,7 +43,54 @@ let controlador={
     }, */
 
     shoppingCar:(req,res)=>{
-        res.render("Products/shopping-car")
+        
+       let user=req.session.userLogged
+       let ordenactual
+        db.orders.findOne({
+            where:{
+                User_ID: user.User_ID
+            }
+        })
+        .then((ordenes)=>{
+            if(ordenes == null){
+                db.orders.create({
+                    User_ID: user.User_ID,
+                    DeliveryService_ID:"",
+                    OrderStatus: "En creacion",
+                    Price:"",
+                    Disccount:"",
+                    Quantity:"",
+                    Taxes:"",
+                    Total:"",
+                    Fecha_pedido:""
+                })
+                .then(()=>{
+                    res.render("Products/shopping-car")
+                })
+            }else{
+                db.orders.findAll({
+                    where:{
+                        User_ID:user.User_ID
+                    },
+                    include: {association:"product" ,include:{
+                        association:"productdetail"
+                    }}
+                })
+                .then((ordenescont)=>{
+                   // console.log(ordenescont[0].dataValues.product)
+                   
+                   for(let i=0;i < ordenescont.length;i++){
+                        if(ordenescont[i].dataValues.OrderStatus == "En creacion"){
+                            ordenactual=ordenescont[i].dataValues
+                        }
+                    }
+                    //console.log(ordenactual)
+                   // console.log(ordenactual.product[0].dataValues.productdetail.dataValues.Description)
+                    res.render("Products/shopping-car",{productos:ordenactual,user:user})
+                })
+            }
+        })
+       // res.render("Products/shopping-car")
     },
 }
 

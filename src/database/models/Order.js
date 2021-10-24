@@ -14,11 +14,7 @@ module.exports = (sequelize,DataTypes) => {
         },
         DeliveryService_ID:{
             type: DataTypes.BIGINT(200),
-            allowNull:false
-        },
-        PaymentMethod:{
-            type: DataTypes.STRING(45),
-            allowNull:false
+            allowNull:true
         },
         OrderStatus:{
             type: DataTypes.STRING(45),
@@ -26,32 +22,34 @@ module.exports = (sequelize,DataTypes) => {
         },
         Price:{
             type: DataTypes.DECIMAL(6,2),
-            allowNull:false
+            allowNull:true
         },
         Disccount:{
             type: DataTypes.DECIMAL(3,0),
-            allowNull:false
+            allowNull:true
         },
         Quantity:{
             type: DataTypes.BIGINT(11),
-            allowNull:false
+            allowNull:true
         },
         Taxes:{
             type: DataTypes.DECIMAL(6,2),
-            allowNull:false
+            allowNull:true
         },
         Total:{
             type: DataTypes.DECIMAL(6,2),
-            allowNull:false
+            allowNull:true
         },
+        Fecha_pedido:{
+            type: DataTypes.DATE,
+            allowNull:true
+        }
 
 
     }
 
     let config = {
-        timestamps: true,
-        createdAt: 'OrderDate',
-        updatedAt: 'UPDATED_AT',
+        timestamps: false,
         deletedAt: false
     }
 
@@ -70,7 +68,7 @@ module.exports = (sequelize,DataTypes) => {
 
         Order.belongsToMany(models.product, { // models.Movie -> Movies es el valor de alias en movie.js
             as: "product",
-            through: 'orderprodcut',
+            through: 'orderproduct',
             foreignKey: 'Order_ID',
             otherKey: 'Product_ID',
             timestamps: false,

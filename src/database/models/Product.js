@@ -64,7 +64,7 @@ module.exports = (sequelize,DataTypes) => {
 
         Product.belongsToMany(models.orders, { // models.Movie -> Movies es el valor de alias en movie.js
             as: "orders",
-            through: 'orderprodcut',
+            through: 'orderproduct',
             foreignKey: 'Product_ID',
             otherKey: 'Order_ID',
             timestamps: false,

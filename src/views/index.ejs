@@ -23,20 +23,14 @@
             <section class="visits">
                 <% for(let i = 0; i < productos.length; i++){ %>
                     <article>
-                        <a href="/productDetail/<%=productos[i].dataValues.Product_ID %>"><img src="/images/products/<%=productos[i].dataValues.Image%>" ></a>
+                        <a href="/products/productDetail/<%=productos[i].dataValues.Product_ID %>"><img src="/images/products/<%=productos[i].dataValues.Image%>" ></a>
                         <p class="description"><%=productos[i].dataValues.ProductName%></p>   
                         <p class="price">$ <%= (productos[i].dataValues.Price).toLocaleString('en-US',{minimumFractionDigits:2}) %></p>
                         <% if(productos[i].dataValues.Disccount != 0){%>
                             <p class="price"> - <%= productos[i].dataValues.Disccount %> %</p>
                         <%}%> 
-                        
-                           
-                        
                     </article>
                 <% } %>    
-                
-                    
-                
             </section>
 
             <p class="Popular_Articles">Artículos populares</p>
@@ -45,8 +39,7 @@
                 
                 <% for(let i = 0; i < pop.length; i++){ %>
                     <article>
-                        <img src="/images/products/<%= pop[i].dataValues.product[0].dataValues.Image%>" >
-                        
+                        <a href="/products/productDetail/<%=productos[i].dataValues.Product_ID %>"><img src="/images/products/<%= pop[i].dataValues.product[0].dataValues.Image%>" > </a>
                         <p class="description"> <%= pop[i].dataValues.product[0].dataValues.ProductName %> </p>
                         <p class="price">$ <%= (pop[i].dataValues.product[0].dataValues.Price).toLocaleString('en-US',{minimumFractionDigits:2})%> </p>
 
