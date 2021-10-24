@@ -20,8 +20,17 @@
 
 LOCK TABLES `brand` WRITE;
 /*!40000 ALTER TABLE `brand` DISABLE KEYS */;
-INSERT INTO `brand` VALUES (1,'Nintendo','Contacto N','Dirección N','22222222','N@email.com','.........'),(2,'Xbox','Contando X','Dirección X','2222222','X@email.com','.........'),(3,'PlayStation','Contacto P ','Dirección P','2222222','P@email.com','.........'),(4,'Adidas','Contacto A','Direeción A','2222222','A@email.com','.........'),(5,'Hot Toys','Contacto H','Dirección H','2222222','H@email.com','...........'),(6,'Hasbro','Contacto Ha','Dirección Ha','2222222','Ha@email.com','...........');
+INSERT INTO `brand` VALUES (0,'Nintendo','Contacto N','Dirección N','22222222','N@email.com','.........'),(1,'Xbox','Contando X','Dirección X','2222222','X@email.com','.........'),(2,'PlayStation','Contacto P ','Dirección P','2222222','P@email.com','.........'),(3,'Adidas','Contacto A','Direeción A','2222222','A@email.com','.........'),(4,'Hot Toys','Contacto H','Dirección H','2222222','H@email.com','...........'),(5,'Hasbro','Contacto Ha','Dirección Ha','2222222','Ha@email.com','...........');
 /*!40000 ALTER TABLE `brand` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `car`
+--
+
+LOCK TABLES `car` WRITE;
+/*!40000 ALTER TABLE `car` DISABLE KEYS */;
+/*!40000 ALTER TABLE `car` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -49,6 +58,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `orderproduct` WRITE;
 /*!40000 ALTER TABLE `orderproduct` DISABLE KEYS */;
+INSERT INTO `orderproduct` VALUES (1,1,1),(2,1,2);
 /*!40000 ALTER TABLE `orderproduct` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -58,6 +68,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES (1,1,NULL,'En creacion',NULL,NULL,NULL,NULL,NULL,NULL),(2,2,0,'En creacion',0.00,0,0,0.00,0.00,'0000-00-00');
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -67,7 +78,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES (1,1,0,0,'Nintendo Switch OLED',10000.00,0,'product-1634532177195.jpg'),(2,2,2,4,'Spider-Man 2099',10000.00,20,'product-1634532236496.jpg'),(3,3,0,2,'Crash Bandicoot 4',1200.00,10,'product-1634532427501.jpg'),(4,2,2,4,'Sillón Simpson',1400.00,0,'product-1634532490349.jpg'),(5,2,2,4,'Reactor Arc',800.00,0,'product-1634532554783.jpg'),(6,6,0,0,'Xbox Series X',14000.00,5,'product-1634532679718.jpeg'),(7,7,0,2,'Play Station 5',14000.00,5,'product-1634532910218.jpg'),(8,8,0,0,'Zelda Breath of the Wild',1200.00,5,'product-1634533343153.jpg'),(9,9,1,1,'Assassin\'s Creed Valhalla',900.00,0,'product-16345335876470.553335415569236.jpg'),(10,10,1,2,'Red Dead Redemption 2',600.00,0,'product-16345337262650.6053559743556765.jpg');
+INSERT INTO `product` VALUES (1,1,1,1,'Nintendo Switch OLED',10000.00,10,'product-1634532177195.jpg'),(2,2,2,4,'Spider-Man 2099',10000.00,20,'product-1634532236496.jpg'),(3,3,0,2,'Crash Bandicoot 4',1200.00,0,'product-1634532427501.jpg'),(4,4,2,4,'Sillón Simpson',1400.00,0,'product-1634532490349.jpg'),(5,5,2,4,'Reactor Arc',800.00,0,'product-1634532554783.jpg'),(6,6,1,0,'Xbox Series X',14000.00,5,'product-1634532679718.jpeg'),(7,7,1,2,'Play Station 5',14000.00,5,'product-1634532910218.jpg'),(8,8,0,0,'Zelda Breath of the Wild',1200.00,5,'product-1634533343153.jpg'),(9,9,0,1,'Assassin\'s Creed Valhalla',900.00,0,'product-16345335876470.553335415569236.jpg'),(10,10,0,2,'Red Dead Redemption 2',600.00,0,'product-16345337262650.6053559743556765.jpg');
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -77,7 +88,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `productcategory` WRITE;
 /*!40000 ALTER TABLE `productcategory` DISABLE KEYS */;
-INSERT INTO `productcategory` VALUES (0,'Videojuegos','Software','404'),(1,'Consolas','Hardware','404'),(2,'Figuras','Figuras de colección de diferentes marcas','404'),(3,'Ropa','Productos textiles de la tienda','404'),(4,'Equipo de computo','Hardware para PC y accesorios','404'),(5,'Peliculas','Peliculas en diferentes formatos','404');
+INSERT INTO `productcategory` VALUES (0,'Videojuegos','Software','404'),(1,'Consolas','Hardware','404'),(2,'Figuras','Figuras de colección de diferentes marcas','404'),(3,'Ropa','Productos textiles de la tienda','404'),(4,'Equipo de computo','Hardware para PC y accesorios','404'),(5,'Peliculas','Peliculas en diferentes formatos','404'),(6,'Accesorios','Accesorios varios de colección','404');
 /*!40000 ALTER TABLE `productcategory` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -87,7 +98,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `productdetail` WRITE;
 /*!40000 ALTER TABLE `productdetail` DISABLE KEYS */;
-INSERT INTO `productdetail` VALUES (1,'La nueva consola de la familia Nintendo ',1,0.500,'20x50x10',1000,'product-1634532177195.jpg','product-1634532177196.jpg','default_product.jpg','default_product.jpg'),(2,'Figura de colección ',2,1.500,'140x60x10',500,'product-1634532236500.jpg','product-1634532236507.jpg','product-1634532236513.jpg','default_product.jpg'),(3,'La nueva aventura del bandicoot mas famoso',3,0.200,'15x10x2',10000,'product-1634532427503.jpg','product-1634532427506.jpg','product-1634532427510.jpg','default_product.jpg'),(4,'Figura de colección ',2,0.450,'123x100x80',500,'default_product.jpg','default_product.jpg','default_product.jpg','default_product.jpg'),(5,'Figura de colección ',5,0.230,'15x15x15',5,'default_product.jpg','default_product.jpg','default_product.jpg','default_product.jpg'),(6,'La nueva consola de Microsoft',1,1.100,'80x30x30',10,'product-1634532679719.jpg','product-1634532679719.jpg','product-1634532679719.jpg','product-1634532679719.jpg'),(7,'Llega la nueva generación de sony ',2,1.100,'120x30x30',10,'default_product.jpg','default_product.jpg','default_product.jpg','default_product.jpg'),(8,'Uno de los mejores juegos de nintendo switch',1,0.200,'15x10x2',100,'default_product.jpg','default_product.jpg','default_product.jpg','default_product.jpg'),(9,'Unete a la experiencia vikinga de la mano de Eivor',7,0.200,'15x10x2',100,'product-1634533473227.jpg','product-1634533473229.jpg','default_product.jpg','default_product.jpg'),(10,'Unete a la aventura vaquera ',3,0.200,'15x10x2',100,'product-16345337077830.1764657976059758.jpg','product-16345337077830.8702254545249801.jpg','product-16345337077840.7347782030443708.jpg','default_product.jpg');
+INSERT INTO `productdetail` VALUES (1,'La nueva consola de la familia Nintendo ',1,0.500,'20x50x10',1000,'product-1634532177195.jpg','product-1634532177196.jpg','default_product.jpg','default_product.jpg'),(2,'Figura de colección ',2,1.500,'140x60x10',500,'product-1634532236500.jpg','product-1634532236507.jpg','product-1634532236513.jpg','default_product.jpg'),(3,'La nueva aventura del bandicoot mas famoso',3,0.200,'15x10x2',10000,'product-1634532427503.jpg','product-1634532427506.jpg','product-1634532427510.jpg','default_product.jpg'),(4,'Figura de colección ',2,0.450,'123x100x80',500,'default_product.jpg','default_product.jpg','default_product.jpg','default_product.jpg'),(5,'Figura de colección ',5,0.230,'15x15x15',5,'default_product.jpg','default_product.jpg','default_product.jpg','default_product.jpg'),(6,'La nueva consola de Microsoft',1,1.100,'80x30x30',10,'product-1634532679719.jpg','product-1634532679719.jpg','product-1634532679719.jpg','product-1634532679719.jpg'),(7,'Llega la nueva generación de sony ',2,1.100,'120x30x30',10,'default_product.jpg','default_product.jpg','default_product.jpg','default_product.jpg'),(8,'Uno de los mejores juegos de nintendo switch',1,0.200,'15x10x2',100,'default_product.jpg','default_product.jpg','default_product.jpg','default_product.jpg'),(9,'Unete a la experiencia vikinga de la mano de Eivor',7,0.200,'15x10x2',100,'product-1634533473227.jpg','product-1634533473229.jpg','default_product.jpg','default_product.jpg'),(10,'Unete a la aventura vaquera. Explora el viejo oeste como nunca antes, vive la vida de un vaquero y lucha para sobrevivir, vence a tus rivales y asegura la comida el refugio para tu comunidad',3,0.200,'15x10x2',100,'product-16345337077830.1764657976059758.jpg','product-16345337077830.8702254545249801.jpg','product-16345337077840.7347782030443708.jpg','default_product.jpg');
 /*!40000 ALTER TABLE `productdetail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -119,4 +130,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-20 11:16:30
+-- Dump completed on 2021-10-23 20:12:19

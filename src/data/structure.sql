@@ -35,6 +35,21 @@ CREATE TABLE `brand` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `car`
+--
+
+DROP TABLE IF EXISTS `car`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `car` (
+  `CAR_ID` int(200) NOT NULL AUTO_INCREMENT,
+  `User_ID` int(200) NOT NULL,
+  `Product_ID` int(200) NOT NULL,
+  PRIMARY KEY (`CAR_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `deliveryservice`
 --
 
@@ -87,7 +102,7 @@ CREATE TABLE `orderproduct` (
   KEY `FK_OrderProduct_Product_idx` (`Product_ID`),
   CONSTRAINT `FK_OrderProduct_Order` FOREIGN KEY (`Order_ID`) REFERENCES `orders` (`Order_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `FK_OrderProduct_Product` FOREIGN KEY (`Product_ID`) REFERENCES `product` (`Product_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -100,19 +115,20 @@ DROP TABLE IF EXISTS `orders`;
 CREATE TABLE `orders` (
   `Order_ID` int(200) NOT NULL AUTO_INCREMENT,
   `User_ID` int(200) NOT NULL,
-  `DeliveryService_ID` int(200) NOT NULL,
+  `DeliveryService_ID` int(200) DEFAULT NULL,
   `OrderStatus` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  `Price` decimal(6,2) NOT NULL,
-  `Disccount` decimal(3,0) NOT NULL,
-  `Quantity` int(11) NOT NULL,
-  `Taxes` decimal(6,2) NOT NULL,
-  `Total` decimal(6,2) NOT NULL,
+  `Price` decimal(6,2) DEFAULT NULL,
+  `Disccount` decimal(3,0) DEFAULT NULL,
+  `Quantity` int(11) DEFAULT NULL,
+  `Taxes` decimal(6,2) DEFAULT NULL,
+  `Total` decimal(6,2) DEFAULT NULL,
+  `Fecha_pedido` date DEFAULT NULL,
   PRIMARY KEY (`Order_ID`),
   KEY `FK_Order_User_idx` (`User_ID`),
   KEY `FK_Order_DeliveryService_idx` (`DeliveryService_ID`),
   CONSTRAINT `FK_Order_DeliveryService` FOREIGN KEY (`DeliveryService_ID`) REFERENCES `deliveryservice` (`DeliveryService_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `FK_Order_User` FOREIGN KEY (`User_ID`) REFERENCES `user` (`User_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -154,7 +170,7 @@ CREATE TABLE `productcategory` (
   `Description` text COLLATE utf8_unicode_ci NOT NULL,
   `Image` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`ProductCategory_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -229,4 +245,4 @@ CREATE TABLE `usercategory` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-20 11:16:07
+-- Dump completed on 2021-10-23 20:11:44
