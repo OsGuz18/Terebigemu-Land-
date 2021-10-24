@@ -354,6 +354,7 @@ main section form button{
     margin-top: 0.5%;
     font-family: 'Homenaje', sans-serif;
     font-size: 160%;
+    display: flex;
 
 }
 

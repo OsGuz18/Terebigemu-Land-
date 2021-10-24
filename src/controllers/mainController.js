@@ -34,13 +34,6 @@ let controlador={
         
     },
 
-    /* login:(req,res)=>{
-        res.render("Users/login")
-    },
-
-    register:(req,res)=>{
-        res.render("Users/register")
-    }, */
 
     shoppingCar:(req,res)=>{
         
@@ -65,7 +58,7 @@ let controlador={
                     Fecha_pedido:""
                 })
                 .then(()=>{
-                    res.render("Products/shopping-car")
+                    res.render("Products/shopping-car",{user:req.session.userLogged})
                 })
             }else{
                 db.orders.findAll({
@@ -92,6 +85,36 @@ let controlador={
         })
        // res.render("Products/shopping-car")
     },
+
+
+    addProduct:(req,res)=>{
+        let user = req.session.userLogged
+        let ordenactual
+        db.orders.findAll({
+            where:{
+                User_ID:user.User_ID
+            }
+        })
+        .then((ordenescont)=>{
+            for(let i=0;i < ordenescont.length;i++){
+                if(ordenescont[i].dataValues.OrderStatus == "En creacion"){
+                    ordenactual=ordenescont[i].dataValues
+                }
+            }
+            return ordenactual
+        })
+        .then((ordenactual)=>{
+           // console.log(ordenactual.Order_ID)
+           db.orderproduct.create({
+                Order_ID:ordenactual.Order_ID,
+                Product_ID:req.params.id
+            })
+            .then(()=>{
+                res.redirect("/shopping-car")
+            })
+        })
+        
+    }
 }
 
 module.exports=controlador; // Exportación del controlador 

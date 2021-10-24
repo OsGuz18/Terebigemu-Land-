@@ -47,10 +47,14 @@
                     </ul>
                     
                     <div class="toCar">
+
                         <p>
-                            <a href="/shopping-car"><button type="submit" class="car">Agregar al Carrito</button></a>
+                            <form  action="/addProduct/<%= producto.Product_ID %>" method="POST">
+                                <button type="submit" class="car" > Agregar al Carrito </button>
+                            </form>
                         </p>
-                        
+
+    
                         <p>
                         <button type="submit" class="buy">Comprar ahora</button>
                         </p>

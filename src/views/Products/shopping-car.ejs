@@ -12,7 +12,6 @@
     </head>
     <body>
         <%- include("../partials/header") %>
-        
         <div class="Banner">
             <img src="/images/Banner_SuperMario.jpg" alt="Banner">
         </div>
@@ -24,71 +23,102 @@
 
             <section class="articulos">
                 <section>
-                    <div class="shopping-car"><i class="fas fa-shopping-cart"></i> Shopping car</div>
+                    <div class="shopping-car"><i class="fas fa-shopping-cart" id="Enfocar"></i> Shopping car</div>
                 </section>
-
-                <form action="articulo">
-
-                    <% for(let i =0 ; i < productos.product.length; i++){ %>
-
-                        <div class="articulo">
-                            <div class="checkbox-articulo"> 
-                                <input class="check" type="checkbox" id="articulo">
-                                <label for="articulo">   <%= productos.product[i].dataValues.ProductName %>  </label>
-                            </div>
-                            
-                            <div class="picture-articulo">
-                                <img class="articulo-foto" src="images/products/<%= productos.product[i].dataValues.Image %>" alt="">
-                            </div> 
-                            
-                            <div class="description-articulo">
-                                <b>Descripción</b>
-                                
-                                <p>
-                                    <%= productos.product[i].dataValues.productdetail.dataValues.Description %>
-                                </p>
-                            </div>
+                <% if(locals.productos){ %>
+                    <%  if(productos.product.length != 0){%>
+                        <form action="articulo">
+                            <% for(let i =0 ; i < productos.product.length; i++){ %>
+                                <div class="articulo">
+                                    <div class="checkbox-articulo"> 
+                                        <input class="check" type="checkbox" id="articulo">
+                                        <label for="articulo">   <%= productos.product[i].dataValues.ProductName %>  </label>
+                                    </div>
+                                    
+                                    <div class="picture-articulo">
+                                        <img class="articulo-foto" src="images/products/<%= productos.product[i].dataValues.Image %>" alt="">
+                                    </div> 
+                                    
+                                    <div class="description-articulo">
+                                        <b>Descripción</b>
+                                        
+                                        <p>
+                                            <%= productos.product[i].dataValues.productdetail.dataValues.Description %>
+                                        </p>
+                                    </div>
+            
+                                    <div class="description-articulo">
+                                        <b>Precio</b>
+                                        <% flag = 0 %>
+                                    <% if(productos.product[i].dataValues.Disccount == 0 || productos.product[i].dataValues.Disccount == null){flag = 0  %>
+                                        <p>$ <%= productos.product[i].dataValues.Price %> MXN</p>
+                                    <% }else{ flag=1 %>
+                                        <del>$ <%=(productos.product[i].dataValues.Price).toLocaleString('en-US',
+                                            {minimumFractionDigits:2})%> MXN
+                                        </del>
+                                        <p>$ <%= (productos.product[i].dataValues.Price - ((productos.product[i].dataValues.Price * productos.product[i].dataValues.Disccount/100))).toLocaleString('en-US',{minimumFractionDigits:2}) %> MXN</p>
+                                        
+                                    <% } %>
+                                    </div>
+                                </div>
+            
+                                <div class="relleno-linea">
+                                    <div >linea</div>
+                                </div>
     
-                            <div class="description-articulo">
-                                <b>Precio</b>
-                            <% if(productos.product[i].dataValues.Disccount == 0 || productos.product[i].dataValues.Disccount == null){ %>
-                                <p>$ <%= productos.product[i].dataValues.Price %></p>
-                            <% }else{ %>
-                                <del>$ <%=(productos.product[i].dataValues.Price).toLocaleString('en-US',
-                                    {minimumFractionDigits:2})%>
-                                </del>
-                                <p>$ <%= (productos.product[i].dataValues.Price - ((productos.product[i].dataValues.Price * productos.product[i].dataValues.Disccount/100))).toLocaleString('en-US',{minimumFractionDigits:2}) %> </p>
-                                
-                            <% } %>
-                            </div>
-                        </div>
+                            <%  } %>
+                        </form> 
+                    </section>
     
-                        <div class="relleno-linea">
-                            <div >linea</div>
+                    <section class="seccion-total">
+                        <div class="texto-total">
+                            <b>Total de artículos a pagar:</b> <b> <%= productos.product.length %> </b> <b>|</b>
                         </div>
-
-                    <%  } %>
-                </form> 
-            </section>
-
-            <section class="seccion-total">
-                <div class="texto-total">
-                    <b>Total de artículos a pagar:</b> <b> <%= productos.product.length %> </b> <b>|</b>
-                </div>
+                        
+                        <form class="borrar-carrito" action="borrar-carrito">
+                            <button>Eliminar del carrito</button>
+                        </form>
+                    
+                        <div>
+                            <b>Subtotal:</b>
+                        </div>
+                    
+                        <div  class="subtotal-cantidad">
+                            <% sum = 0 ,desc=0,sumdesc=0 %>
+                            
+                            <% if(flag == 1){ 
+                                for(let i = 0; i < productos.product.length; i++){
+                                    sum = sum + parseInt(productos.product[i].dataValues.Price)
+                                }
+    
+                                for(let i = 0; i < productos.product.length; i++){
+                                    desc = (productos.product[i].dataValues.Price * productos.product[i].dataValues.Disccount/100)
+                                    sumdesc = sumdesc + parseInt(desc)
+                                }%>
+                                <div>
+                                    <del>$ <%= sum.toLocaleString('en-US',{minimumFractionDigits:2})  %> MXN </del>
+                                </div>
+                                <div>
+                                / $ <%= (parseInt(sum)  - parseInt(sumdesc)).toLocaleString('en-US',{minimumFractionDigits:2})  %> MXN 
+                                </div>
+                            <%}else{
+                                for(let i = 0; i < productos.product.length; i++){
+                                    sum = sum + parseInt(productos.product[i].dataValues.Price)
+                                }%>
+                                <div>
+                                    $ <%= sum.toLocaleString('en-US',{minimumFractionDigits:2})  %> MXN
+                                </div>
+                            <%}%> 
+                        </div>
+                    </section>
+                <%}else{%>
                 
-                <form class="borrar-carrito" action="borrar-carrito">
-                    <button>Eliminar del carrito</button>
-                </form>
-            
-                <div>
-                    <b>Subtotal</b>
-                </div>
-            
-                <div class="subtotal-cantidad">
-                    $12,500 MXN
-                </div>
-            </section>
-        
+                
+                <% } %>    
+                
+                <% }else{ %>
+                    <% console.log(locals.productos) %>
+                <% } %>
             <section class="datos-envio">
                 <section class="texto-envio">
                     <i class="fas fa-shipping-fast"></i>
@@ -99,7 +129,6 @@
                     <section class="datos">
                         <div class="nombre-cliente">
                             <b>Cliente</b>
-                            <%= console.log(user) %>
                             <p><%=user.FirstName + " " + user.LastName %> </p>
                         </div>
                     
@@ -136,6 +165,8 @@
         
             
         </main>
+
+
         <%- include("../partials/footer") %>
     </body>
 </html>
