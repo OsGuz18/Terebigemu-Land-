@@ -18,8 +18,9 @@
                 
                 <div class="products-container">
                 <% for(let i = 0; i < productos.length; i++){ %>
-                    <a href="/products/productDetail/<%= productos[i].Product_ID %>">  
+                    
                         <div class="product-container" >
+                            <a href="/products/productDetail/<%= productos[i].Product_ID %>">  
                                <figure class="figure">
                                    <img src="/images/products/<%= productos[i].Image %>" alt="imagen del producto">
                                 </figure>
@@ -42,10 +43,15 @@
                                     <% } %>
 
                                 </div>
-
+                            </a> 
+                            <% console.log(productos[i].Product_ID) %>
+                            <form  action="/addProduct/<%= productos[i].Product_ID %>" method="POST">
                                 <button class="button">Agregar al carrito</button>
+                            </form>
+
+                                
                         </div>
-                    </a> 
+                    
                 <% } %>
                 </div>
             </div>

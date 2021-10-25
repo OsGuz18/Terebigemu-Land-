@@ -30,7 +30,11 @@
                             <p class="price"> - <%= productos[i].dataValues.Disccount %> %</p>
                         <%}%> 
 
-                        <button class="button">Agregar al carrito</button>
+                        <form  action="/addProduct/<%= productos[i].dataValues.Product_ID %>" method="POST">
+                            <button class="button">Agregar al carrito</button>
+                        </form>
+
+                        
                     </article>
                 <% } %>    
             </section>
@@ -41,7 +45,7 @@
                 
                 <% for(let i = 0; i < pop.length; i++){ %>
                     <article>
-                        <a href="/products/productDetail/<%=productos[i].dataValues.Product_ID %>"><img src="/images/products/<%= pop[i].dataValues.product[0].dataValues.Image%>" > </a>
+                        <a href="/products/productDetail/<%=pop[i].dataValues.product[0].dataValues.Product_ID %>"><img src="/images/products/<%= pop[i].dataValues.product[0].dataValues.Image%>" > </a>
                         <p class="description"> <%= pop[i].dataValues.product[0].dataValues.ProductName %> </p>
                         <p class="price">$ <%= (pop[i].dataValues.product[0].dataValues.Price).toLocaleString('en-US',{minimumFractionDigits:2})%> </p>
 
@@ -49,7 +53,9 @@
                             <p class="price"> - <%= (pop[i].dataValues.product[0].dataValues.Disccount).toLocaleString('en-US',{minimumFractionDigits:2}) %> %</p>
                         <%}%> 
 
-                        <button class="button">Agregar al carrito</button>
+                        <form  action="/addProduct/<%= pop[i].dataValues.product[0].dataValues.Product_ID %>" method="POST">
+                            <button class="button">Agregar al carrito</button>
+                        </form>
                         
                     </article>
                 <%} %>   
