@@ -1,4 +1,3 @@
-
 *  {
     margin: 0px;
     padding: 0px;    
@@ -17,21 +16,23 @@ body{
 
 main{
     width: 100%;
+    height: auto;
 }
 
-div.Views{
+.Views{
     display: flex;
-    overflow: hidden;
     width: 80%;
-    /* height: auto; */
-    margin: 10px 100px 10px 150px;
+    height: auto;
+    margin: 5% auto;
     background: linear-gradient(75deg, rgb(0, 0, 0)80%, rgb(43, 8, 8), rgb(58, 14, 14));
-    /* border: 2px solid rgb(194, 19, 19);   */
-    border: 2px solid rgb(196, 160, 1);  
+    box-shadow: 0 0 10px 7px rgb(192, 0, 0);
+    border-radius: 5px;
+    border: solid 2px rgb(255, 217, 0);   
 }
 
 .Previews{
-    width: 100px;
+    width: 80px;
+    height: auto;
     list-style-type: none;
     margin: 30px 30px 5px 100px;
     /* border: 2px solid white; */
@@ -66,64 +67,78 @@ div.Views{
      font-size: 22px;
 }
 
+@font-face {
+    font-family: HeyComic;
+    src: url(/fuentes/HeyComic.ttf);
+  }
+
+  @font-face {
+    font-family: SimpsonfontDemo;
+    src: url(/fuentes/SimpsonfontDEMO.otf);
+  }
+
 .product_Description{
     text-align: center;
     font-size: 20px;
-    width: 400px;
-    height: 420px;
+    width: 40%;
+    height: auto;
     /* border: 2px solid white; */
-    margin:50px 55px 5px 40px;
-
+    margin: 2% auto; 
 }
 
+
+
 .product_Description h2{
-    margin-bottom: 10px;
+    margin: 2% auto;
+    font-family: SimpsonfontDemo;
+    color: yellow;
     font-size: 24px;
 }
 .product_Description p{
     text-align: justify;
+    font-family: HeyComic;
 }
 
 .product_Description ul{
-    margin-top: 10px;
+    margin-top: 2% auto;
+    font-family: HeyComic;
+    text-align: center;
+    font-size: 18px;
+
 }
 .product_Description ul li{
-    text-align: justify;
-    margin-bottom: 5px;
     text-decoration: none;
 }
 
-.toCar{
-    margin-top: 15px;
-    color: rgb(255, 255, 255);
-    height: 150px;
-    /* border: 2px solid white; */
-    border-radius: 5px
-
-}
+.toCar p{
+    margin: 2% auto;
+   text-align: center;
+    /* border: 2px solid white;*/
+} 
 
 .edition-delete{
     display: flex;
     flex-wrap: wrap;
     /* border: 2px solid white; */
-    width: 500px;
-    height: 80px;
+    width: 100%;
+    height: auto;
 
 
 }
 
 .car, .buy{
-    border-radius: 6px;
-    border: rgb(177, 7, 7) solid 2px;
     font-size: 16px;
-    margin: 20px 100px 15px 80px;
+    margin: 4% auto;
     padding: 8px;
     width: 200px;
     height: 40px;
     text-align: center;
-    color: white;
     background-color: rgb(58, 9, 9);
-} 
+    background: linear-gradient(70deg, rgb(121, 0, 0)80%, rgb(85, 7, 7), rgb(46, 0, 0));
+    color: white;
+    border-color: red;
+    border-radius: 7%;
+}
 
 .edit, .delete{
     border-radius: 6px;
@@ -131,7 +146,7 @@ div.Views{
     font-size: 17px;
     margin: 20px 20px 10px 80px;
     width: 120px;
-    height: 35px;
+    height: auto;
     text-align: center;
     color: rgb(121, 0, 0);
     background-color: rgb(255, 255, 255);
@@ -164,7 +179,9 @@ main section article{
     height: 320px;
     margin: 20px auto;
     font-size: 18px;
-    border: rgb(177, 7, 7) solid 2px;
+    box-shadow: 0 0 10px 7px rgb(192, 0, 0);
+    border-radius: 5px;
+    border: solid 2px rgb(255, 217, 0);   
 }
 
 main section article img{
@@ -175,27 +192,61 @@ main section article img{
 }
 
 .clientOpinion{
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
     font-size: 20px;
-    width: 80%;
+    width: 60%;
     height: 300px;
     /* border: 2px solid white; */
-    margin: 10px 100px 10px 150px;
+    margin: 3% auto;
     background: linear-gradient(75deg, rgb(0, 0, 0)80%, rgb(43, 8, 8), rgb(58, 14, 14));
-    border: 2px solid rgb(194, 19, 19);  
+    box-shadow: 0 0 10px 7px rgb(192, 0, 0);
+    border-radius: 5px;
+    border: solid 2px rgb(255, 217, 0);    
 }
+
 
 .clientOpinion h2{
-    text-align: center;
-    margin: 40px 15px 30px 40px;
+    margin: 2%;
+    font-family: SimpsonfontDemo;
+    color: yellow;
+    font-size: 22px;
+    
+}
+
+
+.clientOpinion p{
+    font-family: HeyComic;
+    text-align: justify;
+    margin: 5% auto;
     width: 400px;
 }
 
-.clientOpinion p{
-    text-align: justify;
-    margin: 35px 40px 0 40px;
-    width: 400px;
+.nombreCliente1, .nombreCliente2{
+    margin: auto;
 }
+
+.nombreCliente1 p{
+    text-align: center;
+    margin: 2% auto;
+}
+
+.nombreCliente2 p{
+    text-align: center;
+    margin: -20% auto;
+}
+.Cosme img{
+    width: 50%;
+    height: auto;
+}
+
+.Homero img{
+    width: 25%;
+    height: auto;
+    margin-top: -35%;
+}
+
 .botones-edit-elim{
     display: flex;
     justify-content: space-around;

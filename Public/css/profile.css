@@ -1,44 +1,58 @@
 *{
-    padding: 0%;
-     margin: 0%;
+
      box-sizing: border-box;
      font-family: 'Homenaje', sans-serif;
     
 }
 
-
  
- .header{
-     width: 90%;
-     margin-left: 5%;
-     font-size: 100%;
+ div.header{
+     text-align: center;
+     width: 35%;
+     height: auto;
+     padding: 2%;
+     margin: 4% auto;
      background-color: black;
-     border: white 5px solid;
-     height: 200%;
-     padding-bottom: 5%;
+     box-shadow: 0 0 10px 7px rgb(192, 0, 0);
+     border-radius: 5px;
+     border: solid 2px rgb(255, 217, 0);  
  }
 
- .header div{
-     font-size: 200%;
- }
+ @font-face {
+    font-family: SimpsonfontDemo;
+    src: url(/fuentes/SimpsonfontDEMO.otf);
+  }
 
- .header div img{
-     margin-left: 5%;
-     margin-top: 5%;
-     width: 40%;
- }
+div.name{
+    font-size: 200%;
+    font-family: SimpsonfontDemo;
+    -webkit-text-stroke: 1.15px black;
+    color: rgb(255, 251, 0);
+    text-align: center; 
+    }
 
- .header div div{
-    margin-left: 5%;
-    margin-top: 5%;
- }
+.image{
+    margin: 5% auto;
+    width: 55%;
+    height: auto;
+}
 
- .email{
-     background-color: gray;
-     width: 30%;
-     margin-left: 5%;
- }
+.nivel{
+    font-size: 200%;
+    color: yellow;
+    margin: 5% auto;
+}
 
- .email div{
-    font-size: 100%;
- }
+form button.edit, button.delete{
+    border-radius: 6px;
+    box-shadow: 0 0 8px 1px rgba(87, 0, 0, 0.849);
+    font-size: 17px;
+     margin:5% auto;
+    width: 140px;
+    height: 35px;
+    text-align: center;
+    background: linear-gradient(70deg, rgb(121, 0, 0)80%, rgb(85, 7, 7), rgb(46, 0, 0));
+    color: white;
+    border-color: red;
+    border-radius: 2%;
+}

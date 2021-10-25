@@ -41,8 +41,8 @@ main{
 
 main section article{
    background-color: black;
-    width: 300px;
-    height: 360px;
+    width: 270px;
+    height: auto;
     margin: 20px auto;
     font-size: 18px;
     box-shadow: 0 0 10px 7px rgb(192, 0, 0);
@@ -51,10 +51,25 @@ main section article{
 }
 
 main section article img{
-    width: 180x;
-    height: 260px;
-    margin-top: 20px;
-    padding: 8px;
+    width: 165px;
+    height: 200px;
+    margin-top: 10%;
+    /* padding: 8px; */
 }
 
+.description, .price {
+    margin: 2% auto;
+
+}
+
+.button{
+    margin: 4% auto;
+    width: 80%;
+    background: linear-gradient(70deg, rgb(121, 0, 0)80%, rgb(85, 7, 7), rgb(46, 0, 0));
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    border-color: red;
+    border-radius: 2%;
+}
 

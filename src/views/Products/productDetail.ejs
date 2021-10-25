@@ -46,28 +46,29 @@
                         <li>Compatible con: <%= producto.brand.CompanyName %> </li> 
                     </ul>
                     
-                    <div class="toCar">
-                        <p>
-                            <a href="/shopping-car"><button type="submit" class="car">Agregar al Carrito</button></a>
-                        </p>
-                        
-                        <p>
-                        <button type="submit" class="buy">Comprar ahora</button>
-                        </p>
-                    </div>
                     
-                    <div class="edition-delete">
-                        <p>
-                            <form  action="/products/editProduct/<%= producto.Product_ID %>" method="GET">
-                                <button type="submit" class="edit" >Editar</button>
-                            </form>
-                        </p>
-                        <p>
-                            <form  action="/products/delete/<%= producto.Product_ID %>?_method=DELETE" method="POST">
-                                <button type="submit" class="delete" >Borrar</button>
-                            </form>
-                        </p>
-                    </div>
+                         <div class="toCar">
+                             <p>
+                                 <a href="/shopping-car"><button type="submit" class="car">Agregar al Carrito</button></a>
+                             </p>
+                             
+                             <p>
+                             <button type="submit" class="buy">Comprar ahora</button>
+                             </p>
+                         </div>
+                         
+                         <div class="edition-delete">
+                             <p>
+                                 <form  action="/products/editProduct/<%= producto.Product_ID %>" method="GET">
+                                     <button type="submit" class="edit" >Editar</button>
+                                 </form>
+                             </p>
+                             <p>
+                                 <form  action="/products/delete/<%= producto.Product_ID %>?_method=DELETE" method="POST">
+                                     <button type="submit" class="delete" >Borrar</button>
+                                 </form>
+                             </p>
+                         </div>
                 </div>
             </div>
 
@@ -109,10 +110,11 @@
 
             <div class="clientOpinion">
                 <h2>Opiniones de otros clientes</h2>
-
-                <p>
-                Cosme Fulanito
-                </p>
+                <div class="nombreCliente1">
+                   <p>
+                   Cosme Fulanito
+                   </p>
+                </div>
                 <br>
                 
                 <p>
@@ -120,19 +122,27 @@
                 Tiene grandes efectos y un sin fin de posibilidades, y lo mejor, integra a personajes 
                 que completan la saga.
                 </p>
+                <div class="Cosme">
+                    <img src="/images/CosmeFulanito.png">
+                </div>
 
             </div>
 
             <div class="clientOpinion">
-                <p>
-                Homer simpsom
-                </p>
+                <div class="nombreCliente2">
+                    <p>
+                    Homero Simpson
+                    </p>
+                 </div>
                 <br>
                 
                 <p>
                 De los mejores juegos que he tenido la oportunidad de comprar. Creo que es entretenido, con buenos efectos
                 con mejoras notables y económicamente viable.
                 </p>
+                <div class="Homero">
+                    <img src="/images/HomeroSimpson.jpg">
+                </div>
 
             </div>
         </main>  <!--</div> --> 

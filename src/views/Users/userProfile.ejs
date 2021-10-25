@@ -17,16 +17,16 @@
         <main>
             <div class="header">
                 <div>
-                    <div >Hola <%= user.FirstName + " " + user.LastName %> </div>
+                    <div class="name" >Hola <%= user.FirstName + " " + user.LastName %> </div>
                 </div>
                 <div>
-                    <img src="/images/users/<%= user.Photo %>" alt="No">
+                    <img src="/images/users/<%= user.Photo %>" alt="No"class="image">
                 </div>
                 <div>
                     <% if(user.UserCategory_ID == "0"){
                             nivel="Básico"
                         }%>
-                    <div>Nivel: <%= nivel %></div>
+                    <div class="nivel">Nivel: <%= nivel %></div>
                 </div>
                 <div>
                     
@@ -35,7 +35,7 @@
                     </form>
 
                     <form action="/users/delete/<%= user.User_ID %>?_method=DELETE" method=POST  class="userRegistration" >
-                        <button type="submit" class="edit" >Eliminar usuario</button>
+                        <button type="submit" class="delete" >Eliminar usuario</button>
                     </form>
                 </div>
             </div>
