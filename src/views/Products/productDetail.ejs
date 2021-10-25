@@ -46,6 +46,19 @@
                         <li>Compatible con: <%= producto.brand.CompanyName %> </li> 
                     </ul>
                     
+                    <div class="toCar">
+
+                        <p>
+                            <form  action="/addProduct/<%= producto.Product_ID %>" method="POST">
+                                <button type="submit" class="car" > Agregar al Carrito </button>
+                            </form>
+                        </p>
+
+    
+                        <p>
+                        <button type="submit" class="buy">Comprar ahora</button>
+                        </p>
+                    </div>
                     
                          <div class="toCar">
                              <p>

@@ -12,4 +12,6 @@ router.get("/",mainController.index)
 //router.get("/register",mainController.register)
 router.get("/shopping-car",authMiddleware, mainController.shoppingCar)
 
+router.post("/addProduct/:id",authMiddleware, mainController.addProduct)
+
 module.exports=router; //Exportación de la constante router
