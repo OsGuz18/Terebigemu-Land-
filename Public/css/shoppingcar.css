@@ -42,8 +42,16 @@ main section.banner-section{
 .articulo{
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
+    width: 100%;
     height: auto;
+    align-items: center; 
+
+}
+
+.first-details{
+    width: 35%;
+    height: auto;
+    text-align: center;
 
 }
 
@@ -52,52 +60,108 @@ main section.banner-section{
    
 }
 
-.checkbox-articulo label{
-    display: flex;
-    width: 25%;
+.name-articulo{
+    text-align: center;
+    margin-top: 2%;
+}
+
+.name-articulo label{
+
+    width: 90%;
     height: auto;
-    margin: 8% auto;
-    font-size: 14px;
+    margin: 3% 5%;
+    font-size: 20px;
     font-family: HeyComic;
 }
 
-
-section form div label{
-    width: 110%;
-    font-family: HeyComic;
-    font-size: 0%;
+.buttons-product{
+    width: 80%;
+    height: auto;
+    margin: 3% 10%;
 }
 
 .picture-articulo{
-    width: 10%;
+    width: 60%;
+    height: auto;
     margin:5% auto;
 }
 
-.description-articulo{
-    width: 25%;
-    margin: 5% auto;
-    display: flex;
-    flex-direction: column;
-    font-family: HeyComic;
-    font-size: 80%;
+.plus, .minus{
+    width: 6%;
+    height: auto;
+    background: linear-gradient(70deg, rgb(121, 0, 0)80%, rgb(85, 7, 7), rgb(46, 0, 0));
+    border: solid 1px red ;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    margin: auto 1%;
+
 }
 
-main section div b{
-    align-self: auto;
+.cantidad{
+    width: 20%;
+    margin: auto 2%;
+    text-align: center;
+}
+
+.eliminar-carrito{
+    background: linear-gradient(70deg, rgb(121, 0, 0)80%, rgb(85, 7, 7), rgb(46, 0, 0));
+    border: none;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    width: 70%;
+    font-size: 16px;
+    text-align: center;
+    margin: 6% auto;
+}
+
+.description-articulo{
+    width: 31%;
+    height: auto;
+    margin: 6% 0%;
+    font-family: HeyComic;
+    font-size: 80%;
+ 
+}
+
+.b{
+    margin: 2% auto;
+    text-align: center;
     font-family: HeyComic;
     font-size: 20px;
 }
 
-main section p{
+div.description-articulo p{
     text-align: justify;
     font-size: 18px;
     margin: 4% auto;
 }
 
-.texto-total{
-    margin: 2%;
-    font-size: 15px;
+.subtotal-cantidad{
+    width: 25%;
+    height: auto;
+    margin: 6% 2%;
+    font-family: HeyComic;
+    font-size: 80%;
+    text-align: center;
 }
+
+.precio-articulo{
+    width: 30%;
+    height: auto;
+    margin: 6% 2%;
+    font-family: HeyComic;
+    font-size: 80%;
+    text-align: center;
+
+}
+
+.p-price{
+    text-align: center;
+    margin: 2% auto;
+    font-size: 18px;
+    font-family: HeyComic;
+}
+
 
 .seccion-total{
     display: flex;
@@ -107,36 +171,42 @@ main section p{
     border: solid 2px rgb(255, 217, 0);  
     width: 70%;
     margin: 5% auto;
-    font-size: 15px;
 }
 
-main section form.borrar-carrito{
+.texto-total{
     width: 30%;
-    font-size: 15px;
+    height: auto;
+    margin: 2%;
+    font-size: 22px;
+    /* border: solid 2px green; */
+    font-family: HeyComic;
 }
 
-form.borra-carrito{
-    background: linear-gradient(70deg, rgb(121, 0, 0)80%, rgb(85, 7, 7), rgb(46, 0, 0));
-    border: none;
-    color: rgb(255, 255, 255);
-    text-align: left;
-    width: 60%;
-    font-size: 18px;
-    text-align: center;
-    margin: 6% auto;
-}
-
-
-div.subtotal{
-    margin-top: 2%;
+.subtotal{
+    width: 20%;
+    margin: 2%;
+    font-size: 22px;
+    /* border: solid 2px green; */
+    font-family: HeyComic;
+    text-align: end;
 
 }
 .subtotal-cantidad{
+    width: 35%;
     margin: 2% auto;
     font-family: HeyComic;
-    font-size: 20px;
-
+    font-size: 18px;
+    /* border: solid 2px rgb(255, 217, 0); */
+    text-align: center;  
 }
+
+.granTotal{
+    width: 55%;
+    margin: 1% auto;
+    text-align: end;
+    /* border: solid 2px rgb(255, 217, 0); */
+}
+
 
 .texto-envio{
     display: flex;
@@ -157,6 +227,7 @@ div.subtotal{
 
 main section.datos-envio i{
     font-size: 200%;
+    margin: 3%;
     
 }
 main section.datos-envio div{
@@ -182,18 +253,25 @@ section form div input.check{
 }
 
 .boton-pagar{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10%;
+    width: 25%;
+    height: auto;
+    /* border:1px solid green; */
+    text-align: center;
 }
 
 .datos{
-    margin-left: -15%;
+    width: 40%;
+    height: auto;
+    /* border:1px solid green; */
 }
 
-main section button.pagar-ahora{
-    width: 200%;
+.pagar-ahora{
+    width: 80%;
     background: linear-gradient(70deg, rgb(121, 0, 0)80%, rgb(85, 7, 7), rgb(46, 0, 0));
+    border: 1px solid red;
+    color: white;
+    font-size: 18px;
+    font-family: HeyComic;
 }
 
 .titulo-mas{

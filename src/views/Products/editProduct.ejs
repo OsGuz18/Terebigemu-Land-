@@ -17,9 +17,7 @@
             <form action="/products/editProduct/<%= producto.Product_ID %>?_method=PUT" method=POST  class="productEdition" enctype="multipart/form-data">
                 <h2>Editar producto</h2>
 
-                <div class="errores">
-                    <ul></ul>
-                </div>
+                
                 
                 <label for="productName" class="formLabel"> Nombre</label>
                 <input type="text" name="name" id="name" class="name" value="<%= producto.ProductName %>">
@@ -70,6 +68,10 @@
                 <input type="text" name="stock" id="stock" class="stock" value="<%= detalle.Stock %>" required> 
 
                 <button type="submit" class="send">Editar</button>
+
+                <div class="errores">
+                    <ul></ul>
+                </div>
             </form>
         </main>
         <%- include("../partials/footer") %>

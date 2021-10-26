@@ -43,12 +43,19 @@ h2{
     color: black;
 }
 
-.errores{
-    color: red;
-    text-align: center;
-    background-color: black;
+@font-face {
+    font-family: SimpsonfontDemo;
+    src: url(/fuentes/SimpsonfontDEMO.otf);
+  }
 
+.errores{
+    font-family: SimpsonfontDemo;
+    -webkit-text-stroke: 1.15px black;
+    color: rgb(255, 251, 0);
+    text-align: center;
+    font-size: 19px;   
 }
+
 
 .formImput .formLabel, .send, .reset, .name, .lastName, .age, .email, .password, .address, .phone{
      display: block;

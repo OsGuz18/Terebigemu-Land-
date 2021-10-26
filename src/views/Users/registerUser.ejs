@@ -18,9 +18,7 @@
             <form action="/users/register" method=POST  class="userRegistration" enctype="multipart/form-data">
                 <h2>Registrarse</h2>
 
-                <div class="errores">
-                    <ul></ul>
-                </div>
+          
                 
                 <label for="name" class="formLabel"> Nombre (s) </label>
                 <input type="text" name="name" id="name" class= "name" value="<%= locals.oldData && oldData.name ? oldData.name : '' %>">
@@ -108,6 +106,10 @@
                 <button type="submit" class="send">Registrar</button>
                 
                 <input type="reset" class="reset">
+
+                <div class="errores">
+                    <ul></ul>
+                </div>
                 
             </form>
         </main>

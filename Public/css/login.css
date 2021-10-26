@@ -31,12 +31,18 @@ main{
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 1.0);
 }
 
-.errores{
-    color: red;
-    text-align: center;
-    background-color: black;
-}
+@font-face {
+    font-family: SimpsonfontDemo;
+    src: url(/fuentes/SimpsonfontDEMO.otf);
+  }
 
+.errores{
+    font-family: SimpsonfontDemo;
+    -webkit-text-stroke: 1.15px black;
+    color: rgb(255, 251, 0);
+    text-align: center;
+    font-size: 19px;   
+}
 .userLogin{
     /* margin-inline-start: 0%; */
     margin-left: -90px;

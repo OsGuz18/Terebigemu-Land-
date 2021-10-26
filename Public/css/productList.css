@@ -79,9 +79,10 @@ figure img{
 
 .button{
     margin: 6% auto;
-    width: 90%;
+    width: 110%;
+    height: auto;
     background: linear-gradient(70deg, rgb(121, 0, 0)80%, rgb(85, 7, 7), rgb(46, 0, 0));
-    font-size: 14px;
+    font-size: 13px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
     border-color: red;
