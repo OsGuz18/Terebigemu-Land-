@@ -14,4 +14,6 @@ router.get("/shopping-car",authMiddleware, mainController.shoppingCar)
 
 router.post("/addProduct/:id",authMiddleware, mainController.addProduct)
 
+router.delete("/deleteProduct/:id",authMiddleware, mainController.deleteProduct)
+
 module.exports=router; //Exportación de la constante router

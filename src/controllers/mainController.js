@@ -1,4 +1,5 @@
 //Declaración de las constantes a usar
+const { Console } = require("console");
 const path = require("path") //Requerimos la paquetería de "path" incluida en node
 let db = require('../database/models');
 const Op = db.Sequelize.Op
@@ -114,6 +115,17 @@ let controlador={
             })
         })
         
+    },
+
+    deleteProduct:(req,res)=>{
+        console.log("Ahí vamos")
+        db.orderproduct.destroy({
+            where:{
+                Product_ID: req.params.id
+            }
+        }).then(()=>{
+            res.redirect("/shopping-car")
+        })
     }
 }
 

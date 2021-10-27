@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Terebigemu Land Register</title>
+        <title>Terebigemu Land</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
                     <div class="shopping-car"><i class="fas fa-shopping-cart" id="Enfocar"></i> Shopping car</div>
                 </section>
                 <% if(locals.productos){ %>
-                    <%  if(productos.product.length != 0){%>
+                    <%if(productos.product.length != 0){%>
                         <form action="articulo">
                             <% for(let i =0 ; i < productos.product.length; i++){ %>
                                 <div class="articulo">
@@ -40,15 +40,16 @@
                                                 <img class="articulo-foto" src="images/products/<%= productos.product[i].dataValues.Image %>" alt="">
                                             </div> 
                        
-
                                             <button class="plus" id='aumentar' onclick="aumentar()">+</button>
                                             <button class="minus" id='disminuir' onclick="disminuir()">-</button>
                                                   
-                                            <input class="cantidad" type='text' id="cantidad" value="0">
+                                            <input class="cantidad" type='text' id="cantidad" value="1">
 
-                                        
-                                            <button class="eliminar-carrito">Eliminar del carrito</button>
+                                            <form  action="/deleteProduct/<%= productos.product[i].dataValues.Product_ID %>?_method=DELETE" method="POST">
+                                                <button class="eliminar-carrito">Eliminar del carrito</button>
+                                            </form>
 
+                                            
 
                                         </div>
                                     </div>
@@ -63,20 +64,16 @@
                                     <div class="precio-articulo">
                                         <b class="b">Precio</b>
                                         <% flag = 0 %>
-                                    <% if(productos.product[i].dataValues.Disccount == 0 || productos.product[i].dataValues.Disccount == null){flag = 0  %>
-                                        <p class="p-price">$ <%= productos.product[i].dataValues.Price %> MXN</p>
-                                    <% }else{ flag=1 %>
-                                        <del>$ <%=(productos.product[i].dataValues.Price).toLocaleString('en-US',
-                                            {minimumFractionDigits:2})%> MXN
-                                        </del>
-                                        <p>$ <%= (productos.product[i].dataValues.Price - ((productos.product[i].dataValues.Price * productos.product[i].dataValues.Disccount/100))).toLocaleString('en-US',{minimumFractionDigits:2}) %> MXN</p>
-                                        
-                                    <% } %>
+                                        <% if(productos.product[i].dataValues.Disccount == 0 || productos.product[i].dataValues.Disccount == null){flag = 0  %>
+                                            <p class="p-price">$ <%= productos.product[i].dataValues.Price %> MXN</p>
+                                        <% }else{ flag=1 %>
+                                            <del>$ <%=(productos.product[i].dataValues.Price).toLocaleString('en-US',
+                                                {minimumFractionDigits:2})%> MXN
+                                            </del>
+                                            <p class="p-price">  $ <%= (productos.product[i].dataValues.Price - ((productos.product[i].dataValues.Price * productos.product[i].dataValues.Disccount/100))).toLocaleString('en-US',{minimumFractionDigits:2}) %> MXN</p>
+                                        <% } %>
                                     </div>
                                 </div>
-            
-                              
-    
                             <%  } %>
                         </form> 
                     </section>
@@ -86,14 +83,12 @@
                             <b>Total de artículos a pagar:</b> <b> <%= productos.product.length %> </b>
                         </div>
                         
-                    
                         <div class="subtotal">
                             <b>Subtotal:</b>
                         </div>
                     
                         <div  class="subtotal-cantidad">
                             <% sum = 0 ,desc=0,sumdesc=0 %>
-                            
                             <% if(flag == 1){ 
                                 for(let i = 0; i < productos.product.length; i++){
                                     sum = sum + parseInt(productos.product[i].dataValues.Price)
@@ -124,9 +119,10 @@
                 
                 <% } %>    
                 
-                <% }else{ %>
+            <% }else{ %>
                     <% console.log(locals.productos) %>
                 <% } %>
+            
             <section class="datos-envio">
                 <section class="texto-envio">
                     <i class="fas fa-shipping-fast"></i>
@@ -167,8 +163,8 @@
 
             
 
-            <section class="banner">
-                <img  src="images/banner.jpg" alt="">
+            <section class="banner-section">
+                <img class="banner2"  src="images/banner.jpg" alt="">
             </section>
         
             
